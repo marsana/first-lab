@@ -1,0 +1,21 @@
+-# - if data.page.page_class != 'index'
+-# 	.menu
+-# 		.logotype
+-# 		.links
+-# 			%a.head_on
+-# 			%a.who_off
+-# 			%a.how_off
+-# 			%a.what_off
+-# - else 
+-# 	.menu
+-# 		.links
+-# 			%a.head_on
+-# 			%a.who_off
+-# 			%a.how_off
+-# 			%a.what_off
+.menu
+	.links
+		%a.header-link.active-menu.anchor{:href => ".header"}
+		%a.who-link.anchor{:href => ".who"}
+		%a.how-link.anchor{:href => ".how"}
+		%a.what-link.anchor{:href => ".what"}
