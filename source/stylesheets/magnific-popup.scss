@@ -475,32 +475,32 @@ button {
   }
 
   /* The shadow behind the image */
-  .mfp-figure {
-    line-height: 0;
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: $mfp-image-padding-top;
-      bottom: $mfp-image-padding-bottom;
-      display: block;
-      right: 0;
-      width: auto;
-      height: auto;
-      z-index: -1;
-      box-shadow: $mfp-shadow;
-      background: $mfp-image-background;
-    }
-    small {
-      color: $mfp-caption-subtitle-color;
-      display: block;
-      font-size: 12px;
-      line-height: 14px;
-    }
-    figure {
-      margin: 0;
-    }
-  }
+  // .mfp-figure {
+  //   line-height: 0;
+  //   &:after {
+  //     content: '';
+  //     position: absolute;
+  //     left: 0;
+  //     top: $mfp-image-padding-top;
+  //     bottom: $mfp-image-padding-bottom;
+  //     display: block;
+  //     right: 0;
+  //     width: auto;
+  //     height: auto;
+  //     z-index: -1;
+  //     box-shadow: $mfp-shadow;
+  //     background: $mfp-image-background;
+  //   }
+  //   small {
+  //     color: $mfp-caption-subtitle-color;
+  //     display: block;
+  //     font-size: 12px;
+  //     line-height: 14px;
+  //   }
+  //   figure {
+  //     margin: 0;
+  //   }
+  // }
   .mfp-bottom-bar {
     margin-top: -$mfp-image-padding-bottom + 4;
     position: absolute;
@@ -547,17 +547,17 @@ button {
             padding: 0;
           }
         }
-        .mfp-figure {
-          // The shadow behind the image
-          &:after {
-            top: 0;
-            bottom: 0;
-          }
-          small {
-            display: inline;
-            margin-left: 5px;
-          }
-        }
+        // .mfp-figure {
+        //   // The shadow behind the image
+        //   &:after {
+        //     top: 0;
+        //     bottom: 0;
+        //   }
+        //   small {
+        //     display: inline;
+        //     margin-left: 5px;
+        //   }
+        // }
         .mfp-bottom-bar {
           background: rgba(0,0,0,0.6);
           bottom: 0;

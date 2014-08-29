@@ -71,9 +71,10 @@ $spritemap: sprite-map("sprite/*.png", $spacing: 10px);
 @mixin lightDecoration() {
 	border-bottom: 1px solid rgba(0, 0, 0, .3);
 	transition: border-color .3s;
+
 	&:hover {
 		text-decoration: none;
-		border-color: rgba(0, 0, 0, 1);
+		border-color: #005fff	;
 	}
 }
 :focus {outline:none;}
@@ -89,6 +90,14 @@ body {
 a {
 	color: #000;
 	text-decoration: none;
+	transition: border-color .3s;
+	transition: color .3s;
+	&:hover{
+		text-decoration: none;
+		color:#005fff;
+		border-color: #005fff	;
+
+	}
 }
 
 .wrapper {
@@ -138,12 +147,20 @@ a {
 	}
 	.header-link.active-menu {@include sbgs(head_on);}
 	.header-link {@include sbgs(head_off);}
+	.header-link span {@include sbgs(head_on); opacity: 0; display: block; transition: opacity .2s;}
+	.header-link span:hover {opacity: 1;}
 	.who-link.active-menu {@include sbgs(who_on);}
 	.who-link {@include sbgs(who_off);}
+	.who-link span {@include sbgs(who_on); opacity: 0; display: block; transition: opacity .2s;}
+	.who-link span:hover {opacity: 1;}
 	.how-link.active-menu {@include sbgs(how_on);}
 	.how-link {@include sbgs(how_off);}
+	.how-link span {@include sbgs(how_on); opacity: 0; display: block; transition: opacity .2s;}
+	.how-link span:hover {opacity: 1;}
 	.what-link.active-menu {@include sbgs(what_on);}
 	.what-link {@include sbgs(what_off);}
+	.what-link span {@include sbgs(what_on); opacity: 0; display: block; transition: opacity .2s;}
+	.what-link span:hover {opacity: 1;}
 }
 
 
@@ -207,8 +224,12 @@ a {
 
 
 /*Who*/
-
-.who .filter_people a {
+.people-wrapper {
+	width: 100%;
+	position: relative;
+}
+.who .filter_people div {
+	position: absolute;
 	background-color: #a7abab;
 	height: 106px;
 	width: 170px;
@@ -216,10 +237,15 @@ a {
 	margin: 15px 5px; 
 	border-radius: 50%;
 	text-align: center;
-	padding-top: 65px;
+	// padding-top: 65px;
 	font-size: 20px;
 	font-weight: 600;
 	color: #fff;
+	transition: all .5s;
+
+	span {
+		padding-top: 60px;
+	}
 }
 
 
@@ -319,6 +345,9 @@ a {
 	color: #fff;
 	opacity: 0;
 	transition:all .5s;
+	&:hover {
+		color: white;
+	}
 	&.active {	
 
 	}
@@ -449,4 +478,44 @@ a {
 .isotope-hidden.isotope-item {
 	pointer-events: none;
 	z-index: 1;
+}
+
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+.mfp-figure { 
+  -webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: .3s;
+	-moz-animation-duration: .3s;
+	-ms-animation-duration: .3s;
+	-o-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
 }

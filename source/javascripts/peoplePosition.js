@@ -12,7 +12,7 @@ var matrix = [];
 
 function calculate($obj, itemsArr){
 	$items = $obj.children();
-	width = $obj.parent().parent().width()-150;
+	width = $obj.parent().width()-150;
 	$obj.width(width);
 	colum = 3000; //некое максимальное число, для поиска минимального значения
 	for(var i = 0; i < $items.length; i++){
@@ -142,12 +142,12 @@ function init($obj, martix, itemsArr) {
 	}else {
 			clearTimeout(to);
 			to = setTimeout(function() {
-				
 				$obj.css({
 					top: $obj.parent().offset().top
 				})
-			}, 5);
+			}, 100);
 		for(var i = 0; i < $obj.children().length; i++){
+
 			itemsArr[i].linkTo.css({
 				width:itemsArr[i].size[0],
 				height:itemsArr[i].size[0]
@@ -160,5 +160,4 @@ function init($obj, martix, itemsArr) {
 	if (draw($obj,matrix, itemsArr)) {
 		$obj.addClass('is__ready')
 	}
-	return true;
 }
