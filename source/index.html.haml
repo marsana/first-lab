@@ -78,63 +78,63 @@ page_class: 'index'
 	.what.chapter{ :data => {:link => '.what-link'} }
 		%h2 что
 		.filter.filter_tags
-			%a.filter-item{:href => "graph"} графический дизайн
-			%a.filter-item{:href => "#"} брендинг
-			%a.filter-item{:href => "#"} логотипы
-			%a.filter-item{:href => "#"} знаки
-			%a.filter-item{:href => "#"} стили
-			%a.filter-item{:href => "#"} упаковка
-			%a.filter-item{:href => "#"} издательские проекты
-			%a.filter-item{:href => "#"} годовые отчеты
-			%a.filter-item{:href => "#"} книги 
-			%a.filter-item{:href => "#"} иллюстрации 
-			%a.filter-item{:href => "#"} презентации 
-			%a.filter-item{:href => "#"} инфографика
-			%a.filter-item{:href => "#"} диджитал 
-			%a.filter-item{:href => "#"} сайты 
-			%a.filter-item{:href => "#"} приложения 
-			%a.filter-item{:href => "#"} реклама 
-			%a.filter-item{:href => "#"} исследования 
-			%a.filter-item{:href => "#"} аналитика 
-			%a.filter-item{:href => "#"} креативные стратегии 
-			%a.filter-item{:href => "#"} 2013
-			%a.filter-item{:href => "#"} 2014 
+			%a.filter-item{:href => "graph", :id => "graph"} графический дизайн
+			%a.filter-item{:href => "brending", :id => "brending"} брендинг
+			%a.filter-item{:href => "logotypes", :id => "logotypes"} логотипы
+			%a.filter-item{:href => "znaki", :id => "znaki"} знаки
+			%a.filter-item{:href => "stili", :id => "stili"} стили
+			%a.filter-item{:href => "upakovka", :id => "upakovka"} упаковка
+			%a.filter-item{:href => "izdatel", :id => "izdatel"} издательские проекты
+			%a.filter-item{:href => "godotchet", :id => "godotchet"} годовые отчеты
+			%a.filter-item{:href => "knigi", :id => "knigi"} книги 
+			%a.filter-item{:href => "illustracii", :id => "illustracii"} иллюстрации 
+			%a.filter-item{:href => "prezentacii", :id => "prezentacii"} презентации 
+			%a.filter-item{:href => "infografika", :id => "infografika"} инфографика
+			%a.filter-item{:href => "digital", :id => "digital"} диджитал 
+			%a.filter-item{:href => "sites", :id => "sites"} сайты 
+			%a.filter-item{:href => "application", :id => "application"} приложения 
+			%a.filter-item{:href => "reklama", :id => "reklama"} реклама 
+			%a.filter-item{:href => "issledovania", :id => "issledovania"} исследования 
+			%a.filter-item{:href => "analitika", :id => "analitika"} аналитика 
+			%a.filter-item{:href => "kreativstrat", :id => "kreativstrat"} креативные стратегии 
+			%a.filter-item{:href => "g2013", :id => "g2013"} 2013
+			%a.filter-item{:href => "g2014", :id => "g2014"} 2014 
 			%br
 			%span.portfolio-link 
 				%a{:href => "#"} портфолио
 				pdf, 21 МБ
 .items-wrapper		
 	.items#items
-		%a.item.f_graph{:href => "/data/posts/post4", :style => "background: #d77931;", :data => {:id => 'post4'}} 
+		%a.item.f_graph{:href => "/data/posts/post4", :id => "post4", :style => "background: #d77931;", :data => {:id => 'post4'}} 
 			%span.item-title 360
-		%a.item.item_big{:href => "/data/posts/post", :style => "background: url(/images/data/golden.png);", :data => {:id => 'post'}} 
+		%a.item.item_big{:href => "/data/posts/post", :id => "post", :style => "background: url(/images/data/golden.png);", :data => {:id => 'post'}} 
 			%span.item-title золотая вышка
-		%a.item.item_big{:href => "/data/posts/post2", :style => "background: #8c3e3f;", :data => {:id => 'post2'}} 
+		%a.item.item_big.f_brending{:href => "/data/posts/post2", :id => "post2", :style => "background: #8c3e3f;", :data => {:id => 'post2'}} 
 			%span.item-title институт образования
-		%a.item{:href => "/data/posts/post5", :style => "background: #0d53d1;", :data => {:id => 'post5'}} 
+		%a.item.f_graph{:href => "/data/posts/post5", :id => "post5", :style => "background: #0d53d1;", :data => {:id => 'post5'}} 
 			%span.item-title университет, открытый городу
 		/ %a.item{:href => "#", :style => "background: #52abdc;"} 
 		/ 	%span.item-title росатом
 		/ %a.item{:href => "#", :style => "background: #8c3e3f;"} 
 		/ 	%span.item-title институт образования
-		%a.item{:href => "/data/posts/post3", :style => "background: #3cc47c;", :data => {:id => 'post3'}}  
+		%a.item.f_brending{:href => "/data/posts/post3", :id => "post3", :style => "background: #3cc47c;", :data => {:id => 'post3'}}  
 			%span.item-title гохберг
-		%a.item{:href => "/data/posts/post6", :style => "background: #1264fb;", :data => {:id => 'post6'}} 
+		%a.item.f_brending{:href => "/data/posts/post6", :id => "post6", :style => "background: #1264fb;", :data => {:id => 'post6'}} 
 			%span.item-title лицей вшэ
-		%a.item{:href => "/data/posts/post7", :style => "background: #76d7ff;", :data => {:id => 'post7'}} 
+		%a.item{:href => "/data/posts/post7", :id => "post7", :style => "background: #76d7ff;", :data => {:id => 'post7'}} 
 			%span.item-title буклет для сколково
 
-		%a.item.item_big{:href => "/data/posts/post8", :style => "background: #c23a1d;", :data => {:id => 'post8'}} 
+		%a.item.item_big.f_graph{:href => "/data/posts/post8", :id => "post8", :style => "background: #c23a1d;", :data => {:id => 'post8'}} 
 			%span.item-title фирменныий стиль департамента интегрированных коммуникациий
-		%a.item{:href => "/data/posts/post9", :style => "background: #339e2a;", :data => {:id => 'post9'}} 
+		%a.item{:href => "/data/posts/post9", :id => "post9", :style => "background: #339e2a;", :data => {:id => 'post9'}} 
 			%span.item-title департамент культуры г.москвы
 
-		%a.item.item_big{:href => "/data/posts/post10", :style => "background: #e7b73c;", :data => {:id => 'post10'}} 
+		%a.item.item_big.f_brending{:href => "/data/posts/post10", :id => "post10", :style => "background: #e7b73c;", :data => {:id => 'post10'}} 
 			%span.item-title pyrus
-		%a.item{:href => "/data/posts/post11", :style => "background: #df7b00;", :data => {:id => 'post11'}} 
+		%a.item.f_graph{:href => "/data/posts/post11", :id => "post11", :style => "background: #df7b00;", :data => {:id => 'post11'}} 
 			%span.item-title атомная энергия
 
-		%a.item{:href => "/data/posts/post12", :style => "background: #77b4d1;", :data => {:id => 'post12'}} 
+		%a.item.f_graph.f_brending{:href => "/data/posts/post12", :id => "post12", :style => "background: #77b4d1;", :data => {:id => 'post12'}} 
 			%span.item-title годовой отчет ксо
 
 		/ %a.item{:href => "#", :style => "background: #96994f;"} 

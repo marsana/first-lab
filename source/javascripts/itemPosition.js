@@ -6,6 +6,7 @@ var $items, to,
 	row,
 	itemsArr,
 	peopleArr,
+	maxObjHeight = 3000,
 	scrollPosition;
 
 var matrix = [];
@@ -67,63 +68,68 @@ function findSpan(matrix,sizeCol){
 function draw($obj,matrix, itemsArr){
 	var matrix2 = [];
 	$items.each(function(i){
-		size = itemsArr[i].size[0] + margin;
-		sizeCol = Math.floor(size / colum);
-		result = findSpan(matrix,sizeCol);
-		if (result) {
-			itemsArr[i].coor.left = result[1]*colum; 
-			itemsArr[i].coor.top = result[0]*colum;
-		}
-		if ($obj.hasClass('active')) {
-			sizeCol = 1;	
-			result = findSpan(matrix2,sizeCol);	
-		}
-		if (result) {
-			$(this).css({
-				left: itemsArr[i].coor.left + margin,
-				top: itemsArr[i].coor.top + margin
-			});
-			$obj.css({
-				width:'auto'
-			})
-			$obj.parent().css({
-				height: (matrix.length)*colum,
-				width:'auto'
-			})
-			
+		if(!$(this).hasClass('display-none')){
+			size = itemsArr[i].size[0] + margin;
+			sizeCol = Math.floor(size / colum);
+			result = findSpan(matrix,sizeCol);
+			if (result) {
+				itemsArr[i].coor.left = result[1]*colum; 
+				itemsArr[i].coor.top = result[0]*colum;
+			}
 			if ($obj.hasClass('active')) {
-				$obj.css({
-					width: (matrix[0].length)*colum,
-					height: 75
-				})
-				var posTop = $('body').scrollTop();
-				var wrapperItemOffset = $obj.offset().top;
-				var leftOffset = (parseInt($obj.parent().css('width')) - $obj.children().length*65)/2;
-
-				$(this).css({
-					left: result[1]*colum+leftOffset,
-					top: - (wrapperItemOffset - posTop) +70
-				});
-
-			}else if($obj.hasClass('notActive'))  {
-				$obj.css({
-					top: $obj.parent().offset().top
-				})
+				sizeCol = 1;	
+				result = findSpan(matrix2,sizeCol);	
+			}
+			if (result) {
 				$(this).css({
 					left: itemsArr[i].coor.left + margin,
 					top: itemsArr[i].coor.top + margin
 				});
-				$obj.removeClass('notActive');
-				init($obj, [], itemsArr);
+				$obj.css({
+					width:'auto'
+				})
+				$obj.parent().css({
+					height: (matrix.length)*colum,
+					width:'auto'
+				})
+				
+				if ($obj.hasClass('active')) {
+					$obj.css({
+						width: (matrix[0].length)*colum,
+						height: 75
+					})
+					var posTop = $(window).scrollTop();
+					var wrapperItemOffset = $obj.offset().top;
+					var leftOffset = (parseInt($obj.parent().css('width')) - $obj.children().length*65)/2;
+
+					$(this).css({
+						left: result[1]*colum+leftOffset,
+						top: - (wrapperItemOffset - posTop) +70
+					});
+					console.log('-----------------',- (wrapperItemOffset - posTop) +70);
+					console.log(wrapperItemOffset);
+					console.log(posTop);
+
+				}else if($obj.hasClass('notActive'))  {
+					$obj.css({
+						top: $obj.parent().offset().top
+					})
+					$(this).css({
+						left: itemsArr[i].coor.left + margin,
+						top: itemsArr[i].coor.top + margin
+					});
+					$obj.removeClass('notActive');
+					init($obj, [], itemsArr);
+				}
+
+				$(this).css({
+					opacity:1
+				})
+
 			}
-
-			$(this).css({
-				opacity:1
-			})
-
-		}
-		else {
-			console.log('error');
+			else {
+				console.log('error');
+			}
 		}
 	});	
 	return true;	
@@ -140,13 +146,38 @@ function init($obj, martix, itemsArr) {
 			itemsArr[i].linkTo.children().css('display','none');
 		}
 	}else {
+
+			$obj.children().each(function(){
+				var size = $(this).offset().top  + $(this).height();
+				if (maxObjHeight > size){
+						maxObjHeight = size;
+				}
+			});
+
+			// $('.main-wrapper').promise().done(function() {
+			//   $obj.css({
+			// 		top: $obj.parent().offset().top
+			// 	});
+			// 	if ($obj.hasClass('filtred')){
+			// 		$obj.parent().css({
+			// 			height: maxObjHeight + 200
+			// 		});
+			// 	}
+
+			// });
+
 			clearTimeout(to);
+
 			to = setTimeout(function() {
-				
 				$obj.css({
 					top: $obj.parent().offset().top
-				})
-			}, 5);
+				});
+				if ($obj.hasClass('filtred')){
+					$obj.parent().css({
+						height: maxObjHeight + 200
+					});
+				}
+			}, 15);
 		for(var i = 0; i < $obj.children().length; i++){
 			itemsArr[i].linkTo.css({
 				width:itemsArr[i].size[0],

@@ -4,8 +4,18 @@
 /*global $:false */
 'use strict';
 
+function changeHashWithoutScrolling(hash) {
+  var id = hash.replace(/^.*#/, ''),
+      elem = document.getElementById(id)
+  elem.id = id+'-tmp'
+  window.location.hash = hash
+  elem.id = id
+}
+
 $(document).ready(function(){
 
+var location = window.location.hash, buffer_hash;
+console.log(location);
 
 	var item,project,menu,post_id,to,
 		CLASS_ACTIVE = 'active',
@@ -73,7 +83,7 @@ $(document).ready(function(){
 		peopleArr.push(eachItem);
 	});
 
-	//--------------------------------------***--------------------------------------
+	//--------------------------------------magnificPopup--------------------------------------
 	$container.magnificPopup({
 		delegate: 'a',
 		type: 'ajax',
@@ -83,12 +93,31 @@ $(document).ready(function(){
 		mainClass: 'mfp-fade',
 		callbacks: {
 			beforeOpen: function(){
+	//--------------------------------------Отмена фильтрации при открытии--------------------------------------
+				var flag_status;
+				$('.filter_active').removeClass('filter_active'); 
+				$container.removeClass('filtred');
+				$('.item').removeClass('display-none');
+				init($container, [], itemsArr);
+	//--------------------------------------***--------------------------------------
+
+				// buffer_hash = window.location.hash;
 				$container.addClass(CLASS_ACTIVE);
 				$menu.addClass(CLASS_SUB_MENU);
 				$post.addClass(CLASS_ACTIVE);
 				init($container, [], itemsArr);
 			},
 			open: function(){
+				var mp = $.magnificPopup.instance,
+						t = $(mp.currItem.el[0]);
+					
+					if(history.pushState) {	
+					var redirect = '/#'+ t.data('id');
+					window.history.pushState('', '', redirect);
+				}else{
+					changeHashWithoutScrolling(t.data('id'))
+					// window.location.hash = t.data('id');
+				}
 				$item.css('transition','all 0s');
 
 				$('.mfp-wrap').on("scroll", function(){
@@ -101,21 +130,41 @@ $(document).ready(function(){
 						})
 					}
 				});
+				// $('.mfp-wrap').trigger('scroll');
 			},
 			beforeClose: function(){
 				$item.css('transition','all .5s');
+
+				if(history.pushState) {		
+					// var redirect = '/#'+ buffer_hash;
+					var redirect = '/#';
+					history.pushState('', '', redirect);
+				}else{
+					changeHashWithoutScrolling('/#');
+					// changeHashWithoutScrolling(buffer_hash);
+
+
+				}
+
 			},
 			change: function(){
+				var mp = $.magnificPopup.instance,
+						t = $(mp.currItem.el[0]);
+				if(history.pushState) {		
+					var redirect = '/#'+ t.data('id');
+					window.history.pushState('', '', redirect);
+				}else{
+					changeHashWithoutScrolling(t.data('id'))
+					// window.location.hash = t.data('id');
+				}
 				if ($('.mfp-wrap').hasClass('mfp-ready')){
 					// alert(1);
 					$('.mfp-container').addClass('mfp-figure');
 					clearTimeout(to);
 					to = setTimeout(function() {
 						$('.mfp-container').removeClass('mfp-figure');	
-						
 					}, 300);			
 				}
-
 			}
 		}
 	});
@@ -124,15 +173,58 @@ $(document).ready(function(){
 	$(document).on("click", "a.anchor", function(e){	
 		e.preventDefault();	
 		var idtop = $($(this).attr("href")).offset().top-200;
-		$('html,body').animate({scrollTop: idtop}, A_DURATION);
 		if ($post.hasClass(CLASS_ACTIVE)) closeProgect();
+		$('html,body').animate({scrollTop: idtop}, A_DURATION);
+
 	});
+
+	var status_filter = false;
 
 	$(document).on("click", ".filter a", function(e){	
 		e.preventDefault();	
-		var idtop = $('.what').offset().top-200;
-		$('html,body').animate({scrollTop: idtop}, A_DURATION);
 		if ($post.hasClass(CLASS_ACTIVE)) closeProgect();
+		
+		if(history.pushState) {
+			var redirect = '/';
+			history.pushState('', '', redirect);
+		}
+		else{
+			changeHashWithoutScrolling('')
+
+			// window.location.hash = '';
+		}
+		var idtop = $('.what').offset().top-200; // где бы ни были отскролить к итемам		
+		$('html,body').animate({scrollTop: idtop}, A_DURATION);
+
+		var flag_status;
+		if ($(this).hasClass('filter_active')) flag_status = true;
+		$('.filter_active').removeClass('filter_active'); 
+
+		$container.removeClass('filtred');
+		$('.item').removeClass('display-none');
+		if (!flag_status){
+			$(this).addClass('filter_active')
+			var filter_search = $(this).attr('href');
+			$container.children().each(function(){
+				if(!$(this).hasClass('f_'+filter_search)){
+				
+					if(history.pushState) {
+
+						var redirect = '/#'+ filter_search;
+						window.history.pushState('', '', redirect);
+					}else{
+					changeHashWithoutScrolling('')
+
+					// window.location.hash = filter_search;
+					}
+					$container.addClass('filtred');
+					$(this).addClass('display-none');
+				}
+			});			
+
+		}
+
+		init($container, [], itemsArr);
 	});
 
 	$("body").on("click", ".close", function(){
@@ -152,12 +244,28 @@ $(document).ready(function(){
 		$container.children().addClass('item-translate');
 		$peopleItems.children().addClass('item-translate');
 		if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
-		// init($peopleItems, [], peopleArr);
-		// init($container, [], itemsArr);
-
 	});
 
 	if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
-	// init($peopleItems, [], peopleArr);
-	// init($container, [], itemsArr);
+
+
+	// $('html').promise().done(function(){
+		if(location){
+			// alert(1);
+			console.log($(location	));
+			// console.log('777777777777777777777',idtop);
+			setTimeout(function() {
+				var idtop = $('.what').offset().top-200; // где бы ни были отскролить к итемам		
+				$(window).scrollTop(idtop);
+				setTimeout(function() {
+					$(location).trigger( "click" );
+					$(window).trigger('scroll');
+				}, 1000);
+				
+			}, 100);
+			// $(location).trigger( "click" );
+			
+		}
+	// });
+
 });
