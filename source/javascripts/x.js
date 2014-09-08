@@ -27,6 +27,7 @@ console.log(location);
 		$item = $('.item'),
 		$post = $('#post'),
 		$menu = $('.menu'),
+		$menu2 = $('.menu2'),
 		menuChapter = $('.chapter'),
 		postTopCash = 0;
 	var itemSizeSmall = 35;
@@ -36,7 +37,7 @@ console.log(location);
 		$.magnificPopup.close()
 		$container.removeClass('is__small')
 		$post.removeClass(CLASS_ACTIVE);
-		$menu.removeClass(CLASS_SUB_MENU);
+		$menu2.removeClass(CLASS_SUB_MENU);
 		$container.removeClass(CLASS_ACTIVE);
 		$container.addClass('notActive');
 		init($container, [], itemsArr);
@@ -83,9 +84,28 @@ console.log(location);
 		peopleArr.push(eachItem);
 	});
 
+	$(document).on("click", ".close1", function(e){	
+		if ($('.mfp-wrap').hasClass('mfp-ready')){
+			e.preventDefault();	
+			closeProgect();
+		};
+	});
+
+
+	$(document).on("click", ".logotype", function(e){	
+		// e.preventDefault();	
+		// alert(1);
+		var idtop = $('.header').offset().top-200;
+		if ($post.hasClass(CLASS_ACTIVE)) {
+			// alert(1);
+			closeProgect();
+			}
+		$('html,body').animate({scrollTop: idtop}, A_DURATION);
+
+	});
 	//--------------------------------------magnificPopup--------------------------------------
 	$container.magnificPopup({
-		delegate: 'a',
+		delegate: '.magpop',
 		type: 'ajax',
 		alignTop: true,
 		overflowY: 'scroll',
@@ -98,26 +118,18 @@ console.log(location);
 				$('.filter_active').removeClass('filter_active'); 
 				$container.removeClass('filtred');
 				$('.item').removeClass('display-none');
+				
 				init($container, [], itemsArr);
+
 	//--------------------------------------***--------------------------------------
 
 				// buffer_hash = window.location.hash;
 				$container.addClass(CLASS_ACTIVE);
-				$menu.addClass(CLASS_SUB_MENU);
+				$menu2.addClass(CLASS_SUB_MENU);
 				$post.addClass(CLASS_ACTIVE);
 				init($container, [], itemsArr);
 			},
 			open: function(){
-				var mp = $.magnificPopup.instance,
-						t = $(mp.currItem.el[0]);
-					
-					if(history.pushState) {	
-					var redirect = '/#'+ t.data('id');
-					window.history.pushState('', '', redirect);
-				}else{
-					changeHashWithoutScrolling(t.data('id'))
-					// window.location.hash = t.data('id');
-				}
 				$item.css('transition','all 0s');
 
 				$('.mfp-wrap').on("scroll", function(){
@@ -130,9 +142,17 @@ console.log(location);
 						})
 					}
 				});
+
+
 				// $('.mfp-wrap').trigger('scroll');
+				return true;
 			},
 			beforeClose: function(){
+				$('.close1').removeClass('close1');
+				$container.children().addClass('magpop');
+				// $('.mfp-close').removeClass('mfp-close');
+
+
 				$item.css('transition','all .5s');
 
 				if(history.pushState) {		
@@ -148,8 +168,15 @@ console.log(location);
 
 			},
 			change: function(){
+				// $container.children().addClass('magpop');
+				
 				var mp = $.magnificPopup.instance,
 						t = $(mp.currItem.el[0]);
+
+				t.removeClass('magpop');
+				t.addClass('mfp-close');
+				t.addClass('close1');
+
 				if(history.pushState) {		
 					var redirect = '/#'+ t.data('id');
 					window.history.pushState('', '', redirect);
@@ -158,13 +185,31 @@ console.log(location);
 					// window.location.hash = t.data('id');
 				}
 				if ($('.mfp-wrap').hasClass('mfp-ready')){
-					// alert(1);
+					// alert(2);
+					$('.close1').removeClass('close1');
+				
+					$container.children().addClass('magpop');
+					// $('.mfp-close').removeClass('mfp-close');
+					var mp = $.magnificPopup.instance,
+							t = $(mp.currItem.el[0]);
+					t.removeClass('magpop');
+					t.addClass('close1');
+					// t.addClass('mfp-close');
+
 					$('.mfp-container').addClass('mfp-figure');
 					clearTimeout(to);
 					to = setTimeout(function() {
 						$('.mfp-container').removeClass('mfp-figure');	
 					}, 300);			
 				}
+								if ($('.mfp-container').hasClass('mfp-s-ready')){
+					// alert(401);
+					t.removeClass('magpop');
+					t.addClass('mfp-close');
+					t.addClass('close1');	
+
+
+				};
 			}
 		}
 	});

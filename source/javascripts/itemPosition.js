@@ -106,9 +106,9 @@ function draw($obj,matrix, itemsArr){
 						left: result[1]*colum+leftOffset,
 						top: - (wrapperItemOffset - posTop) +70
 					});
-					console.log('-----------------',- (wrapperItemOffset - posTop) +70);
-					console.log(wrapperItemOffset);
-					console.log(posTop);
+					// console.log('-----------------',- (wrapperItemOffset - posTop) +70);
+					// console.log(wrapperItemOffset);
+					// console.log(posTop);
 
 				}else if($obj.hasClass('notActive'))  {
 					$obj.css({
