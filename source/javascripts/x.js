@@ -13,6 +13,11 @@ function changeHashWithoutScrolling(hash) {
 }
 
 $(document).ready(function(){
+
+
+	document.addEventListener('backbutton', function(){
+		alert(1);
+	});
 	$(window).keyup(function(e){
 		if(e.keyCode == 8){
 			if(location){

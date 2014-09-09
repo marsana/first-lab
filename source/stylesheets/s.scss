@@ -246,15 +246,22 @@ a {
 	transition: all 1s;
 	// transition: background-image .3s !important;
 	span {
-		opacity: 0;
+		position: absolute;
+		height: 110px;
+		width: 170px;		
+		opacity: .95;
+		margin: 0;
+		margin-left: -85px;
+		border-radius: 50%;
 		padding-top: 60px;
 		transition: opacity .5s;
 	}
 	&:hover {
-		background-image: none !important;
+
+		// background-image: none !important;
 		transition: background-image .3s !important;
 		span{
-			opacity: 1;
+			opacity: 0;
 		}
 	}
 }
