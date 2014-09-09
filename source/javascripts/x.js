@@ -13,35 +13,24 @@ function changeHashWithoutScrolling(hash) {
 }
 
 $(document).ready(function(){
-
 	$(window).keyup(function(e){
 		if(e.keyCode == 8){
-
-		if(location){
-			// alert(1);
-			console.log($(location	));
-			// console.log('777777777777777777777',idtop);
-			setTimeout(function() {
-				var idtop = $('.what').offset().top-200; // где бы ни были отскролить к итемам		
-				$(window).scrollTop(idtop);
+			if(location){
+				console.log($(location	));
 				setTimeout(function() {
-					$(location).trigger( "click" );
-					$(window).trigger('scroll');
-				}, 1000);
-				
-			}, 100);
-			// $(location).trigger( "click" );
-			
-		}
-			location.reload();
+					var idtop = $('.what').offset().top-200;	
+					$(window).scrollTop(idtop);
+					setTimeout(function() {
+						$(location).trigger( "click" );
+						$(window).trigger('scroll');
+					}, 1000);
+					
+				}, 100);
+			}
 		}
 	}) 
-			
- 
 
-
-var location = window.location.hash, buffer_hash;
-console.log(location);
+	var location = window.location.hash, buffer_hash;
 
 	var item,project,menu,post_id,to,
 		CLASS_ACTIVE = 'active',
@@ -149,7 +138,6 @@ console.log(location);
 
 	//--------------------------------------***--------------------------------------
 
-				// buffer_hash = window.location.hash;
 				$container.addClass(CLASS_ACTIVE);
 				$menu2.addClass(CLASS_SUB_MENU);
 				$post.addClass(CLASS_ACTIVE);
@@ -169,33 +157,22 @@ console.log(location);
 					}
 				});
 
-
-				// $('.mfp-wrap').trigger('scroll');
 				return true;
 			},
 			beforeClose: function(){
 				$('.close1').removeClass('close1');
 				$container.children().addClass('magpop');
-				// $('.mfp-close').removeClass('mfp-close');
-
-
 				$item.css('transition','all .5s');
 
 				if(history.pushState) {		
-					// var redirect = '/#'+ buffer_hash;
 					var redirect = '/#';
 					history.pushState('', '', redirect);
 				}else{
 					changeHashWithoutScrolling('/#');
-					// changeHashWithoutScrolling(buffer_hash);
-
-
 				}
 
 			},
-			change: function(){
-				// $container.children().addClass('magpop');
-				
+			change: function(){			
 				var mp = $.magnificPopup.instance,
 						t = $(mp.currItem.el[0]);
 
@@ -208,20 +185,15 @@ console.log(location);
 					window.history.pushState('', '', redirect);
 				}else{
 					changeHashWithoutScrolling(t.data('id'))
-					// window.location.hash = t.data('id');
 				}
 				if ($('.mfp-wrap').hasClass('mfp-ready')){
-					// alert(2);
 					$('.close1').removeClass('close1');
 				
 					$container.children().addClass('magpop');
-					// $('.mfp-close').removeClass('mfp-close');
 					var mp = $.magnificPopup.instance,
 							t = $(mp.currItem.el[0]);
 					t.removeClass('magpop');
 					t.addClass('close1');
-					// t.addClass('mfp-close');
-
 					$('.mfp-container').addClass('mfp-figure');
 					clearTimeout(to);
 					to = setTimeout(function() {
@@ -229,7 +201,6 @@ console.log(location);
 					}, 300);			
 				}
 								if ($('.mfp-container').hasClass('mfp-s-ready')){
-					// alert(401);
 					t.removeClass('magpop');
 					t.addClass('mfp-close');
 					t.addClass('close1');	
@@ -261,10 +232,8 @@ console.log(location);
 		}
 		else{
 			changeHashWithoutScrolling('')
-
-			// window.location.hash = '';
 		}
-		var idtop = $('.what').offset().top-200; // где бы ни были отскролить к итемам		
+		var idtop = $('.what').offset().top-200;
 		$('html,body').animate({scrollTop: idtop}, A_DURATION);
 
 		var flag_status;
@@ -285,8 +254,6 @@ console.log(location);
 						window.history.pushState('', '', redirect);
 					}else{
 					changeHashWithoutScrolling('')
-
-					// window.location.hash = filter_search;
 					}
 					$container.addClass('filtred');
 					$(this).addClass('display-none');
@@ -318,25 +285,15 @@ console.log(location);
 	});
 
 	if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
-
-
-	// $('html').promise().done(function(){
 		if(location){
-			// alert(1);
 			console.log($(location	));
-			// console.log('777777777777777777777',idtop);
 			setTimeout(function() {
-				var idtop = $('.what').offset().top-200; // где бы ни были отскролить к итемам		
+				var idtop = $('.what').offset().top-200;
 				$(window).scrollTop(idtop);
 				setTimeout(function() {
 					$(location).trigger( "click" );
 					$(window).trigger('scroll');
 				}, 1000);
-				
 			}, 100);
-			// $(location).trigger( "click" );
-			
 		}
-	// });
-
 });

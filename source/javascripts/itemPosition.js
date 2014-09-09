@@ -15,7 +15,7 @@ function calculate($obj, itemsArr){
 	$items = $obj.children();
 	width = $obj.parent().parent().width()-150;
 	$obj.width(width);
-	colum = 3000; //некое максимальное число, для поиска минимального значения
+	colum = 3000;
 	for(var i = 0; i < $items.length; i++){
 		size = itemsArr[i].size[0] + margin;
 		if (colum > size){
@@ -106,10 +106,6 @@ function draw($obj,matrix, itemsArr){
 						left: result[1]*colum+leftOffset,
 						top: - (wrapperItemOffset - posTop) +70
 					});
-					// console.log('-----------------',- (wrapperItemOffset - posTop) +70);
-					// console.log(wrapperItemOffset);
-					// console.log(posTop);
-
 				}else if($obj.hasClass('notActive'))  {
 					$obj.css({
 						top: $obj.parent().offset().top
@@ -153,19 +149,6 @@ function init($obj, martix, itemsArr) {
 						maxObjHeight = size;
 				}
 			});
-
-			// $('.main-wrapper').promise().done(function() {
-			//   $obj.css({
-			// 		top: $obj.parent().offset().top
-			// 	});
-			// 	if ($obj.hasClass('filtred')){
-			// 		$obj.parent().css({
-			// 			height: maxObjHeight + 200
-			// 		});
-			// 	}
-
-			// });
-
 			clearTimeout(to);
 
 			to = setTimeout(function() {

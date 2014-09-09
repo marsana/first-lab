@@ -150,19 +150,19 @@ a {
 	.header-link.active-menu {@include sbgs(head_on);}
 	.header-link {@include sbgs(head_off);}
 	.header-link span {@include sbgs(head_on); opacity: 0; display: block; transition: opacity .2s;}
-	.header-link span:hover {opacity: 1;}
+	.header-link span:hover {opacity: 1; transition: opacity .2s;}
 	.who-link.active-menu {@include sbgs(who_on);}
 	.who-link {@include sbgs(who_off);}
 	.who-link span {@include sbgs(who_on); opacity: 0; display: block; transition: opacity .2s;}
-	.who-link span:hover {opacity: 1;}
+	.who-link span:hover {opacity: 1; transition: opacity .2s;}
 	.how-link.active-menu {@include sbgs(how_on);}
 	.how-link {@include sbgs(how_off);}
 	.how-link span {@include sbgs(how_on); opacity: 0; display: block; transition: opacity .2s;}
-	.how-link span:hover {opacity: 1;}
+	.how-link span:hover {opacity: 1; transition: opacity .2s;}
 	.what-link.active-menu {@include sbgs(what_on);}
 	.what-link {@include sbgs(what_off);}
 	.what-link span {@include sbgs(what_on); opacity: 0; display: block; transition: opacity .2s;}
-	.what-link span:hover {opacity: 1;}
+	.what-link span:hover {opacity: 1; transition: opacity .2s;}
 }
 
 
