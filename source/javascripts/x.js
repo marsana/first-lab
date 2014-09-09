@@ -14,6 +14,32 @@ function changeHashWithoutScrolling(hash) {
 
 $(document).ready(function(){
 
+	$(window).keyup(function(e){
+		if(e.keyCode == 8){
+
+		if(location){
+			// alert(1);
+			console.log($(location	));
+			// console.log('777777777777777777777',idtop);
+			setTimeout(function() {
+				var idtop = $('.what').offset().top-200; // где бы ни были отскролить к итемам		
+				$(window).scrollTop(idtop);
+				setTimeout(function() {
+					$(location).trigger( "click" );
+					$(window).trigger('scroll');
+				}, 1000);
+				
+			}, 100);
+			// $(location).trigger( "click" );
+			
+		}
+			location.reload();
+		}
+	}) 
+			
+ 
+
+
 var location = window.location.hash, buffer_hash;
 console.log(location);
 

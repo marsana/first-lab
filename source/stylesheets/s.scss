@@ -243,8 +243,8 @@ a {
 	font-size: 20px;
 	font-weight: 600;
 	color: #fff;
-	transition:all 1s;
-	transition: background-image .3s !important;
+	transition: all 1s;
+	// transition: background-image .3s !important;
 	span {
 		opacity: 0;
 		padding-top: 60px;
@@ -337,10 +337,10 @@ a {
 	
 	&.active {
 		.item {
-			transition: background-color .3s !important;
+			transition: all .3s !important;
 			&:hover{
 				background-color: #000 !important;
-				transition: background-color .3s !important;
+				transition: all .3s !important;
 			}
 		}
 
