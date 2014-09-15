@@ -150,7 +150,7 @@ $(document).ready(function(){
 			},
 			open: function(){
 				$item.css('transition','all 0s');
-
+				$(window).trigger('resize');
 				// $('.mfp-wrap').on("scroll", function(){
 				// 	var posTop = $('.article_inner').offset().top;
 				// 	var wrapperItemOffset = $('.items').offset().top;
