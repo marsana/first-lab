@@ -26,8 +26,8 @@ page_class: 'index'
 					%span{:style => "background: #897f7b;"} павел<br /> борисовский
 				%div.people-item.filter-item{:href => "#", :style => "background: url(/images/data/H68A4815.jpg);"} 
 					%span{:style => "background: #a7abab;"} игорь<br /> гурович
-				%div.people-item.filter-item{:href => "#", :style => "background: url(/images/data/H68A8777.jpg);"} 
-					%span{:style => "background: #7f8f8f;"} алена<br /> дорохина
+				/ %div.people-item.filter-item{:href => "#", :style => "background: url(/images/data/H68A8777.jpg);"} 
+				/ 	%span{:style => "background: #7f8f8f;"} алена<br /> дорохина
 				%div.people-item.filter-item{:href => "#", :style => "background: url(/images/data/H68A7227.jpg);"} 
 					%span{:style => "background: #897f7b;"} сергей<br /> клещев
 				%div.people-item.filter-item{:href => "#", :style => "background: url(/images/data/H68A3551.jpg);"} 
@@ -105,39 +105,45 @@ page_class: 'index'
 				pdf, 21 МБ
 .items-wrapper		
 	.items#items
-		%a.item.magpop.f_graph{:href => "/data/posts/post4", :id => "post4", :style => "background-color: #d77931;", :data => {:id => 'post4'}} 
-			%span.item-title 360
-		%a.item.magpop.item_big{:href => "/data/posts/post", :id => "post", :style => "background-color: #ffb8b8;", :data => {:id => 'post'}} 
-			%span.item-title золотая вышка
-		%a.item.magpop.item_big.f_brending{:href => "/data/posts/post2", :id => "post2", :style => "background-color: #8c3e3f;", :data => {:id => 'post2'}} 
-			%span.item-title институт образования
-		%a.item.magpop.f_graph{:href => "/data/posts/post5", :id => "post5", :style => "background-color: #0d53d1;", :data => {:id => 'post5'}} 
-			%span.item-title университет, открытый городу
+		/ %a.item.magpop.f_graph{:href => "/data/posts/post4", :id => "post4", :style => "background-color: #d77931;", :data => {:id => 'post4'}} 
+		/ 	%span.item-title 360
+		/ %a.item.magpop.f_graph{:href => "/data/posts/post5", :id => "post5", :style => "background-color: #0d53d1;", :data => {:id => 'post5'}} 
+		/ 	%span.item-title университет, открытый городу
 		/ %a.item{:href => "#", :style => "background: #52abdc;"} 
 		/ 	%span.item-title росатом
 		/ %a.item{:href => "#", :style => "background: #8c3e3f;"} 
 		/ 	%span.item-title институт образования
-		%a.item.magpop.f_brending{:href => "/data/posts/post3", :id => "post3", :style => "background-color: #3cc47c;", :data => {:id => 'post3'}}  
-			%span.item-title гохберг
-		%a.item.magpop.f_brending{:href => "/data/posts/post6", :id => "post6", :style => "background-color: #1264fb;", :data => {:id => 'post6'}} 
-			%span.item-title лицей вшэ
-		%a.item.magpop{:href => "/data/posts/post7", :id => "post7", :style => "background-color: #76d7ff;", :data => {:id => 'post7'}} 
-			%span.item-title буклет для сколково
-
-		%a.item.magpop.item_big.f_graph{:href => "/data/posts/post8", :id => "post8", :style => "background-color: #c23a1d;", :data => {:id => 'post8'}} 
-			%span.item-title фирменныий стиль департамента интегрированных коммуникациий
-		%a.item.magpop{:href => "/data/posts/post9", :id => "post9", :style => "background-color: #339e2a;", :data => {:id => 'post9'}} 
-			%span.item-title департамент культуры г.москвы
-
-		%a.item.magpop.item_big.f_brending{:href => "/data/posts/post10", :id => "post10", :style => "background-color: #e7b73c;", :data => {:id => 'post10'}} 
-			%span.item-title pyrus
-		%a.item.magpop.f_graph{:href => "/data/posts/post11", :id => "post11", :style => "background-color: #df7b00;", :data => {:id => 'post11'}} 
-			%span.item-title атомная энергия
-
-		%a.item.magpop.f_graph.f_brending{:href => "/data/posts/post12", :id => "post12", :style => "background-color: #77b4d1;", :data => {:id => 'post12'}} 
-			%span.item-title годовой отчет ксо
-
 		/ %a.item{:href => "#", :style => "background: #96994f;"} 
 		/ 	%span.item-title нискольково
+
+
+		%a.item.magpop.f_brending{:href => "/data/posts/post6", :id => "post6", :style => "background-color: #1264fb;", :data => {:id => 'post6'}} 
+			%span.item-title Фирменный стиль Лицея НИУ ВШЭ
+		%a.item.magpop.item_big{:href => "/data/posts/post", :id => "post", :style => "background-color: #ffb8b8;", :data => {:id => 'post'}} 
+			%span.item-title Фирменный стиль премии «Золотая вышка»
+		%a.item.magpop.item_big.f_graph{:href => "/data/posts/post8", :id => "post8", :style => "background-color: #c23a1d;", :data => {:id => 'post8'}} 
+			%span.item-title Фирменный стиль «Отделения интегрированных коммуникаций»
+		%a.item.magpop.item_big.f_brending{:href => "/data/posts/post10", :id => "post10", :style => "background-color: #e7b73c;", :data => {:id => 'post10'}} 
+			%span.item-title Фирменный стиль PYRUS
+		%a.item.magpop.f_brending{:href => "/data/posts/post1", :id => "post1", :style => "background-color: #2bb6ac;", :data => {:id => 'post1'}} 
+			%span.item-title Дизайн сайта  PYRUS
+		%a.item.magpop.f_brending{:href => "/data/posts/post13", :id => "post13", :style => "background-color: #0b4dd9;", :data => {:id => 'post13'}} 
+			%span.item-title Лекции в культурном центре ЗИЛ
+		%a.item.magpop.f_graph{:href => "/data/posts/post11", :id => "post11", :style => "background-color: #df7b00;", :data => {:id => 'post11'}} 
+			%span.item-title Буклет для информационных центров по атомной энергии.
+		%a.item.magpop.item_big.f_brending{:href => "/data/posts/post2", :id => "post2", :style => "background-color: #8c3e3f;", :data => {:id => 'post2'}} 
+			%span.item-title Брендбук «Института образования НИУ ВШЭ»
+		%a.item.magpop.f_brending{:href => "/data/posts/post3", :id => "post3", :style => "background-color: #3cc47c;", :data => {:id => 'post3'}}  
+			%span.item-title Сайт для института статистических исследований и экономики знаний
+		%a.item.magpop.f_graph.f_brending{:href => "/data/posts/post12", :id => "post12", :style => "background-color: #77b4d1;", :data => {:id => 'post12'}} 
+			%span.item-title Годовой отчет КСО группы Внешеэкономбанка
+		%a.item.magpop.f_graph.f_brending{:href => "/data/posts/post5", :id => "post5", :style => "background-color: #64bebf;", :data => {:id => 'post5'}} 
+			%span.item-title Публичные лекции в Санкт-Петербурге
+		%a.item.item_big.magpop{:href => "/data/posts/post9", :id => "post9", :style => "background-color: #339e2a;", :data => {:id => 'post9'}} 
+			%span.item-title Презентация государственноий программы «Культура москвы 2012-2018», ДЕПАРТАМЕНТ КУЛЬТУРЫ г. МОСКВЫ
+		%a.item.magpop{:href => "/data/posts/post14", :id => "post14", :style => "background-color: #6862a2;", :data => {:id => 'post14'}} 
+			%span.item-title Буклет для института статистических исследований и экономики знаний	
+		%a.item.magpop{:href => "/data/posts/post7", :id => "post7", :style => "background-color: #76d7ff;", :data => {:id => 'post7'}} 
+			%span.item-title Буклет для Сколково
 
 #post.article

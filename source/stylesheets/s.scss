@@ -372,6 +372,8 @@ a {
 	background: rgba(9, 0, 0, .3);
 	color: #fff;
 	opacity: 0;
+	font-size: 60%;
+	text-transform: lowercase;
 	transition:all .5s;
 	&:hover {
 		color: white;
@@ -493,6 +495,7 @@ a {
 }
 
 .article_inner{
+	h2 {text-transform: lowercase;}
 	.description{
 		padding-left: 155px; 
 	}
