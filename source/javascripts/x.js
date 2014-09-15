@@ -151,16 +151,16 @@ $(document).ready(function(){
 			open: function(){
 				$item.css('transition','all 0s');
 
-				$('.mfp-wrap').on("scroll", function(){
-					var posTop = $('.article_inner').offset().top;
-					var wrapperItemOffset = $('.items').offset().top;
+				// $('.mfp-wrap').on("scroll", function(){
+				// 	var posTop = $('.article_inner').offset().top;
+				// 	var wrapperItemOffset = $('.items').offset().top;
 
-					if ($container.hasClass(CLASS_ACTIVE)) {
-						$container.children().css({
-							top: - (wrapperItemOffset - posTop) -110
-						})
-					}
-				});
+				// 	if ($container.hasClass(CLASS_ACTIVE)) {
+				// 		$container.children().css({
+				// 			top: - (wrapperItemOffset - posTop) -110
+				// 		})
+				// 	}
+				// });
 
 				return true;
 			},

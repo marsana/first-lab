@@ -249,7 +249,7 @@ a {
 		position: absolute;
 		height: 110px;
 		width: 170px;		
-		opacity: .95;
+		opacity: .7;
 		margin: 0;
 		margin-left: -85px;
 		border-radius: 50%;
@@ -343,6 +343,17 @@ a {
 	}
 	
 	&.active {
+		&:before{
+			content: '';
+			height: 140px;
+			background-color: #fff;
+			width: 100%;
+			display: block;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+		}
+		// background-color: #fff;
 		.item {
 			transition: all .3s !important;
 			&:hover{
