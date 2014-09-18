@@ -289,7 +289,7 @@ $(document).ready(function(){
 		if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
 	});
 
-	if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
+	if (init($peopleItems, [], peopleArr)) setTimeout(function(){init($container, [], itemsArr)},500);
 		if(location){
 			console.log($(location	));
 			setTimeout(function() {

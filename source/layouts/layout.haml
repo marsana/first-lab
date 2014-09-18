@@ -7,8 +7,7 @@
 			= data.page.title
 		%link{:href => "stylesheets/magnific-popup.css", :rel => "stylesheet"}
 		%link{:href => "stylesheets/s.css", :rel => "stylesheet"}
-		%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
-		%script{:src => "javascripts/x.js"}
+		
 		
 		%meta{:name => "viewport", :content => "width=device-width"}/ 
 		/ [if lte IE 8]
@@ -22,3 +21,5 @@
 			= partial :menu
 			.main
 				= yield
+		%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+		%script{:src => "javascripts/x.js"}

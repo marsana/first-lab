@@ -1,0 +1,179 @@
+@media only screen and (max-width: 767px) {
+  /* line 23, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .wrapper {
+    margin: 70px auto;
+    padding: 0 10px;
+  }
+
+  /* line 27, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .main {
+    margin-left: 80px;
+  }
+
+  /* line 30, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .logo {
+    display: none;
+  }
+
+  /* line 33, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .descriptions {
+    margin-bottom: 40px;
+  }
+
+  /* line 36, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .infoblock.col {
+    width: 100%;
+  }
+
+  /* line 39, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  /* line 42, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .item-title {
+    font-size: 14px;
+  }
+
+  /* line 45, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .item {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+  }
+
+  /* line 50, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .chapter {
+    margin-bottom: 60px;
+  }
+
+  /* line 56, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .article_inner img {
+    width: 100%;
+  }
+
+  /* line 59, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .article_inner .description {
+    padding: 0 10px 0 90px;
+    margin: 0;
+  }
+
+  /* line 63, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .logotype {
+    display: none;
+  }
+
+  /* line 66, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .items.is__ready.active {
+    display: none;
+  }
+
+  /* line 69, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .mfp-content {
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (max-width: mob) {
+  /* line 23, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .wrapper {
+    margin: 70px auto;
+    padding: 0 10px;
+  }
+
+  /* line 27, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .main {
+    margin-left: 80px;
+  }
+
+  /* line 30, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .logo {
+    display: none;
+  }
+
+  /* line 33, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .descriptions {
+    margin-bottom: 40px;
+  }
+
+  /* line 36, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .infoblock.col {
+    width: 100%;
+  }
+
+  /* line 39, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  /* line 42, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .item-title {
+    font-size: 14px;
+  }
+
+  /* line 45, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .item {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+  }
+
+  /* line 50, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .chapter {
+    margin-bottom: 60px;
+  }
+
+  /* line 56, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .article_inner img {
+    width: 100%;
+  }
+
+  /* line 59, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .article_inner .description {
+    padding: 0 10px 0 90px;
+    margin: 0;
+  }
+
+  /* line 63, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .logotype {
+    display: none;
+  }
+
+  /* line 66, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .items.is__ready.active {
+    display: none;
+  }
+
+  /* line 69, /Users/kozlov/Work/hse-lab-new/source/stylesheets/mobile.scss */
+
+  .mfp-content {
+    padding-top: 80px;
+  }
+}
