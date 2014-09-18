@@ -1,31 +1,6 @@
 @import "normalize";
 @import "compass/css3/background-size";
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('../fonts/proximanova-reg.eot');
-	src: url('../fonts/proximanova-reg.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/proximanova-reg.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('../fonts/proximanova-sbold.eot');
-	src: url('../fonts/proximanova-sbold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/proximanova-sbold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('../fonts/proximanova-bold.eot');
-	src: url('../fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/proximanova-bold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
-
+@import "font";
 $fontDefault: 'Proxima Nova', Helvetica, Arial, sans-serif;
 
 $colorMain: #C0122B;
@@ -87,6 +62,9 @@ body, input, button, textarea {
 body {
 	font: 18px 'Proxima Nova', Arial, sans-serif;
 }
+.article_inner .filter{
+  color: #999;
+}
 a {
 	color: #000;
 	text-decoration: none;
@@ -98,6 +76,12 @@ a {
 		border-color: #005fff	;
 
 	}
+}
+.article_inner a.filter-item{
+	color: #999;
+}
+.article_inner a.filter-item:hover{
+	color:#005fff;
 }
 
 .wrapper {
@@ -322,6 +306,9 @@ a {
 }
 .portfolio-link {
 	margin-bottom: 150px;
+	color: #999;
+	@include lightDecoration();
+
 }
 .filter_active {
 	color:#005fff;
@@ -331,9 +318,7 @@ a {
 	opacity: 0 !important;
 	transition: opacity .2s;
 }
-.portfolio-link {
-	color: #999;
-}
+
 .items-wrapper	{position: static; margin: 0 auto;}
 .items {
 	position: absolute;
@@ -565,3 +550,6 @@ a {
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
 }
+
+
+@import "mobile";
