@@ -8,3 +8,4 @@ gem "puma"
 
 gem "middleman-livereload"
 gem "middleman-autoprefixer"
+gem "therubyracer"
