@@ -52,6 +52,8 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :partials_dir, 'shared'
 
+set :prefix, "/lab"
+
 # activate :livereload
 activate :autoprefixer
 
