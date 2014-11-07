@@ -52,7 +52,7 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :partials_dir, 'shared'
 
-activate :livereload
+# activate :livereload
 activate :autoprefixer
 
 # Build-specific configuration
