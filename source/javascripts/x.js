@@ -2,7 +2,12 @@
 // = require jquery.magnific-popup
 
 /*global $:false */
+
 'use strict';
+
+var prefix = window.location.pathname;
+if(prefix[prefix.length-1] == '/')
+	prefix = prefix.slice(0, prefix.length-1);
 
 function changeHashWithoutScrolling(hash) {
   var id = hash.replace(/^.*#/, ''),
@@ -170,10 +175,10 @@ $(document).ready(function(){
 				$item.css('transition','all .5s');
 
 				if(history.pushState) {		
-					var redirect = '/#';
+					var redirect = prefix + '/#';
 					history.pushState('', '', redirect);
 				}else{
-					changeHashWithoutScrolling('/#');
+					changeHashWithoutScrolling(prefix + '/#');
 				}
 
 			},
@@ -186,7 +191,7 @@ $(document).ready(function(){
 				t.addClass('close1');
 
 				if(history.pushState) {		
-					var redirect = '/#'+ t.data('id');
+					var redirect = prefix + '/#'+ t.data('id');
 					window.history.pushState('', '', redirect);
 				}else{
 					changeHashWithoutScrolling(t.data('id'))
@@ -255,7 +260,7 @@ $(document).ready(function(){
 				
 					if(history.pushState) {
 
-						var redirect = '/#'+ filter_search;
+						var redirect = prefix + '/#'+ filter_search;
 						window.history.pushState('', '', redirect);
 					}else{
 					changeHashWithoutScrolling('')
@@ -291,7 +296,7 @@ $(document).ready(function(){
 
 	if (init($peopleItems, [], peopleArr)) setTimeout(function(){init($container, [], itemsArr)},500);
 		if(location){
-			console.log($(location	));
+			// console.log($(location	));
 			setTimeout(function() {
 				var idtop = $('.what').offset().top-200;
 				$(window).scrollTop(idtop);
