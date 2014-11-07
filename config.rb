@@ -47,9 +47,9 @@
 activate :directory_indexes
 
 set :build_dir, '../../public/lab'
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
 set :partials_dir, 'shared'
 
 activate :livereload
