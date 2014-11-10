@@ -5,6 +5,7 @@ $fontDefault: 'Proxima Nova', Helvetica, Arial, sans-serif;
 
 $colorMain: #C0122B;
 
+
 $spritemap: sprite-map("sprite/*.png", $spacing: 10px);
 // $spritemap_r: sprite-map("spriter/*.png", $spacing: 10px);
 /**/
@@ -23,6 +24,7 @@ $spritemap: sprite-map("sprite/*.png", $spacing: 10px);
 	@include image-sizer(sprite-file($map, $sprite));
 	@include background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2));
 }
+
 
 @mixin bgs($sprite) {
 	background: sprite($spritemap, $sprite) no-repeat;
@@ -124,27 +126,39 @@ a {
 	// transition: all .4s;
 }
 .links{
-	background-color: #ccc;
-	border: 6px solid black;
-	width: 58px;
-	height: 288px;
+  position: fixed;
+  z-index: 2000;
+  top: 213px;
+	box-sizing:border-box;
+  width: 70px;
+  height: 307px;
+  padding: 0;
+
+  border: 5px solid black;
 	a {
 		display: block;
+    overflow: hidden;
+
+    margin: 4px 0 0 -5px;
+
+    text-indent: -1000em;
+
+    border: 0;
 	}
-	.header-link.active-menu {@include sbgs(head_on);}
-	.header-link {@include sbgs(head_off);}
-	.header-link span {@include sbgs(head_on); opacity: 0; display: block; transition: opacity .2s;}
+	.header-link.active-menu {@include sbgs(main_on);}
+	.header-link {@include sbgs(main);}
+	.header-link span {@include sbgs(main_on); opacity: 0; display: block; transition: opacity .2s;}
 	.header-link span:hover {opacity: 1; transition: opacity .2s;}
 	.who-link.active-menu {@include sbgs(who_on);}
-	.who-link {@include sbgs(who_off);}
+	.who-link {@include sbgs(who);}
 	.who-link span {@include sbgs(who_on); opacity: 0; display: block; transition: opacity .2s;}
 	.who-link span:hover {opacity: 1; transition: opacity .2s;}
 	.how-link.active-menu {@include sbgs(how_on);}
-	.how-link {@include sbgs(how_off);}
+	.how-link {@include sbgs(how);}
 	.how-link span {@include sbgs(how_on); opacity: 0; display: block; transition: opacity .2s;}
 	.how-link span:hover {opacity: 1; transition: opacity .2s;}
 	.what-link.active-menu {@include sbgs(what_on);}
-	.what-link {@include sbgs(what_off);}
+	.what-link {@include sbgs(what);}
 	.what-link span {@include sbgs(what_on); opacity: 0; display: block; transition: opacity .2s;}
 	.what-link span:hover {opacity: 1; transition: opacity .2s;}
 }
@@ -180,20 +194,21 @@ a {
 	padding-top: 160px;
 
 }
-.social {
-	margin-bottom: 5px;
-	a {
-		display: inline-block;
-		width: 19px;
-		height: 17px;
-		margin-right: 20px;
-		text-indent: -1000em;
-		border: 0;
-	}
+.social a{
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  text-indent: -1000em;
+  border: 0;
 }
-.social-fb { @include bgs(s_fb); }
-.social-vk { @include bgs(s_vk); }
-.social-tw { @include bgs(s_tw); }
+    .social-fb{@include bgs(fb);}
+    .social-vk{@include bgs(vk);}
+    .social-tw{@include bgs(tw);}
+    .social-fb:hover{@include bgs(fb_on);}
+    .social-vk:hover{@include bgs(vk_on);}
+    .social-tw:hover{@include bgs(tw_on);}
 // .social-tb { @include bgs(s_tb); }
 // .social-yt { @include bgs(s_yt); }
 // .social-ig { @include bgs(s_ig); }
@@ -273,35 +288,6 @@ a {
 	text-align: center;
  	margin-bottom: 140px;
 }
-.phrase {
-	display: table;
-	width: 100%;
-	text-align: center;
-	margin-bottom: 145px;
-}
-.inline-item {
-	display: inline-block;
-	margin: 0 10px 10px 10px;
-	p {
-		margin-top: 40px;
-		font-size: 12px;
-		text-align: center;
-		width: auto;
-	}
-}
-.phrase-item {
-	height: 180px;
-	margin: 5px;
-	vertical-align: middle;
-	display: table-cell;
-}
-.plus, .equally {margin-top: -40px;}
-.plus {@include sbgs(plus)}
-.equally {@include sbgs(equally)}
-.research {@include sbgs(research)}
-.brain {@include sbgs(brain)}
-.technology {@include sbgs(technology)}
-.result {@include sbgs(result)}
 
 
 /*What*/
@@ -559,4 +545,11 @@ a {
 }
 
 
+#natalia {
+	margin-top: 210px;
+	left: 25px !important;
+}
+
+
 @import "mobile";
+

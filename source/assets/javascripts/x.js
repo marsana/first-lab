@@ -28,17 +28,17 @@ $(document).ready(function(){
 			if(location){
 				console.log($(location	));
 				setTimeout(function() {
-					var idtop = $('.what').offset().top-200;	
+					var idtop = $('.what').offset().top-200;
 					$(window).scrollTop(idtop);
 					setTimeout(function() {
 						$(location).trigger( "click" );
 						$(window).trigger('scroll');
 					}, 1000);
-					
+
 				}, 100);
 			}
 		}
-	}) 
+	})
 
 	var location = window.location.hash, buffer_hash;
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
 		CLASS_ACTIVE = 'active',
 		CLASS_LOADING = 'loading',
 		CLASS_SUB_MENU = 'logotype',
-		A_DURATION = 500, 
+		A_DURATION = 500,
 		$container = $('.items'),
 		$peopleItems = $('.people'),
 		$item = $('.item'),
@@ -78,14 +78,14 @@ $(document).ready(function(){
 	}
 
 	$container.children().each(function(){
-		var eachItem = { 
+		var eachItem = {
 			linkTo: $(this),
 			size: [
 				$(this).width(),
 				itemSizeSmall
 				],
 			coor: {
-					top: $(this).offset().top, 
+					top: $(this).offset().top,
 					left: $(this).offset().left
 				},
 			status: 0
@@ -94,14 +94,14 @@ $(document).ready(function(){
 	});
 
 	$peopleItems.children().each(function(){
-		var eachItem = { 
+		var eachItem = {
 			linkTo: $(this),
 			size: [
 				$(this).width(),
 				itemSizeSmall
 				],
 			coor: {
-					top: $(this).offset().top, 
+					top: $(this).offset().top,
 					left: $(this).offset().left
 				},
 			status: 0
@@ -109,16 +109,16 @@ $(document).ready(function(){
 		peopleArr.push(eachItem);
 	});
 
-	$(document).on("click", ".close1", function(e){	
+	$(document).on("click", ".close1", function(e){
 		if ($('.mfp-wrap').hasClass('mfp-ready')){
-			e.preventDefault();	
+			e.preventDefault();
 			closeProgect();
 		};
 	});
 
 
-	$(document).on("click", ".logotype", function(e){	
-		// e.preventDefault();	
+	$(document).on("click", ".logotype", function(e){
+		// e.preventDefault();
 		// alert(1);
 		var idtop = $('.header').offset().top-200;
 		if ($post.hasClass(CLASS_ACTIVE)) {
@@ -140,10 +140,10 @@ $(document).ready(function(){
 			beforeOpen: function(){
 	//--------------------------------------Отмена фильтрации при открытии--------------------------------------
 				var flag_status;
-				$('.filter_active').removeClass('filter_active'); 
+				$('.filter_active').removeClass('filter_active');
 				$container.removeClass('filtred');
 				$('.item').removeClass('display-none');
-				
+
 				init($container, [], itemsArr);
 
 	//--------------------------------------***--------------------------------------
@@ -174,7 +174,7 @@ $(document).ready(function(){
 				$container.children().addClass('magpop');
 				$item.css('transition','all .5s');
 
-				if(history.pushState) {		
+				if(history.pushState) {
 					var redirect = prefix + '/#';
 					history.pushState('', '', redirect);
 				}else{
@@ -182,7 +182,7 @@ $(document).ready(function(){
 				}
 
 			},
-			change: function(){			
+			change: function(){
 				var mp = $.magnificPopup.instance,
 						t = $(mp.currItem.el[0]);
 
@@ -190,7 +190,7 @@ $(document).ready(function(){
 				t.addClass('mfp-close');
 				t.addClass('close1');
 
-				if(history.pushState) {		
+				if(history.pushState) {
 					var redirect = prefix + '/#'+ t.data('id');
 					window.history.pushState('', '', redirect);
 				}else{
@@ -198,7 +198,7 @@ $(document).ready(function(){
 				}
 				if ($('.mfp-wrap').hasClass('mfp-ready')){
 					$('.close1').removeClass('close1');
-				
+
 					$container.children().addClass('magpop');
 					var mp = $.magnificPopup.instance,
 							t = $(mp.currItem.el[0]);
@@ -207,13 +207,13 @@ $(document).ready(function(){
 					$('.mfp-container').addClass('mfp-figure');
 					clearTimeout(to);
 					to = setTimeout(function() {
-						$('.mfp-container').removeClass('mfp-figure');	
-					}, 300);			
+						$('.mfp-container').removeClass('mfp-figure');
+					}, 300);
 				}
 								if ($('.mfp-container').hasClass('mfp-s-ready')){
 					t.removeClass('magpop');
 					t.addClass('mfp-close');
-					t.addClass('close1');	
+					t.addClass('close1');
 
 
 				};
@@ -222,8 +222,8 @@ $(document).ready(function(){
 	});
 	//--------------------------------------***--------------------------------------
 
-	$(document).on("click", "a.anchor", function(e){	
-		e.preventDefault();	
+	$(document).on("click", "a.anchor", function(e){
+		e.preventDefault();
 		var idtop = $($(this).attr("href")).offset().top-200;
 		if ($post.hasClass(CLASS_ACTIVE)) closeProgect();
 		$('html,body').animate({scrollTop: idtop}, A_DURATION);
@@ -232,10 +232,10 @@ $(document).ready(function(){
 
 	var status_filter = false;
 
-	$(document).on("click", ".filter a", function(e){	
-		e.preventDefault();	
+	$(document).on("click", ".filter a", function(e){
+		e.preventDefault();
 		if ($post.hasClass(CLASS_ACTIVE)) closeProgect();
-		
+
 		if(history.pushState) {
 			var redirect = '/';
 			history.pushState('', '', redirect);
@@ -248,7 +248,7 @@ $(document).ready(function(){
 
 		var flag_status;
 		if ($(this).hasClass('filter_active')) flag_status = true;
-		$('.filter_active').removeClass('filter_active'); 
+		$('.filter_active').removeClass('filter_active');
 
 		$container.removeClass('filtred');
 		$('.item').removeClass('display-none');
@@ -257,7 +257,7 @@ $(document).ready(function(){
 			var filter_search = $(this).attr('href');
 			$container.children().each(function(){
 				if(!$(this).hasClass('f_'+filter_search)){
-				
+
 					if(history.pushState) {
 
 						var redirect = prefix + '/#'+ filter_search;
@@ -268,7 +268,7 @@ $(document).ready(function(){
 					$container.addClass('filtred');
 					$(this).addClass('display-none');
 				}
-			});			
+			});
 
 		}
 
@@ -277,11 +277,11 @@ $(document).ready(function(){
 
 	$("body").on("click", ".close", function(){
 		closeProgect();
-	});	
+	});
 
 	$(window).on("scroll", function(){
 		changePointMenu();
-		
+
 	});
 
 	$container.css({

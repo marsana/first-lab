@@ -35,7 +35,7 @@ function findPlaceInMatrix(matrix, sizeCol, i, j){
 		for (var k = j; k < j + sizeCol; k++){
 			if (matrix[h][k] > col) return false;
 			if (matrix[h][k]) return false;
-		}	
+		}
 	}
 	return true;
 }
@@ -44,7 +44,7 @@ function setTrueToMatrix(matrix, sizeCol, i, j){
 		if (!matrix[h]) matrix[h] = new Array();
 		for (var k = j; k < j + sizeCol; k++){
 			matrix[h][k] = true;
-		}	
+		}
 	}
 }
 function findSpan(matrix,sizeCol){
@@ -62,8 +62,8 @@ function findSpan(matrix,sizeCol){
 			}
 		}
 		i++;
-	}	
-	return result;	
+	}
+	return result;
 }
 function draw($obj,matrix, itemsArr){
 	var matrix2 = [];
@@ -73,12 +73,12 @@ function draw($obj,matrix, itemsArr){
 			sizeCol = Math.floor(size / colum);
 			result = findSpan(matrix,sizeCol);
 			if (result) {
-				itemsArr[i].coor.left = result[1]*colum; 
+				itemsArr[i].coor.left = result[1]*colum;
 				itemsArr[i].coor.top = result[0]*colum;
 			}
 			if ($obj.hasClass('active')) {
-				sizeCol = 1;	
-				result = findSpan(matrix2,sizeCol);	
+				sizeCol = 1;
+				result = findSpan(matrix2,sizeCol);
 			}
 			if (result) {
 				$(this).css({
@@ -89,10 +89,10 @@ function draw($obj,matrix, itemsArr){
 					width:'auto'
 				})
 				$obj.parent().css({
-					height: (matrix.length)*colum,
+					height: (matrix.length+1)*colum,
 					width:'auto'
 				})
-				
+
 				if ($obj.hasClass('active')) {
 					$obj.css({
 						width: (matrix[0].length)*colum,
@@ -127,12 +127,12 @@ function draw($obj,matrix, itemsArr){
 				console.log('error');
 			}
 		}
-	});	
-	return true;	
+	});
+	return true;
 }
 function init($obj, martix, itemsArr) {
 	$obj = itemsArr[0].linkTo.parent()
-	matrix = []; 
+	matrix = [];
 	if ($obj.hasClass('active')) {
 		for(var i = 0; i < $obj.children().length; i++){
 			itemsArr[i].linkTo.css({

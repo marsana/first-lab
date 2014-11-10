@@ -9,13 +9,13 @@
 		%link{:href => settings.prefix + "/assets/images/32.png", :rel => "icon", :sizes => "32"}
 		%link{:href => settings.prefix + "/assets/stylesheets/magnific-popup.css", :rel => "stylesheet"}
 		%link{:href => settings.prefix + "/assets/stylesheets/s.css", :rel => "stylesheet"}
-		
-		
-		%meta{:name => "viewport", :content => "width=device-width"}/ 
+
+
+		%meta{:name => "viewport", :content => "width=device-width"}/
 
 	%body
 		/ .hse-menu
-		.wrapper
+		.wrapper.hse-lab
 			= partial :menu
 			.main
 				= yield
