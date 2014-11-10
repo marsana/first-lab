@@ -53,7 +53,7 @@ set :images_dir, 'assets/images'
 set :partials_dir, 'shared'
 
 # set :prefix, "/lab"
-set :prefix, ""
+set :prefix, "/lab"
 
 # activate :livereload
 activate :autoprefixer
