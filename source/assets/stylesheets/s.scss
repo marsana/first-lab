@@ -93,6 +93,7 @@ a {
 	font-size: 21px;
 }
 
+
 .hse-menu {
 	height: 40px;
 	width: 100%;
@@ -117,11 +118,13 @@ a {
 	margin-bottom: 15px;
 }*/
 .logotype {
+	position: relative;
 	// content: '';
 	display: block;
 	@include sbgs(logotype);
 	margin-bottom: 15px;
 	cursor: pointer;
+	top:-90px;
 	// top: 200px;
 	// transition: all .4s;
 }
@@ -437,6 +440,7 @@ a {
 
 }
 .full_width {
+	max-width: 100%;
 		width: 100%;
 	}
 .article_inner  {
@@ -459,6 +463,7 @@ a {
 	img {
 		display: block;
 		margin: 1em auto;
+		max-width: 1200px;
 		&.full_width {
 			width: 100%;
 	}
