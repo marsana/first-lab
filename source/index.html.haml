@@ -4,7 +4,7 @@ page_class: 'index'
 ---
 .main-wrapper
 	%header.header.columns.chapter{ :data => {:link => '.header-link'} }
-		.logo.col
+		/ .logo.col
 		.infoblock.col
 			.social
 				%a.social-fb{href: "https://www.facebook.com/HSEDesign"} Facebook
@@ -14,7 +14,7 @@ page_class: 'index'
 				%p
 					%a{:href => "mailto:deslab@hse.ru"} deslab@hse.ru
 				%p +7 (495) 772-95-90
-		.descriptions Это дизайн-студия, исследовательскиий центр и&nbsp;образовательная программа. Интеллектуальныий ресурс лаборатории составляют опытные дизайнеры, а&nbsp;также лучшие студенты #{ link_to 'HSE Art and Design School', 'http://design.hse.ru'}
+		/ .descriptions Это дизайн-студия, исследовательскиий центр и&nbsp;образовательная программа. Интеллектуальныий ресурс лаборатории составляют опытные дизайнеры, а&nbsp;также лучшие студенты #{ link_to 'HSE Art and Design School', 'http://design.hse.ru'}
 
 
 	.what.chapter{ :data => {:link => '.what-link'} }
@@ -119,7 +119,7 @@ page_class: 'index'
 					%span{:style => "background: RGBa(167, 171, 171, .7);"} протей<br /> темен
 				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/yug.JPG'});"}
 					%span{:style => "background: RGBa(124, 128, 129, .7);"} ира<br /> южанина
-				%div.people-item.filter-item#natalia{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/log.JPG'});"}
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/log.JPG'});"}
 					%span{:style => "background: RGBa(175, 174, 146, .7);"} наталья<br /> логутова
 
 

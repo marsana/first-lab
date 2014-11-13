@@ -88,7 +88,7 @@ a {
 
 .wrapper {
 	padding: 0 40px;
-	margin: 230px auto;
+	margin: 140px auto;
 	max-width: 1200px;
 	font-size: 21px;
 }
@@ -124,7 +124,7 @@ a {
 	@include sbgs(logotype);
 	margin-bottom: 15px;
 	cursor: pointer;
-	top:-135px;
+	top:-45px;
 	// top: 200px;
 	// transition: all .4s;
 }
@@ -134,7 +134,7 @@ a {
   top: 213px;
 	box-sizing:border-box;
   width: 70px;
-  height: 307px;
+  height: 250px;
   padding: 0;
 
   border: 5px solid black;
@@ -142,7 +142,7 @@ a {
 		display: block;
     overflow: hidden;
 
-    margin: 4px 0 0 -5px;
+    margin: 0px 0 4px -5px;
 
     text-indent: -1000em;
 
@@ -169,7 +169,7 @@ a {
 
 /*Header*/
 .chapter{
-	margin-bottom: 160px;
+	// margin-bottom: 160px;
 }
 
 .col {
@@ -294,7 +294,9 @@ a {
 
 
 /*What*/
-
+.what {
+	margin-bottom: 30px;
+}
 .filter_tags, {
 	max-width: 920px;
 

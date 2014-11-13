@@ -62,7 +62,7 @@ $(document).ready(function(){
 		$.magnificPopup.close()
 		$container.removeClass('is__small')
 		$post.removeClass(CLASS_ACTIVE);
-		$menu2.removeClass(CLASS_SUB_MENU);
+		// $menu2.removeClass(CLASS_SUB_MENU);
 		$container.removeClass(CLASS_ACTIVE);
 		$container.addClass('notActive');
 		init($container, [], itemsArr);
@@ -149,7 +149,7 @@ $(document).ready(function(){
 	//--------------------------------------***--------------------------------------
 
 				$container.addClass(CLASS_ACTIVE);
-				$menu2.addClass(CLASS_SUB_MENU);
+				// $menu2.addClass(CLASS_SUB_MENU);
 				$post.addClass(CLASS_ACTIVE);
 				init($container, [], itemsArr);
 			},
