@@ -15,40 +15,6 @@ page_class: 'index'
 					%a{:href => "mailto:deslab@hse.ru"} deslab@hse.ru
 				%p +7 (495) 772-95-90
 		.descriptions Это дизайн-студия, исследовательскиий центр и&nbsp;образовательная программа. Интеллектуальныий ресурс лаборатории составляют опытные дизайнеры, а&nbsp;также лучшие студенты #{ link_to 'HSE Art and Design School', 'http://design.hse.ru'}
-	.who.chapter{ :data => {:link => '.who-link'} }
-		%h2 кто
-		.filters.col.people-wrapper
-			.filter_people.people
-
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A8862.jpg'});"}
-					%span{:style => "background: RGBa(175, 174, 146, .7);"} арсений<br /> мещеряков
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A8730.jpg'});"}
-					%span{:style => "background: RGBa(137, 127, 123, .7);"} павел<br /> борисовский
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/egor.JPG'});"}
-					%span{:style => "background: RGBa(137, 127, 123, .7);"} василий<br /> егоров
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A7227.jpg'});"}
-					%span{:style => "background: RGBa(175, 174, 146, .7);"} сергей<br /> клещев
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/nov.JPG'});"}
-					%span{:style => "background: RGBa(167, 171, 171, .7);"} алексей<br /> новичков
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A4905.jpg'});"}
-					%span{:style => "background: RGBa(97, 95, 97, .7);"} олег<br /> пащенко
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/rum.jpg'});"}
-					%span{:style => "background: RGBa(167, 171, 171, .7);"} алексей<br /> рюмин
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/serg.JPG'});"}
-					%span{:style => "background: RGBa(167, 171, 171, .7);"} арсений<br /> сергеев
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A3451.jpg'});"}
-					%span{:style => "background: RGBa(167, 171, 171, .7);"} протей<br /> темен
-				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/yug.JPG'});"}
-					%span{:style => "background: RGBa(124, 128, 129, .7);"} ира<br /> южанина
-				%div.people-item.filter-item#natalia{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/log.JPG'});"}
-					%span{:style => "background: RGBa(175, 174, 146, .7);"} наталья<br /> логутова
-
-
-	.how.chapter{ :data => {:link => '.how-link'} }
-		%h2 как
-		.scheme
-			%img{:src => settings.prefix + "/assets/images/data/scheme.png"}
-		%p.scheme-desc ресурсы лаборатории позволяют собрать оптимальный состав команды под каждый новый проект
 
 
 	.what.chapter{ :data => {:link => '.what-link'} }
@@ -79,7 +45,6 @@ page_class: 'index'
 			%br
 		%span.portfolio-link
 			%a{:href => settings.prefix + "/assets/data/hse-designlab-portfolio.pdf"} скачать портфолио pdf, 10&nbsp;МБ
-
 
 .items-wrapper
 	.items#items
@@ -118,6 +83,44 @@ page_class: 'index'
 			%span.item-title ИСИЭЗ <br />буклет
 		%a.item.magpop.f_all.f_graph.f_analitika.f_g2013{:href => settings.prefix + "/assets/data/posts/skolkovo", :id => "skolkovo", :style => "background-color: #76d7ff;", :data => {:id => 'skolkovo'}}
 			%span.item-title Сколково <br />буклет
+
+
+.main-wrapper
+	.how.chapter{ :data => {:link => '.how-link'} }
+		%h2 как
+		.scheme
+			%img{:src => settings.prefix + "/assets/images/data/scheme.png"}
+		%p.scheme-desc ресурсы лаборатории позволяют собрать оптимальный состав команды под каждый новый проект
+
+
+
+	.who.chapter{ :data => {:link => '.who-link'} }
+		%h2 кто
+		.filters.col.people-wrapper
+			.filter_people.people
+
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A8862.jpg'});"}
+					%span{:style => "background: RGBa(175, 174, 146, .7);"} арсений<br /> мещеряков
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A8730.jpg'});"}
+					%span{:style => "background: RGBa(137, 127, 123, .7);"} павел<br /> борисовский
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/egor.JPG'});"}
+					%span{:style => "background: RGBa(137, 127, 123, .7);"} василий<br /> егоров
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A7227.jpg'});"}
+					%span{:style => "background: RGBa(175, 174, 146, .7);"} сергей<br /> клещев
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/nov.JPG'});"}
+					%span{:style => "background: RGBa(167, 171, 171, .7);"} алексей<br /> новичков
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A4905.jpg'});"}
+					%span{:style => "background: RGBa(97, 95, 97, .7);"} олег<br /> пащенко
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/rum.jpg'});"}
+					%span{:style => "background: RGBa(167, 171, 171, .7);"} алексей<br /> рюмин
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/serg.JPG'});"}
+					%span{:style => "background: RGBa(167, 171, 171, .7);"} арсений<br /> сергеев
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/H68A3451.jpg'});"}
+					%span{:style => "background: RGBa(167, 171, 171, .7);"} протей<br /> темен
+				%div.people-item.filter-item{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/yug.JPG'});"}
+					%span{:style => "background: RGBa(124, 128, 129, .7);"} ира<br /> южанина
+				%div.people-item.filter-item#natalia{:href => "#", :style => "background: url(#{settings.prefix + '/assets/images/data/log.JPG'});"}
+					%span{:style => "background: RGBa(175, 174, 146, .7);"} наталья<br /> логутова
 
 
 
