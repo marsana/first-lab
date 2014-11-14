@@ -156,8 +156,9 @@ function init($obj, martix, itemsArr) {
 					top: $obj.parent().offset().top
 				});
 				if ($obj.hasClass('filtred')){
+					console.log((matrix.length+1)*colum);
 					$obj.parent().css({
-						height: maxObjHeight + 200
+						height: (matrix.length+1)*colum
 					});
 				}
 			}, 15);
@@ -172,7 +173,7 @@ function init($obj, martix, itemsArr) {
 	}
 	calculate($obj, itemsArr);
 	if (draw($obj,matrix, itemsArr)) {
-		$obj.addClass('is__ready')
+		$obj.addClass('is__ready');
 	}
 	return true;
 }

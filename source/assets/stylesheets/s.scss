@@ -124,14 +124,14 @@ a {
 	@include sbgs(logotype);
 	margin-bottom: 15px;
 	cursor: pointer;
-	top:-45px;
+	// top:-45px;
 	// top: 200px;
 	// transition: all .4s;
 }
 .links{
   position: fixed;
   z-index: 2000;
-  top: 213px;
+  top: 258px;
 	box-sizing:border-box;
   width: 70px;
   height: 250px;

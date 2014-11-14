@@ -21,8 +21,9 @@ $(document).ready(function(){
 
 
 	document.addEventListener('backbutton', function(){
-		alert(1);
+		// alert(1);
 	});
+
 	$(window).keyup(function(e){
 		if(e.keyCode == 8){
 			if(location){
@@ -271,8 +272,9 @@ $(document).ready(function(){
 			});
 
 		}
-
+		// alert((matrix.length+1)*colum);
 		init($container, [], itemsArr);
+
 	});
 
 	$("body").on("click", ".close", function(){
@@ -294,16 +296,26 @@ $(document).ready(function(){
 		if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
 	});
 
-	if (init($peopleItems, [], peopleArr)) setTimeout(function(){init($container, [], itemsArr)},500);
-		if(location){
-			// console.log($(location	));
+	if (init($peopleItems, [], peopleArr))
+		setTimeout(function(){init($container, [], itemsArr)},500);
+	if(location){
+		// console.log($(location	));
+		setTimeout(function() {
+			var idtop = $('.what').offset().top-200;
+			$(window).scrollTop(idtop);
 			setTimeout(function() {
-				var idtop = $('.what').offset().top-200;
-				$(window).scrollTop(idtop);
-				setTimeout(function() {
-					$(location).trigger( "click" );
-					$(window).trigger('scroll');
-				}, 1000);
-			}, 100);
-		}
+				$(location).trigger( "click" );
+				$(window).trigger('scroll');
+			}, 1000);
+		}, 100);
+	}
+// alert((matrix.length+1)*colum);
+
+// $('.items-wrapper').css({
+// 	height: (matrix.length+1)*colum,
+// 	width:'auto'
+// })
+
+
+
 });
