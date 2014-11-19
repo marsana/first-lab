@@ -553,11 +553,14 @@ a {
 }
 
 
-#natalia {
-	margin-top: 210px;
-	left: 25px !important;
+// #natalia {
+// 	margin-top: 210px;
+// 	left: 25px !important;
+// }
+
+.mfp-content .video {
+	display: block;
+	margin: 80px auto;
 }
-
-
 @import "mobile";
 
