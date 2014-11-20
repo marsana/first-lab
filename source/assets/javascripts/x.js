@@ -2,6 +2,28 @@
 // = require jquery.magnific-popup
 /*global $:false */
 'use strict';
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 var prefix = window.location.pathname;
 if(prefix[prefix.length-1] == '/')
 	prefix = prefix.slice(0, prefix.length-1);
@@ -134,7 +156,9 @@ $(document).ready(function(){
 				return true;
 			},
 			beforeClose: function(){
+				$('.main').css('display','block');
 				$('.close1').removeClass('close1');
+
 				$container.children().addClass('magpop');
 				$item.css('transition','all .5s');
 				if(history.pushState) {
@@ -174,6 +198,13 @@ $(document).ready(function(){
 					t.addClass('mfp-close');
 					t.addClass('close1');
 				};
+
+				if(isMobile.any()){
+					$('.main').css('display','none');
+				}
+				else {
+					$('.main').css('display','block');
+				}
 			}
 		}
 	});
@@ -247,4 +278,5 @@ $(document).ready(function(){
 			}, 1000);
 		}, 100);
 	}
+
 });
