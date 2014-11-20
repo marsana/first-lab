@@ -3,17 +3,15 @@ var margin = 25,
 		smallWidth = 35,
 		smallItemSize = smallMargin + smallWidth;
 var $items, to,
-	width,
-	colum,
-	col,
-	row,
-	itemsArr,
-	peopleArr,
-	maxObjHeight = 3000,
-	scrollPosition;
-
+		width,
+		colum,
+		col,
+		row,
+		itemsArr,
+		peopleArr,
+		maxObjHeight = 3000,
+		scrollPosition;
 var matrix = [];
-
 function calculate($obj, itemsArr){
 	$items = $obj.children();
 	width = $obj.parent().parent().width()-150;
@@ -95,7 +93,6 @@ function draw($obj,matrix, itemsArr){
 					height: (matrix.length+1)*colum,
 					width:'auto'
 				})
-
 				if ($obj.hasClass('active')) {
 					$obj.css({
 						width: (matrix[0].length)*colum,
@@ -104,7 +101,6 @@ function draw($obj,matrix, itemsArr){
 					var posTop = $(window).scrollTop(),
 							wrapperItemOffset = $obj.offset().top,
 							leftOffset = ($(document).width() - $obj.children().length*smallItemSize)/2 - $obj.parent().offset().left;
-
 					$(this).css({
 						left: result[1]*colum+leftOffset,
 						top: - (wrapperItemOffset - posTop) +70
@@ -120,11 +116,9 @@ function draw($obj,matrix, itemsArr){
 					$obj.removeClass('notActive');
 					init($obj, [], itemsArr);
 				}
-
 				$(this).css({
 					opacity:1
 				})
-
 			}
 			else {
 				console.log('error');
@@ -145,7 +139,6 @@ function init($obj, martix, itemsArr) {
 			itemsArr[i].linkTo.children().css('display','none');
 		}
 	}else {
-
 			$obj.children().each(function(){
 				var size = $(this).offset().top  + $(this).height();
 				if (maxObjHeight > size){
@@ -153,7 +146,6 @@ function init($obj, martix, itemsArr) {
 				}
 			});
 			clearTimeout(to);
-
 			to = setTimeout(function() {
 				$obj.css({
 					top: $obj.parent().offset().top
@@ -171,7 +163,6 @@ function init($obj, martix, itemsArr) {
 				height:itemsArr[i].size[0]
 			})
 			itemsArr[i].linkTo.children().css('display','inline-block');
-
 		}
 	}
 	calculate($obj, itemsArr);
