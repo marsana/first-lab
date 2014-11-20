@@ -1,4 +1,7 @@
-var margin = 25;
+var margin = 25,
+		smallMargin = 10,
+		smallWidth = 35,
+		smallItemSize = smallMargin + smallWidth;
 var $items, to,
 	width,
 	colum,
@@ -98,9 +101,9 @@ function draw($obj,matrix, itemsArr){
 						width: (matrix[0].length)*colum,
 						height: 75
 					})
-					var posTop = $(window).scrollTop();
-					var wrapperItemOffset = $obj.offset().top;
-					var leftOffset = (parseInt($obj.parent().css('width')) - $obj.children().length*65)/2;
+					var posTop = $(window).scrollTop(),
+							wrapperItemOffset = $obj.offset().top,
+							leftOffset = ($(document).width() - $obj.children().length*smallItemSize)/2 - $obj.parent().offset().left;
 
 					$(this).css({
 						left: result[1]*colum+leftOffset,
@@ -156,7 +159,7 @@ function init($obj, martix, itemsArr) {
 					top: $obj.parent().offset().top
 				});
 				if ($obj.hasClass('filtred')){
-					console.log((matrix.length+1)*colum);
+					// console.log((matrix.length+1)*colum);
 					$obj.parent().css({
 						height: (matrix.length+1)*colum
 					});
