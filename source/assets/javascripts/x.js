@@ -1,7 +1,9 @@
 // = require itemPosition
 // = require jquery.magnific-popup
+// = require jquery.fitvids
 /*global $:false */
 'use strict';
+
 
 var isMobile = {
     Android: function() {
@@ -205,7 +207,17 @@ $(document).ready(function(){
 				else {
 					$('.main').css('display','block');
 				}
-			}
+			},
+			ajaxContentAdded: function(mfpResponse) {
+				// Basic FitVids Test
+				$(".mfp-content").fitVids();
+				// Custom selector and No-Double-Wrapping Prevention Test
+				$(".mfp-content").fitVids({ customSelector: "iframe"});
+
+			    console.log('Ajax content loaded:', mfpResponse);
+			  }
+
+
 		}
 	});
 	//--------------------------------------***--------------------------------------
