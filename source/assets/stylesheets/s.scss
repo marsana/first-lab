@@ -1,50 +1,10 @@
 @import 'normalize';
 @import 'compass/css3/background-size';
 @import 'font';
-$fontDefault: 'Proxima Nova', Helvetica, Arial, sans-serif;
-$colorMain: #c0122b;
-$spritemap: sprite-map('sprite/*.png', $spacing: 10px);
-@mixin image-size($path)
-{
-    width: image-width($path);
-    height: image-height($path);
-}
-@mixin sized-sprite($map, $sprite)
-{
-    background: sprite($map, $sprite) no-repeat;
+@import 'var';
+@import 'mixin';
 
-    @include image-size(sprite-file($map, $sprite));
-}
-@mixin sized-spriter($map, $sprite)
-{
-    background: sprite($map, $sprite) no-repeat;
-    background-position: 0 $ypos;
-
-    $ypos: round(nth(sprite-position($map, $sprite), 2) / 2);
-    @include image-sizer(sprite-file($map, $sprite));
-    @include background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2));
-}
-@mixin bgs($sprite)
-{
-    background: sprite($spritemap, $sprite) no-repeat;
-}
-@mixin sbgs($sprite)
-{
-    @include sized-sprite($spritemap, $sprite);
-}
-@mixin lightDecoration()
-{
-    transition: border-color .3s;
-
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
-    &:hover
-    {
-        text-decoration: none;
-
-        border-color: #005fff	;
-    }
-}
-:focus
+a:focus, :hover
 {
     outline: none;
 }
@@ -64,10 +24,6 @@ body
 {
     font: 18px 'Proxima Nova', Arial, sans-serif;
 }
-.article_inner .filter
-{
-    color: #999;
-}
 a
 {
     transition: border-color .3s;
@@ -78,12 +34,12 @@ a
     &:hover
     {
         text-decoration: none;
-
         color: #005fff;
         border-color: #005fff	;
     }
 }
-.article_inner a.filter-item
+
+.article_inner .filter, .article_inner a.filter-item
 {
     color: #999;
 }
@@ -91,25 +47,15 @@ a
 {
     color: #005fff;
 }
+
 .wrapper
 {
     font-size: 21px;
-
     max-width: 1200px;
     margin: 140px auto;
     padding: 0 40px;
 }
-.hse-menu
-{
-    position: fixed;
-    z-index: 3000;
-    top: 0;
 
-    width: 100%;
-    height: 40px;
-
-    background-color: #2f3a3b;
-}
 .main
 {
     max-width: 970px;
@@ -117,26 +63,22 @@ a
     h2
     {
         font-size: 23px;
-
         margin-bottom: 30px;
     }
 }
+// Menu ______________________________________
 .menu
 {
     position: fixed;
     z-index: 2000;
 }
+
 .logotype
 {
     position: relative;
-    // content: '';
-
     display: block;
-
     margin-bottom: 15px;
-
     cursor: pointer;
-
     @include sbgs(logotype);
 }
 .links
@@ -259,20 +201,11 @@ a
         opacity: 1;
     }
 }
+
+// ______________________________________ Menu
+
 /*Header*/
-.col
-{
-    display: inline-block;
 
-    vertical-align: top;
-}
-.logo
-{
-    margin-right: 230px;
-    margin-bottom: 15px;
-
-    @include sbgs(logo);
-}
 .infoblock.col
 {
     font-weight: 550;
@@ -286,10 +219,7 @@ a
         @include lightDecoration();
     }
 }
-.mfp-content
-{
-    padding-top: 160px;
-}
+
 .social a
 {
     display: inline-block;
@@ -303,32 +233,14 @@ a
 
     border: 0;
 }
-.social-fb
-{
-    @include bgs(fb);
-}
-.social-vk
-{
-    @include bgs(vk);
-}
-.social-tw
-{
-    @include bgs(tw);
-}
-.social-fb:hover
-{
-    @include bgs(fb_on);
-}
-.social-vk:hover
-{
-    @include bgs(vk_on);
-}
-.social-tw:hover
-{
-    @include bgs(tw_on);
-}
-.infoblock-contacts
-{
+.social-fb{@include bgs(fb);}
+.social-vk{@include bgs(vk);}
+.social-tw{@include bgs(tw);}
+.social-fb:hover{@include bgs(fb_on);}
+.social-vk:hover{@include bgs(vk_on);}
+.social-tw:hover{@include bgs(tw_on);}
+
+.infoblock-contacts{
     a
     {
         @include lightDecoration();
@@ -739,29 +651,21 @@ a
 }
 .mfp-figure
 {
-    -webkit-animation-name: fadeIn;
-       -moz-animation-name: fadeIn;
-         -o-animation-name: fadeIn;
             animation-name: fadeIn;
-    -webkit-animation-duration: .3s;
-       -moz-animation-duration: .3s;
-        -ms-animation-duration: .3s;
-         -o-animation-duration: .3s;
             animation-duration: .3s;
-
-    -webkit-animation-fill-mode: both;
-       -moz-animation-fill-mode: both;
-        -ms-animation-fill-mode: both;
-         -o-animation-fill-mode: both;
             animation-fill-mode: both;
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
         -ms-backface-visibility: hidden;
 }
-.mfp-content .video
-{
-    display: block;
 
-    margin: 80px auto;
+iframe.video {
+    display: block;
+    margin: 80 auto;
+}
+
+.mfp-content
+{
+    padding-top: 160px;
 }
 @import 'mobile';
