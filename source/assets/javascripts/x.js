@@ -1,6 +1,7 @@
 // = require itemPosition
 // = require jquery.magnific-popup
 // = require jquery.fitvids
+// = require personInformation2
 /*global $:false */
 'use strict';
 
@@ -118,6 +119,9 @@ $(document).ready(function(){
 		};
 		peopleArr.push(eachItem);
 	});
+
+
+
 	$(document).on("click", ".close1", function(e){
 		if ($('.mfp-wrap').hasClass('mfp-ready')){
 			e.preventDefault();
@@ -221,6 +225,7 @@ $(document).ready(function(){
 		}
 	});
 	//--------------------------------------***--------------------------------------
+
 	$(document).on("click", "a.anchor", function(e){
 		e.preventDefault();
 		var idtop = $($(this).attr("href")).offset().top-200;
@@ -274,11 +279,12 @@ $(document).ready(function(){
 	});
 	$(window).resize(function(){
 		$container.children().addClass('item-translate');
-		$peopleItems.children().addClass('item-translate');
+		$peopleItems.children('.people-item').addClass('item-translate');
 		if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
 	});
 	if (init($peopleItems, [], peopleArr))
 		setTimeout(function(){init($container, [], itemsArr)},500);
+
 	if(location){
 		// console.log($(location	));
 		setTimeout(function() {
@@ -290,5 +296,5 @@ $(document).ready(function(){
 			}, 1000);
 		}, 100);
 	}
-
+	$('.people-item').addClass('people-hover').isPerson();
 });

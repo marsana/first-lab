@@ -260,13 +260,13 @@ a
 
     width: 100%;
 }
-.who .filter_people div
+.who .filter_people .people-item
 {
     font-size: 20px;
     font-weight: 600;
 
     position: absolute;
-
+    z-index: 20;
     display: inline-block;
 
     width: 170px;
@@ -296,18 +296,40 @@ a
         opacity: 1;
         border-radius: 50%;
     }
-    &:hover
-    {
-        cursor: default;
-        transition: background-image .3s !important;
-        span
-        {
-            cursor: default;
+    // &:hover
+    // {
+    //     cursor: default;
+    //     transition: background-image .3s !important;
+    //     span
+    //     {
+    //         cursor: default;
 
-            opacity: 0;
-        }
-    }
+    //         opacity: 0;
+    //     }
+    // }
 }
+
+// .who .filter_people .people-item.people-hover-active {
+
+//     cursor: default;
+//     transition: background-image .3s !important;
+//     span
+//     {
+//         cursor: default;
+
+//         opacity: 0;
+//     }
+// }
+// .who .filter_people .people-item.people-hover:hover {
+//     cursor: default;
+//     transition: background-image .3s !important;
+//     span
+//     {
+//         cursor: default;
+
+//         opacity: 0;
+//     }
+// }
 /*How*/
 .scheme
 {
@@ -652,12 +674,12 @@ a
 }
 .mfp-figure
 {
-            animation-name: fadeIn;
-            animation-duration: .3s;
-            animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
+        animation-name: fadeIn;
+        animation-duration: .3s;
+        animation-fill-mode: both;
+-webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
 }
 
 iframe.video {
@@ -669,4 +691,51 @@ iframe.video {
 {
     padding-top: 160px;
 }
+
+.personAbout {
+    background-color: #ccc;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    transition: top .3s;
+}
+
+.personAbout {
+    background-color: #ccc;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    transition: top .3s;
+}
+
+// .peopleAbouteOpen {
+//     position: absolute;
+//     margin-top: 50px;
+//     transition: all .3s;
+// }
+
+// .peopleAboute div {
+//     display: none;
+// }
+
+.peopleAboutItem {
+    position: absolute;
+    opacity: 0;
+    padding: 60px;
+    transition: opacity .3s;
+}
+
+.activeItemPerson {
+    opacity: 1;
+}
+
+// .who .filter_people .people-item.__down{
+//     margin-top: 350px;
+// }
+
+.who .filter_people .people-item.whiteItem {
+    opacity: .3 !important;
+}
+.people-item .peopleAboutItem {display: none; position: absolute;}
 @import 'mobile';

@@ -162,7 +162,7 @@ function init($obj, martix, itemsArr) {
 				width:itemsArr[i].size[0],
 				height:itemsArr[i].size[0]
 			})
-			itemsArr[i].linkTo.children().css('display','inline-block');
+			itemsArr[i].linkTo.children('').css('display','inline-block');
 		}
 	}
 	calculate($obj, itemsArr);
