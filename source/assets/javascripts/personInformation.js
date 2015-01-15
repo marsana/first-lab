@@ -49,6 +49,7 @@
       elemCurr = $(elem);
       $(self.place) // крайний элемент в строке выбранного элемента
         .nextAll('.people-item')
+          .stop()
           .animate({
             'margin-top': margin + infoheight
           },

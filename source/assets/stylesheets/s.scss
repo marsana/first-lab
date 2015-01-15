@@ -741,3 +741,51 @@ iframe.video {
 }
 .people-item .peopleAboutItem {display: none; position: absolute;}
 @import 'mobile';
+
+
+.person-works {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+
+    margin: 80px auto;
+    text-align: center;
+    img{
+        margin-top: 20px;
+    }
+    .col-10 {width: 98.0%}
+    .col-9 {width: 88.0%}
+    .col-8 {width: 78.0%}
+    .col-7 {width: 68.0%}
+    .col-6 {width: 58.0%}
+    .col-5 {width: 48.0%}
+    .col-4 {width: 38.0%}
+    .col-3 {width: 28.0%}
+    .col-2 {width: 18.0%}
+    .col-1 {width: 8.0%}
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10
+    {
+        position: relative;
+        margin-left: 1%;
+        margin-right: 1%;
+
+    }
+}
+
+
+
+
+.in {
+    vertical-align: top;
+    float: left;
+}
