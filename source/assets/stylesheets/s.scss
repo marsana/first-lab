@@ -274,7 +274,7 @@ a
     margin: 15px 5px;
 
     cursor: default;
-    transition: all 1s;
+    transition: all .3s;
     text-align: center;
 
     color: #fff;
@@ -291,7 +291,7 @@ a
         padding-top: 60px;
 
         cursor: default;
-        transition: opacity .5s;
+        transition: opacity .3s;
 
         opacity: 1;
         border-radius: 50%;
@@ -691,33 +691,6 @@ iframe.video {
 {
     padding-top: 160px;
 }
-
-.personAbout {
-    background-color: #ccc;
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    z-index: 10;
-    transition: top .3s;
-}
-
-.personAbout {
-    background-color: #ccc;
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    transition: top .3s;
-}
-
-// .peopleAbouteOpen {
-//     position: absolute;
-//     margin-top: 50px;
-//     transition: all .3s;
-// }
-
-// .peopleAboute div {
-//     display: none;
-// }
 
 .peopleAboutItem {
     position: absolute;

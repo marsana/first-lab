@@ -32,9 +32,19 @@
         self.textTop = parseInt(self.place.css('top')) + self.place.height() + 20;
       }
     },
-    openrows: function(){},
-    closerows: function(){},
-    openinfo: function(){},
+
+    closerows: function(){
+      // спрятать текст в любом случае
+      // схлопнуть строку
+      $allTextDiv.removeClass('activeItemPerson');
+      $(".people-hover-active").removeClass("people-hover-active");
+      // $('.people-item').addClass('people-hover');
+      setTimeout(function() {
+        $('.filter-item').css('margin-top', margin);
+        $allTextDiv.css('display', 'none');
+      }, timeAnimation);
+    },
+
     beforeOpenText: function(elem){
       self = this;
       self.searchRow();
@@ -62,7 +72,7 @@
             'display' : 'block'
           });
           setTimeout(function(){ $textDiv.addClass('activeItemPerson') }, timeAnimation);
-      }, timeAnimation*3);
+      }, timeAnimation);
     },
     events: {
       click: function() {
@@ -94,15 +104,10 @@
             }
             // иначе - клик второй
             else {
+              self.closerows();
 
-              // спрятать текст в любом случае
-              // схлопнуть строку
-              $allTextDiv.removeClass('activeItemPerson');
-              // $('.people-item').addClass('people-hover');
-              setTimeout(function() {
-                $('.filter-item').nextAll().css('margin-top', margin);
-                $allTextDiv.css('display', 'none');
-              }, timeAnimation);
+
+
               setTimeout(function() {
               // если клик по новому пользователю
                 if (lastElem !== currElem) {
@@ -140,9 +145,13 @@
         var self = this;
         $('.peopleAboutItem').css('width', $('.people-wrapper').width());
         console.log($('.peopleAboutItem').width())
+
         $(window).resize(function() {
           $('.peopleAboutItem').css('width', $('.people-wrapper').width());
+
           self.elemTop = parseInt($( self.elem ).css('top'));
+          self.closerows();
+
         })
       }
     }
