@@ -1,7 +1,7 @@
 // = require itemPosition
 // = require jquery.magnific-popup
 // = require jquery.fitvids
-// = require personInformation2
+// = require personInformation
 /*global $:false */
 'use strict';
 
@@ -297,4 +297,6 @@ $(document).ready(function(){
 		}, 100);
 	}
 	$('.people-item').addClass('people-hover').isPerson();
+
+	$('.peopleAboutItem').css('display','none')
 });

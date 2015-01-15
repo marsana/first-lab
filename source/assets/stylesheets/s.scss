@@ -309,27 +309,27 @@ a
     // }
 }
 
-// .who .filter_people .people-item.people-hover-active {
+.who .filter_people .people-item.people-hover-active {
 
-//     cursor: default;
-//     transition: background-image .3s !important;
-//     span
-//     {
-//         cursor: default;
+    cursor: default;
+    // transition: background-image .3s !important;
+    span
+    {
+        cursor: default;
 
-//         opacity: 0;
-//     }
-// }
-// .who .filter_people .people-item.people-hover:hover {
-//     cursor: default;
-//     transition: background-image .3s !important;
-//     span
-//     {
-//         cursor: default;
+        opacity: 0;
+    }
+}
+.who .filter_people .people-item.people-hover:hover {
+    cursor: default;
+    // transition: background-image .3s !important;
+    span
+    {
+        cursor: default;
 
-//         opacity: 0;
-//     }
-// }
+        opacity: 0;
+    }
+}
 /*How*/
 .scheme
 {
@@ -722,12 +722,14 @@ iframe.video {
 .peopleAboutItem {
     position: absolute;
     opacity: 0;
-    padding: 60px;
-    transition: opacity .3s;
+    padding: 60px 60px 60px 0;
+    box-sizing: border-box;
+    transition: all .3s;
 }
 
 .activeItemPerson {
     opacity: 1;
+    transition: all .3s;
 }
 
 // .who .filter_people .people-item.__down{

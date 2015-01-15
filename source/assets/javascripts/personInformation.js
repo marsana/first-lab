@@ -1,4 +1,7 @@
+// отчаяние
+
 ;(function($, window, document, undefined){
+            var b = 1, lastElem, timeAnimation = 300;
   var Person = {
     init: function( options, elem ) {
       var self = this;
@@ -6,6 +9,7 @@
       self.elem = $( elem );
       self.elemTop = parseInt($( elem ).css('top'));
       self.events.click.call( self );
+      self.events.resize.call( self );
     },
     searchRow: function() {
       var self = this;
@@ -28,59 +32,116 @@
         self.textTop = parseInt(self.place.css('top')) + self.place.height() + 20;
       }
     },
-    beforeAll: function() { //close
-      $('.peopleAbouteOpen').hide().html('');
-      this.elem
-        .removeClass(this.options.white)
-        .removeClass(this.options.active)
-        .removeClass(this.options.down)
-        .siblings()
-          .removeClass(this.options.white)
-          .removeClass(this.options.active)
-          .removeClass(this.options.down);
-    },
-    beforeChange: function() {
-      $('.peopleAbouteOpen').hide().html('');
-      this.elem
-        .addClass(this.options.active)
-        .siblings()
-          .addClass(this.options.white);
-    },
-    placeText: function() {
-      var a = this.elem.hasClass(this.options.active)
-      this.beforeAll();
-      if (!a) {
-        this.beforeChange();
-        this.searchRow();
-        this.indexItem = $( "div" ).index( this.elem ) - 20;
-        console.log(this.indexItem);
-        // var d = $('.peopleAboute').children();
+    openrows: function(){},
+    closerows: function(){},
+    openinfo: function(){},
+    beforeOpenText: function(elem){
+      self = this;
+      self.searchRow();
 
-        var htmlEl = $('.peopleAboute').find('div').eq(this.indexItem).html();
-        console.log(this.textTop);
-        $('.peopleAbouteOpen')
-          .insertAfter( this.place )
+      $(elem).addClass("people-hover-active");
+      a = $(elem).index(); // записать номер позиции человека
+      $allTextDiv = $('.peopleAboutItem');
+      $textDiv = $('.peopleAboutItem').eq(a);
+      infoheight = $textDiv.outerHeight(); // узнать высоту описания соответствующую данному человеку
+    },
+    OpenText: function(elem){
+      elemCurr = $(elem);
+      $(self.place) // крайний элемент в строке выбранного элемента
+        .nextAll('.people-item')
+          .animate({
+            'margin-top': margin + infoheight
+          },
+          timeAnimation);
+
+      setTimeout(function(){
+        $textDiv // соответствующий блок с тектом
           .css({
-            'top' : this.textTop
-          })
-          .html(htmlEl)
-          .show();
-        this.place.nextAll().addClass(this.options.down);
-        var b = ($('.people').offset().top + this.textTop) - ($(window).height()/2 - $('.personAbout').height());
-        $('html,body').animate({scrollTop: b }, 500);
-      }
+            'top': elemCurr.offset().top + elemCurr.outerHeight() + margin,
+            'display' : 'block'
+          });
+          setTimeout(function(){ $textDiv.addClass('activeItemPerson') }, timeAnimation);
+      }, timeAnimation*3);
     },
     events: {
       click: function() {
-        var self = this;
+        var self = this,
+            margin = 15;
+
+
         self.elem.on( 'click' , function() {
-          if ($(this).hasClass('activeItemPerson')) {
-            self.beforeAll();
-          }
-          else {
-            self.beforeAll();
-            self.placeText();
-          }
+          // на данный момент self - это объект, а currElem - блок по которому был клик
+          currElem = this;
+
+          $(".people-hover-active").removeClass("people-hover-active")
+
+          setTimeout(function(){
+
+            // если это первый клик
+            if (b == 1) {
+
+              self.beforeOpenText(currElem);
+              // открыть:
+                // раздвинуть строку
+                // когда строка будет раздвинута - проявить тект
+              self.OpenText(currElem);
+
+              // приравнять b к 2
+              b = 2;
+              // назначить последним элементом данный
+              lastElem = currElem;
+            }
+            // иначе - клик второй
+            else {
+
+              // спрятать текст в любом случае
+              // схлопнуть строку
+              $allTextDiv.removeClass('activeItemPerson');
+              // $('.people-item').addClass('people-hover');
+              setTimeout(function() {
+                $('.filter-item').nextAll().css('margin-top', margin);
+                $allTextDiv.css('display', 'none');
+              }, timeAnimation);
+              setTimeout(function() {
+              // если клик по новому пользователю
+                if (lastElem !== currElem) {
+
+                    self.beforeOpenText(currElem);
+
+                  // открыть:
+                    // раздвинуть строку
+                    // когда строка будет раздвинута - проявить тект
+
+                    self.OpenText(currElem);
+
+
+
+                  b = 2;
+                  lastElem = currElem;
+                }
+
+                // иначе - все персонажи были закрыты
+                else {
+                  b = 1;
+                  lastElem = 0;
+                }
+              }, timeAnimation);
+            }
+
+          }, 300);
+
+        })
+
+
+
+      },
+      resize: function() {
+        var self = this;
+        $('.peopleAboutItem').css('width', $('.people-wrapper').width());
+        console.log($('.peopleAboutItem').width())
+        $(window).resize(function() {
+          $('.peopleAboutItem').css('width', $('.people-wrapper').width());
+          self.elemTop = parseInt($( self.elem ).css('top'));
         })
       }
     }
