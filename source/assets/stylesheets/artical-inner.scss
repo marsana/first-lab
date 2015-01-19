@@ -136,9 +136,9 @@
 
 
 .peopleAboutItem {
-    position: absolute;
+    // position: absolute;
     // opacity: 0;
-    padding: 60px 60px 60px 0;
+    // padding: 60px 60px 60px 0;
     box-sizing: border-box;
     transition: all .3s;
 }
@@ -152,14 +152,16 @@
 
 
 .person-works {
-    width: 92%;
-    margin-left: 4%;
-    margin-right: 4%;
+    width: 100%;
+    //margin-left: 4%;
+    //margin-right: 4%;
 
     margin: 80px auto;
     text-align: center;
     img{
+        text-align: center;
         margin-top: 20px;
+        display: inline-block;
     }
     .col-10 {width: 98.0%}
     .col-9 {width: 88.0%}
