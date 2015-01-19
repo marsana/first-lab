@@ -1,7 +1,6 @@
 // = require itemPosition
 // = require jquery.magnific-popup
 // = require jquery.fitvids
-
 /*global $:false */
 'use strict';
 
