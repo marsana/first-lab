@@ -1,0 +1,199 @@
+.content
+{
+    position: relative;
+    &.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: #fff;
+    }
+}
+.main-wrapper
+{
+    transition: opacity .3s;
+
+    opacity: 1;
+}
+.close1
+{
+    background: image-url('data/close_item.png') no-repeat;
+}
+.article_inner
+{
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.full_width
+{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.article_inner .filter, .article_inner a.filter-item
+{
+    color: #999;
+}
+.article_inner a.filter-item:hover
+{
+    color: #005fff;
+}
+
+
+.article_inner
+{
+    width: 100%;
+    margin: 0 auto;
+    h1
+    {
+        font-size: 30px;
+        font-weight: normal;
+
+        text-transform: lowercase;
+    }
+    img
+    {
+        display: block;
+
+        max-width: 1200px;
+        margin: 1em auto;
+        &.full_width
+        {
+            width: 100%;
+        }
+    }
+    .content_colum
+    {
+        float: left;
+
+        width: 45%;
+    }
+    .image_colum
+    {
+        float: right;
+
+        width: 45%;
+    }
+    .description,
+    .colums
+    {
+        max-width: 1000px;
+        margin: 1em auto;
+        padding: 20px 150px;
+    }
+    .filter_tags
+    {
+        display: inline-block;
+
+        width: 45%;
+        margin-bottom: 10px;
+
+        vertical-align: top;
+    }
+    .filter_people
+    {
+        display: inline-block;
+
+        width: 50%;
+        margin-right: 4%;
+        margin-bottom: 10px;
+
+        vertical-align: top;
+        .filter-item
+        {
+            display: inline-block;
+        }
+    }
+}
+.article_inner
+{
+    h2
+    {
+        text-transform: lowercase;
+    }
+    .description
+    {
+        padding-left: 155px;
+    }
+}
+.isotope-item
+{
+    z-index: 2;
+}
+.isotope-hidden.isotope-item
+{
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+
+
+.peopleAboutItem {
+    position: absolute;
+    // opacity: 0;
+    padding: 60px 60px 60px 0;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+.activeItemPerson {
+    opacity: 1;
+    transition: all .3s;
+}
+
+
+
+
+.person-works {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+
+    margin: 80px auto;
+    text-align: center;
+    img{
+        margin-top: 20px;
+    }
+    .col-10 {width: 98.0%}
+    .col-9 {width: 88.0%}
+    .col-8 {width: 78.0%}
+    .col-7 {width: 68.0%}
+    .col-6 {width: 58.0%}
+    .col-5 {width: 48.0%}
+    .col-4 {width: 38.0%}
+    .col-3 {width: 28.0%}
+    .col-2 {width: 18.0%}
+    .col-1 {width: 8.0%}
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10
+    {
+        position: relative;
+        margin-left: 1%;
+        margin-right: 1%;
+
+    }
+}
+
+
+
+
+.in {
+    vertical-align: top;
+    float: left;
+}

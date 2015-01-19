@@ -1,0 +1,124 @@
+a:focus, :hover
+{
+    outline: none;
+}
+::-moz-focus-inner
+{
+    border: 0;
+}
+body,
+input,
+button,
+textarea
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body
+{
+    font: 18px 'Proxima Nova', Arial, sans-serif;
+}
+a
+{
+    transition: border-color .3s;
+    transition: color .3s;
+    text-decoration: none;
+
+    color: #000;
+    &:hover
+    {
+        text-decoration: none;
+        color: #005fff;
+        border-color: #005fff ;
+    }
+}
+
+.wrapper
+{
+    font-size: 21px;
+    max-width: 1200px;
+    margin: 140px auto;
+    padding: 0 40px;
+}
+
+.main
+{
+    max-width: 970px;
+    margin-left: 230px;
+    h2
+    {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+}
+
+.display-none
+{
+    transition: opacity .2s;
+
+    opacity: 0 !important;
+}
+
+@-webkit-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.mfp-figure
+{
+        animation-name: fadeIn;
+        animation-duration: .3s;
+        animation-fill-mode: both;
+-webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+iframe.video {
+    display: block;
+    margin: 80 auto;
+}
+
+.mfp-content
+{
+    padding-top: 160px;
+}

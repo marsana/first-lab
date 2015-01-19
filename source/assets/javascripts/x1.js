@@ -68,18 +68,25 @@ $(document).ready(function(){
     $menu = $('.menu'),
     $menu2 = $('.menu2'),
     menuChapter = $('.chapter'),
-    postTopCash = 0;
+    postTopCash = 0,
+    $currContainer;
   var itemSizeSmall = 35;
   itemsArr = [];
   peopleArr = [];
+
+
   function closeProgect(){
     $.magnificPopup.close()
-    $container.removeClass('is__small')
+    $currContainer.removeClass('is__small')
     $post.removeClass(CLASS_ACTIVE);
-    $container.removeClass(CLASS_ACTIVE);
-    $container.addClass('notActive');
-    init($container, [], itemsArr);
+    $currContainer.removeClass(CLASS_ACTIVE);
+    $currContainer.addClass('notActive');
+    // init($container, [], itemsArr);
+    if ( init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
+
   }
+
+
   function changePointMenu(){
     menuChapter.each(function(){
       if ($(this).offset().top-240 <= $(window).scrollTop()){
@@ -157,8 +164,8 @@ $(document).ready(function(){
                 cur = magnificPopup.st.el;
                 //console.log(cur.hasClass('people-item'));
 
-              var $currContainer = cur.parent(),
-                currArr;
+              $currContainer = cur.parent();
+                var currArr;
 
       // если это айтем от людей, то переназначить массив
         (cur.hasClass('people-item')) ? currArr = peopleArr : currArr = itemsArr;
@@ -300,16 +307,32 @@ $(document).ready(function(){
   $(window).on("scroll", function(){
     changePointMenu();
   });
-  $container.css({
+  $('.items').css({
     top: $('.items-wrapper').offset().top
   });
+  setTimeout(function() {
+    $('.people').css({
+      top: $('.people-wrapper').offset().top
+    });
+  }, 2000);
   $(window).resize(function(){
+    $('.items').css({
+      top: $('.items-wrapper').offset().top
+    });
+    setTimeout(function() {
+      $('.people').css({
+        top: $('.people-wrapper').offset().top
+      });
+    }, 200);
     $container.children().addClass('item-translate');
     $peopleItems.children('.people-item').addClass('item-translate');
-    if (init($peopleItems, [], peopleArr)) init($container, [], itemsArr);
+    if (
+      init($container, [], itemsArr )) init( $peopleItems, [], peopleArr ) ;
   });
-  if (init($peopleItems, [], peopleArr))
-    setTimeout(function(){init($container, [], itemsArr)},500);
+  if (init($container, [], itemsArr))
+    setTimeout(function(){
+      init($peopleItems, [], peopleArr)
+    },500);
 
   if(location){
     // console.log($(location ));

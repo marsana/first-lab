@@ -1,0 +1,49 @@
+
+/*Header*/
+
+.infoblock.col
+{
+    font-weight: 550;
+}
+.descriptions
+{
+    width: 570px;
+    margin-bottom: 100px;
+    a
+    {
+        @include lightDecoration();
+    }
+}
+
+.social a
+{
+    display: inline-block;
+    overflow: hidden;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+
+    text-indent: -1000em;
+
+    border: 0;
+}
+.social-fb{@include bgs(fb);}
+.social-vk{@include bgs(vk);}
+.social-tw{@include bgs(tw);}
+.social-fb:hover{@include bgs(fb_on);}
+.social-vk:hover{@include bgs(vk_on);}
+.social-tw:hover{@include bgs(tw_on);}
+
+.infoblock-contacts{
+    a
+    {
+        @include lightDecoration();
+    }
+    p
+    {
+        margin-top: 0;
+        margin-bottom: px;
+    }
+}
+

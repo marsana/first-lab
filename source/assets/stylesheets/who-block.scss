@@ -1,0 +1,186 @@
+/*Who*/
+.people-wrapper
+{
+    position: static;
+
+    margin: 0 auto;
+}
+.filter_people {
+    position: absolute;
+    z-index: 2024;
+    transition: all .5s;
+    .people-item {
+        font-size: 20px;
+        font-weight: 600;
+
+        position: absolute;
+        z-index: 20;
+        display: inline-block;
+
+        width: 170px;
+        height: 106px;
+        margin: 15px 5px;
+
+        cursor: default;
+        transition: all .3s;
+        text-align: center;
+        z-index: 2024;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #a7abab;
+        span
+        {
+            position: absolute;
+
+            width: 170px;
+            height: 110px;
+            margin: 0;
+            margin-left: -85px;
+            padding-top: 60px;
+
+            cursor: default;
+            transition: opacity .3s;
+
+            opacity: 1;
+            border-radius: 50%;
+        }
+    }
+    &.is__ready
+    {
+        transition-delay: .5s;
+
+        opacity: 1;
+    }
+    #meshherjakov
+    {
+        background: image-url('data/H68A8862.jpg') no-repeat;
+        span {background: RGBa(175, 174, 146, .7);}}
+    #borisovsky
+    {
+        background: image-url('data/H68A8730.jpg') no-repeat;
+        span {background: RGBa(137, 127, 123, .7);}}
+    #egorov
+    {
+        background: image-url('data/egor.JPG') no-repeat;
+        span {background: RGBa(137, 127, 123, .7);}}
+    #kleschev
+    {
+        background: image-url('data/H68A7227.jpg') no-repeat;
+        span {background: RGBa(175, 174, 146, .7);}}
+    #novichkov
+    {
+        background: image-url('data/nov.JPG') no-repeat;
+        span {background: RGBa(167, 171, 171, .7);}}
+    #paschenko
+    {
+        background: image-url('data/H68A4905.jpg') no-repeat;
+        span {background: RGBa(97, 95, 97, .7);}}
+    #rumin
+    {
+        background: image-url('data/rum.jpg') no-repeat;
+        span {background: RGBa(167, 171, 171, .7);}}
+    #sergeev
+    {
+        background: image-url('data/serg.JPG') no-repeat;
+        span {background: RGBa(167, 171, 171, .7);}}
+    #temen
+    {
+        background: image-url('data/H68A3451.jpg') no-repeat;
+        span {background: RGBa(167, 171, 171, .7);}}
+    #juzhanina
+    {
+        background: image-url('data/yug.JPG') no-repeat;
+        span {background: RGBa(124, 128, 129, .7);}}
+    #logutova
+    {
+        background: image-url('data/log.JPG') no-repeat;
+        span {background: RGBa(175, 174, 146, .7);}}
+    &.active
+    {
+        &:before
+        {
+            position: fixed;
+            z-index: 0;
+            top: 0;
+            left: 0;
+
+            display: block;
+
+            width: 100%;
+            height: 140px;
+
+            content: '';
+
+            background-color: #fff;
+        }
+        .people-item
+        {
+            transition: all .3s !important;
+            &:hover
+            {
+                transition: all .3s !important;
+
+                background-color: #000 !important;
+            }
+        }
+        .item-title
+        {
+            transition: opacity .3s;
+
+            opacity: 0;
+        }
+        .item_deco
+        {
+            display: none;
+        }
+        #meshherjakov {background: RGBa(175, 174, 146, 1);}
+        #borisovsky {background: RGBa(137, 127, 123, 1);}
+        #egorov {background: RGBa(137, 127, 123, 1);}
+        #kleschev {background: RGBa(175, 174, 146, 1)}
+        #novichkov {background: RGBa(167, 171, 171, 1)}
+        #paschenko {background: RGBa(97, 95, 97, 1)}
+        #rumin {background: RGBa(167, 171, 171, 1)}
+        #sergeev {background: RGBa(167, 171, 171, 1)}
+        #temen {background: RGBa(167, 171, 171, 1)}
+        #juzhanina {background: RGBa(124, 128, 129, 1)}
+        #logutova {background: RGBa(175, 174, 146, 1);}
+        .close1
+        {
+        background-image: image-url('data/close_item.png') !important;
+        }
+
+    }
+}
+
+.filter_people .people-item.people-hover-active {
+
+    cursor: default;
+    // transition: background-image .3s !important;
+    span
+    {
+        cursor: default;
+
+        opacity: 0;
+    }
+}
+.filter_people .people-item.people-hover:hover {
+    cursor: default;
+    // transition: background-image .3s !important;
+    span
+    {
+        cursor: default;
+
+        opacity: 0;
+    }
+}
+
+.filter_people .people-item.whiteItem {
+    opacity: .3 !important;
+}
+
+
+
+
+
+
+

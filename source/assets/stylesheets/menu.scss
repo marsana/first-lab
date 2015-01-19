@@ -1,0 +1,134 @@
+.menu
+{
+    position: fixed;
+    z-index: 2000;
+}
+
+.logotype
+{
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    @include sbgs(logotype);
+}
+.links
+{
+    position: fixed;
+    z-index: 2000;
+    top: 258px;
+
+    box-sizing: border-box;
+    width: 70px;
+    height: 250px;
+    padding: 0;
+
+    border: 5px solid black;
+    a
+    {
+        display: block;
+        overflow: hidden;
+
+        margin: 0 0 4px -5px;
+
+        text-indent: -1000em;
+
+        border: 0;
+    }
+    .header-link.active-menu
+    {
+        @include sbgs(main_on);
+    }
+    .header-link
+    {
+        @include sbgs(main);
+    }
+    .header-link span
+    {
+        display: block;
+
+        transition: opacity .2s;
+
+        opacity: 0;
+
+        @include sbgs(main_on);
+    }
+    .header-link span:hover
+    {
+        transition: opacity .2s;
+
+        opacity: 1;
+    }
+    .who-link.active-menu
+    {
+        @include sbgs(who_on);
+    }
+    .who-link
+    {
+        @include sbgs(who);
+    }
+    .who-link span
+    {
+        display: block;
+
+        transition: opacity .2s;
+
+        opacity: 0;
+
+        @include sbgs(who_on);
+    }
+    .who-link span:hover
+    {
+        transition: opacity .2s;
+
+        opacity: 1;
+    }
+    .how-link.active-menu
+    {
+        @include sbgs(how_on);
+    }
+    .how-link
+    {
+        @include sbgs(how);
+    }
+    .how-link span
+    {
+        display: block;
+
+        transition: opacity .2s;
+
+        opacity: 0;
+
+        @include sbgs(how_on);
+    }
+    .how-link span:hover
+    {
+        transition: opacity .2s;
+
+        opacity: 1;
+    }
+    .what-link.active-menu
+    {
+        @include sbgs(what_on);
+    }
+    .what-link
+    {
+        @include sbgs(what);
+    }
+    .what-link span
+    {
+        display: block;
+
+        transition: opacity .2s;
+
+        opacity: 0;
+
+        @include sbgs(what_on);
+    }
+    .what-link span:hover
+    {
+        transition: opacity .2s;
+
+        opacity: 1;
+    }
+}
