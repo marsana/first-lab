@@ -1,21 +1,12 @@
 $break-1: 477px;
 $break-2: 767px;
-$break-3: 900px;
+$break-3: 1500px;
 @mixin respond-to($media) {
-  @if $media == sm {
-    @media only screen and (max-width: $break-1) { @content; }
-  }
   @if $media == mob {
     @media only screen and (max-width: $break-2) { @content; }
   }
-  @if $media == tablet {
+  @if $media == small {
     @media only screen and (max-width: $break-3) { @content; }
-  }
-  @if $media == desktop {
-    @media only screen and (min-width: $break-3 + 1) { @content; }
-  }
-  @else {
-    @media only screen and (max-width: $media) { @content; }
   }
 }
 
@@ -70,4 +61,18 @@ $break-3: 900px;
     padding-top: 80px;
   }
 
+}
+
+
+@include respond-to(small){
+
+  .person-works.custome-style {
+  .person-row{
+    position: relative;
+    img {position: static;}
+    &.row-up {
+      margin-top: 0px;
+    }
+    }
+  }
 }

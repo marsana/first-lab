@@ -1,0 +1,32 @@
+.person-works.custome-style {
+  .person-row{
+    position: relative;
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .p1{left: 150px; z-index: 2;}
+    .p2{top:-80px;z-index: 1;}
+    .p3{top: -210px;left: 200px;z-index: 1;}
+    .p4{top: -440px;left: 460px;z-index: 3;}
+    .p5{top: -180px;left: 100px;z-index: 2;}
+    .p6{top: -310px;left: -90px;z-index: 3;}
+    .p7{top: -270px;left: 550px;z-index: 3;}
+    .p8{}
+    .p9{top: -80px;left: -20px;z-index: 3;}
+    .p10{}
+    .p11{top: -110px;}
+    .p12{top: -350px;left: 140px;}
+    .p13{top: -200px;left: 250px;}
+    .p14{top: -100px;left: -100px;}
+    .p15{top: -100px;}
+    .p19{top: -100px;}
+    .p17{top: -100px;}
+    .p18{top: -100px;}
+
+    &.row-up {
+      margin-top: -300px;
+    }
+  }
+}
