@@ -86,27 +86,20 @@
         margin: 1em auto;
         padding: 20px 150px;
     }
-    .filters:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
     .filter_tags
     {
-        float: left;
-        // display: inline-block;
+        display: inline-block;
 
-        // width: 45%;
+        width: 45%;
         margin-bottom: 10px;
 
         vertical-align: top;
     }
     .filter_people
     {
-        // display: inline-block;
-
-        // width: 50%;
-        float: right;
+        display: inline-block;
+        position: static;
+        width: 50%;
         margin-right: 4%;
         margin-bottom: 10px;
 
