@@ -3,7 +3,7 @@ title: 'Лаборатория дизайна высшей школы эконо
 page_class: 'index'
 ---
 .main-wrapper
-  %header.header.columns.chapter{ :data => {:link => '.header-link'} }
+  %header.header.columns.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.header-link'} }
     .infoblock.col
       .social
         %a.social-fb{href: "https://www.facebook.com/HSEDesign"} Facebook
@@ -14,7 +14,7 @@ page_class: 'index'
           %a{:href => "mailto:deslab@hse.ru"} deslab@hse.ru
         %p +7 (495) 772-95-90 (доб. 14302)
     .description Лаборатория дизайна – это подразделение Школы дизайна НИУ ВШЭ, по форме деятельности представляющее собой арт-студию или дизайн-бюро. Но ни в одной другой студии вы не найдете такого количества выдающих дизайнеров, собранных под одной крышей. Интеллектуальные и технические ресурсы Лаборатории позволяют собрать оптимально выгодный состав команды под каждый новый проект и бюджет.
-  .what.chapter{ :data => {:link => '.what-link'} }
+  .what.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.what-link'} }
     %h2 что
     .filter.filter_tags
       %a.filter_active.filter-item{:href => "all", :id => "all"} всё
@@ -31,7 +31,7 @@ page_class: 'index'
     %span.portfolio-link
       %a{:href => settings.prefix + "/assets/data/hse-designlab-portfolio.pdf"} скачать портфолио pdf, 10&nbsp;МБ
 
-.items-wrapper
+.items-wrapper.col-xs-10.col-xs-offset-1.col-sm-offset-2
   .items#items.items-container
     %a.item.magpop.f_all.f_graph.f_infografika.f_reklama.f_godotchet.f_g2014{:href => settings.prefix + "/assets/data/posts/chtpz", :id => "chtpz", :style => "background-color: #c2321a;", :data => {:id => 'chtpz'}}
       %span.item-title ЧТПЗ<br />полиграфия
@@ -72,7 +72,7 @@ page_class: 'index'
 
 
 .main-wrapper
-  .how.chapter{ :data => {:link => '.how-link'} }
+  .how.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.how-link'} }
     %h2 как
     .scheme
       %img{:src => settings.prefix + "/assets/images/data/scheme.png"}
@@ -80,9 +80,9 @@ page_class: 'index'
 
 
 
-  .who.chapter{ :data => {:link => '.who-link'} }
+  .who.chapter.col-xs-10.col-xs-offset-2{ :data => {:link => '.who-link'} }
     %h2 кто
-.filters.col.people-wrapper
+.filters.col.people-wrapper.col-xs-10.col-xs-offset-1.col-sm-offset-2
   .filter_people.people.items-container
 
     %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/meshherjakov/meshherjakov", :id => "meshherjakov", :data => {:id => 'meshherjakov'}}

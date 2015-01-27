@@ -156,9 +156,9 @@ $(document).ready(function(){
       //--------------------------------------Отмена фильтрации при открытии--------------------------------------
         var flag_status;
         $('.filter_active').removeClass('filter_active');
-        $container.removeClass('filtred');
+        $item.removeClass('filtred');
         $('.item').removeClass('display-none');
-        init($container, [], itemsArr);
+        if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
       //--------------------------------------***--------------------------------------
       // определение this
         var magnificPopup = $.magnificPopup.instance,
@@ -288,12 +288,14 @@ $(document).ready(function(){
     var flag_status;
     if ($(this).hasClass('filter_active')) flag_status = true;
     $('.filter_active').removeClass('filter_active');
-    $container.removeClass('filtred');
+    $item.removeClass('filtred');
     $('.item').removeClass('display-none');
     if (!flag_status){
-      $(this).addClass('filter_active')
+
       var filter_search = $(this).attr('href');
-      $container.children().each(function(){
+      // console.log(filter_search);
+      $('#'+filter_search).addClass('filter_active')
+      $item.children().each(function(){
         if(!$(this).hasClass('f_'+filter_search)){
           if(history.pushState) {
             var redirect = prefix + '/#'+ filter_search;
@@ -301,12 +303,12 @@ $(document).ready(function(){
           }else{
           changeHashWithoutScrolling('')
           }
-          $container.addClass('filtred');
+          $item.addClass('filtred');
           $(this).addClass('display-none');
         }
       });
     }
-    init($container, [], itemsArr);
+    if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
   });
   $("body").on("click", ".close", function(){
     closeProgect();
@@ -335,8 +337,7 @@ $(document).ready(function(){
     }
     $container.children().addClass('item-translate');
     $peopleItems.children('.people-item').addClass('item-translate');
-    if (
-      init($container, [], itemsArr )) init( $peopleItems, [], peopleArr ) ;
+    if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
   });
   if (init($container, [], itemsArr))
     setTimeout(function(){

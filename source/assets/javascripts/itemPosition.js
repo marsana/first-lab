@@ -14,7 +14,7 @@ var $items, to,
 var matrix = [];
 function calculate($obj, itemsArr){
 	$items = $obj.children();
-	width = $obj.parent().parent().width()-150;
+	width = $obj.parent().width()-150;
 	$obj.width(width);
 	colum = 3000;
 	for(var i = 0; i < $items.length; i++){
@@ -86,12 +86,8 @@ function draw($obj,matrix, itemsArr){
 					left: itemsArr[i].coor.left + margin,
 					top: itemsArr[i].coor.top + margin
 				});
-				$obj.css({
-					width:'auto'
-				})
 				$obj.parent().css({
-					height: (matrix.length+1)*colum,
-					width:'auto'
+					height: (matrix.length+1)*colum
 				})
 				if ($obj.hasClass('active')) {
 					$obj.css({

@@ -10,18 +10,31 @@
     else{
       changeHashWithoutScrolling('')
     }
+
     var idtop = $('.what').offset().top-200;
     $('html,body').animate({scrollTop: idtop}, A_DURATION);
+
+
     var flag_status;
+
     if ($(this).hasClass('filter_active')) flag_status = true;
+
     $('.filter_active').removeClass('filter_active');
+
     $container.removeClass('filtred');
+
     $('.item').removeClass('display-none');
+
     if (!flag_status){
-      $(this).addClass('filter_active')
+
+      $(this).addClass('filter_active');
+
       var filter_search = $(this).attr('href');
+      console.log(filter_search);
       $container.children().each(function(){
+
         if(!$(this).hasClass('f_'+filter_search)){
+
           if(history.pushState) {
             var redirect = prefix + '/#'+ filter_search;
             window.history.pushState('', '', redirect);
@@ -29,6 +42,8 @@
           changeHashWithoutScrolling('')
           }
           $container.addClass('filtred');
+
+
           $(this).addClass('display-none');
         }
       });
