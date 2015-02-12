@@ -62,7 +62,8 @@
         display: block;
 
         max-width: 1200px;
-        margin: 1em auto;
+        margin: 0 auto;
+        box-sizing:border-box;
         &.full_width
         {
             width: 100%;
@@ -109,6 +110,9 @@
         {
             display: inline-block;
         }
+    }
+    iframe {
+        margin: 30px auto;
     }
 }
 .article_inner
