@@ -55,7 +55,7 @@ set :partials_dir, 'shared'
 set :prefix, "/lab"
 # set :prefix, ""
 
-activate :livereload
+# activate :livereload
 activate :autoprefixer
 
 # Build-specific configuration

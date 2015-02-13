@@ -17,60 +17,44 @@ page_class: 'index'
   .what.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.what-link'} }
     %h2 что
     .filter.filter_tags
+    
       %a.filter_active.filter-item{:href => "all", :id => "all"} всё
-      %a.filter-item{:href => "graph", :id => "graph"} графический&nbsp;дизайн
-      %a.filter-item{:href => "brending", :id => "brending"} брендинг
-      %a.filter-item{:href => "godotchet", :id => "godotchet"} годовые&nbsp;отчеты&nbsp;и&nbsp;буклеты
-      %a.filter-item{:href => "prezentacii", :id => "prezentacii"} презентации
-      %a.filter-item{:href => "infografika", :id => "infografika"} инфографика
-      %a.filter-item{:href => "digital", :id => "digital"} диджитал
-      %a.filter-item{:href => "reklama", :id => "reklama"} реклама
-      %a.filter-item{:href => "g2013", :id => "g2013"} 2013
-      %a.filter-item{:href => "g2014", :id => "g2014"} 2014
+      
+      = partial :filter, locals: {name: "graph", head: "графический&nbsp;дизайн"}
+      = partial :filter, locals: {name: "brending", head: "брендинг"}
+      = partial :filter, locals: {name: "godotchet", head: "годовые&nbsp;отчеты&nbsp;и&nbsp;буклеты"}
+      = partial :filter, locals: {name: "prezentacii", head: "презентации"}
+      = partial :filter, locals: {name: "infografika", head: "инфографика"}
+      = partial :filter, locals: {name: "digital", head: "диджитал"}
+      = partial :filter, locals: {name: "reklama", head: "реклама"}
+      = partial :filter, locals: {name: "g2013", head: "2013"}
+      = partial :filter, locals: {name: "g2014", head: "2014"}    
+
       %br
     %span.portfolio-link
       %a{:href => settings.prefix + "/assets/data/hse-designlab-portfolio.pdf"} скачать портфолио pdf, 10&nbsp;МБ
 
 .items-wrapper.col-xs-10.col-xs-offset-1.col-sm-offset-2
   .items#items.items-container
-    %a.item.magpop.f_all.f_graph.f_brending.f_digital.f_reklama.f_g2014{:href => settings.prefix + "/assets/data/posts/rvkcalen", :id => "rvkcalen", :style => "background-color: #24286a;", :data => {:id => 'rvkcalen'}}
-      %span.item-title РВК<br />календарь
-    %a.item.magpop.f_all.f_graph.f_infografika.f_reklama.f_godotchet.f_g2014{:href => settings.prefix + "/assets/data/posts/chtpz", :id => "chtpz", :style => "background-color: #c2321a;", :data => {:id => 'chtpz'}}
-      %span.item-title ЧТПЗ<br />полиграфия
-    %a.item.magpop.f_all.f_graph.f_brending.f_infografika.f_godotchet.f_g2014{:href => settings.prefix + "/assets/data/posts/rvk", :id => "rvk", :style => "background-color: #730e92;", :data => {:id => 'rvk'}}
-      %span.item-title РВК<br />полиграфия
-    %a.item.item_big.magpop.f_all.f_graph.f_brending.f_g2014{:href => settings.prefix + "/assets/data/posts/hosp", :id => "hosp", :style => "background-color: #ebdf35;", :data => {:id => 'hosp'}}
-      %span.item-title Первый московский хоспис им.&nbsp;Веры&nbsp;Миллионщиковой<br />стиль
-    %a.item.magpop.f_all.f_graph.f_brending.f_digital.f_reklama.f_g2014{:href => settings.prefix + "/assets/data/posts/school", :id => "school", :style => "background-color: #000000;", :data => {:id => 'school'}}
-      %span.item-title Школа дизайна<br /> стиль и носители
-    %a.item.magpop.f_all.f_graph.f_brending.f_infografika.f_g2013.f_g2014{:href => settings.prefix + "/assets/data/posts/lyceumhse", :id => "lyceumhse", :style => "background-color: #1264fb;", :data => {:id => 'lyceumhse'}}
-      %span.item-title Лицей НИУ&nbsp;ВШЭ <br />стиль
-    %a.item.magpop.f_all.item_big.f_graph.f_brending.f_g2013{:href => settings.prefix + "/assets/data/posts/goldhse", :id => "goldhse", :style => "background-color: #ffb8b8;", :data => {:id => 'goldhse'}}
-      %span.item-title премия «Золотая вышка» <br />стиль
-    %a.item.magpop.f_all.item_big.f_graph.f_brending.f_g2013{:href => settings.prefix + "/assets/data/posts/depintercom", :id => "depintercom", :style => "background-color: #c23a1d;", :data => {:id => 'depintercom'}}
-      %span.item-title «Отделение интегрированных коммуникаций»<br />стиль
-    %a.item.magpop.f_all.item_big.f_graph.f_brending.f_g2013{:href => settings.prefix + "/assets/data/posts/pyrusstyle", :id => "pyrusstyle", :style => "background-color: #e7b73c;", :data => {:id => 'pyrusstyle'}}
-      %span.item-title PYRUS<br />стиль
-    %a.item.magpop.f_all.f_digital.f_reklama.f_g2014{:href => settings.prefix + "/assets/data/posts/pyrussite", :id => "pyrussite", :style => "background-color: #2bb6ac;", :data => {:id => 'pyrussite'}}
-      %span.item-title PYRUS <br />сайт
-    %a.item.magpop.f_all.f_graph.f_reklama.f_g2013.f_g2014{:href => settings.prefix + "/assets/data/posts/lecturezil", :id => "lecturezil", :style => "background-color: #0b4dd9;", :data => {:id => 'lecturezil'}}
-      %span.item-title Лекции в кц ЗИЛ
-    %a.item.magpop.f_all.f_graph.f_godotchet.f_g2013.f_g2014{:href => settings.prefix + "/assets/data/posts/rosatom", :id => "rosatom", :style => "background-color: #df7b00;", :data => {:id => 'rosatom'}}
-      %span.item-title Росатом <br />буклет
-    %a.item.magpop.f_all.item_big.f_graph.f_brending.f_digital.f_g2013.f_g2014{:href => settings.prefix + "/assets/data/posts/iohse", :id => "iohse", :style => "background-color: #8c3e3f;", :data => {:id => 'iohse'}}
-      %span.item-title «Института образования НИУ&nbsp;ВШЭ» <br />Брендбук
-    %a.item.magpop.f_all.f_digital.f_g2013{:href => settings.prefix + "/assets/data/posts/isiezsite", :id => "isiezsite", :style => "background-color: #3cc47c;", :data => {:id => 'isiezsite'}}
-      %span.item-title ИСИЭЗ <br />сайт
-    %a.item.magpop.f_all.f_godotchet{:href => settings.prefix + "/assets/data/posts/arkso", :id => "arkso", :style => "background-color: #77b4d1;", :data => {:id => 'arkso'}}
-      %span.item-title Годовой отчет ВЭБ
-    %a.item.magpop.f_all.f_graph.f_reklama.f_g2013{:href => settings.prefix + "/assets/data/posts/lecturesp", :id => "lecturesp", :style => "background-color: #64bebf;", :data => {:id => 'lecturesp'}}
-      %span.item-title лекции в Санкт-Петербурге
-    %a.item.item_big.f_all.magpop.f_graph.f_prezentacii.f_infografika.f_g2013.f_g2014{:href => settings.prefix + "/assets/data/posts/presentationdepculture", :id => "presentationdepculture", :style => "background-color: #339e2a;", :data => {:id => 'presentationdepculture'}}
-      %span.item-title Презентация для ДЕПАРТАМЕНТа&nbsp;КУЛЬТУРЫ
-    %a.item.magpop.f_all.f_graph.f_infografika.f_godotchet.f_g2013{:href => settings.prefix + "/assets/data/posts/isiezbooklet", :id => "isiezbooklet", :style => "background-color: #6862a2;", :data => {:id => 'isiezbooklet'}}
-      %span.item-title ИСИЭЗ <br />буклет
-    %a.item.magpop.f_all.f_graph.f_godotchet.f_infografika.f_g2013{:href => settings.prefix + "/assets/data/posts/skolkovo", :id => "skolkovo", :style => "background-color: #76d7ff;", :data => {:id => 'skolkovo'}}
-      %span.item-title Сколково <br />буклет
+    = partial :work, locals: {tags: "f_graph f_brending f_digital f_reklama f_g2014", name: "rvkcalen", head: "РВК<br />календарь", color: "#24286a"} 
+    = partial :work, locals: {tags: "f_graph f_godotchet f_infografika f_reklama f_g2014", name: "chtpz", head: "ЧТПЗ<br />полиграфия", color: "#c2321a"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_infografika f_godotchet f_g2014", name: "rvk", head: "РВК<br />полиграфия", color: "#730e92"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_g2014", name: "hosp", head: "Первый московский хоспис им.&nbsp;Веры&nbsp;Миллионщиковой<br />стиль", color: "#ebdf35", size: "item_big"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_digital f_reklama f_g2014", name: "school", head: "Школа дизайна<br /> стиль и носители", color: "#000000"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_infografika f_g2013 f_g2014", name: "lyceumhse", head: "Лицей НИУ&nbsp;ВШЭ <br />стиль", color: "#1264fb"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_g2013", name: "goldhse", head: "премия «Золотая вышка» <br />стиль", color: "#ffb8b8", size: "item_big"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_g2013", name: "depintercom", head: "«Отделение интегрированных коммуникаций»<br />стиль", color: "#c23a1d", size: "item_big"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_g2013 f_g2014", name: "pyrusstyle", head: "«PYRUS»<br />стиль", color: "#e7b73c", size: "item_big"} 
+    = partial :work, locals: {tags: "f_digital f_reklama f_g2014", name: "pyrusstyle", head: "«PYRUS» <br />сайт", color: "#2bb6ac"} 
+    = partial :work, locals: {tags: "f_graph f_reklama f_g2013 f_g2014", name: "lecturezil", head: "Лекции в кц ЗИЛ", color: "#0b4dd9"} 
+    = partial :work, locals: {tags: "f_graph f_godotchet f_g2013 f_g2014", name: "rosatom", head: "«Росатом» <br />буклет", color: "#df7b00"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_digital f_g2013 f_g2014", name: "iohse", head: "«Института образования НИУ&nbsp;ВШЭ» <br />Брендбук", color: "#8c3e3f", size: "item_big"} 
+    = partial :work, locals: {tags: "f_digital f_g2013", name: "isiezsite", head: "ИСИЭЗ <br />сайт", color: "#3cc47c"} 
+    = partial :work, locals: {tags: "f_godotchet", name: "arkso", head: "Годовой отчет ВЭБ", color: "#77b4d1"} 
+    = partial :work, locals: {tags: "f_graph f_reklama f_g2013", name: "lecturesp", head: "лекции в Санкт-Петербурге", color: "#64bebf"}
+    = partial :work, locals: {tags: "f_graph f_prezentacii f_infografika f_g2013 f_g2014", name: "presentationdepculture", head: "Презентация для ДЕПАРТАМЕНТа&nbsp;КУЛЬТУРЫ", color: "#339e2a", size: "item_big"}
+    = partial :work, locals: {tags: "f_graph f_infografika f_godotchet f_g2013", name: "isiezbooklet", head: "ИСИЭЗ <br />буклет", color: "#6862a2"}
+    = partial :work, locals: {tags: "f_graph f_godotchet f_infografika f_g2013", name: "skolkovo", head: "Сколково <br />буклет", color: "#76d7ff"}
 
 
 .main-wrapper
@@ -86,28 +70,18 @@ page_class: 'index'
     %h2 кто
 .filters.col.people-wrapper.col-xs-10.col-xs-offset-1.col-sm-offset-2
   .filter_people.people.items-container
+    = partial :person, locals: {name: "meshherjakov", head: "арсений<br /> мещеряков"}
+    = partial :person, locals: {name: "borisovsky", head: "павел<br /> борисовский"}
+    = partial :person, locals: {name: "egorov", head: "василий<br /> егоров"}
+    = partial :person, locals: {name: "kleschev", head: "сергей<br /> клещев"}
+    = partial :person, locals: {name: "novichkov", head: "алексей<br /> новичков"}
+    = partial :person, locals: {name: "paschenko", head: "олег<br /> пащенко"}
+    = partial :person, locals: {name: "rumin", head: "алексей<br /> рюмин"}
+    = partial :person, locals: {name: "sergeev", head: "арсений<br /> сергеев"}
+    = partial :person, locals: {name: "temen", head: "протей<br /> темен"}
+    = partial :person, locals: {name: "juzhanina", head: "ира<br /> южанина"}
+    = partial :person, locals: {name: "logutova", head: "наталья<br /> логутова"}
 
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/meshherjakov/meshherjakov", :id => "meshherjakov", :data => {:id => 'meshherjakov'}}
-      %span арсений<br /> мещеряков
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/borisovsky/borisovsky", :id => "borisovsky", :data => {:id => 'borisovsky'}}
-      %span павел<br /> борисовский
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/egorov/egorov", :id => "egorov", :data => {:id => 'egorov'}}
-      %span василий<br /> егоров
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/kleschev/kleschev", :id => "kleschev", :data => {:id => 'kleschev'}}
-      %span сергей<br /> клещев
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/novichkov/novichkov", :id => "novichkov", :data => {:id => 'novichkov'}}
-      %span алексей<br /> новичков
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/paschenko/paschenko", :id => "paschenko", :data => {:id => 'paschenko'}}
-      %span олег<br /> пащенко
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/rumin/rumin", :id => "rumin", :data => {:id => 'rumin'}}
-      %span алексей<br /> рюмин
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/sergeev/sergeev", :id => "sergeev", :data => {:id => 'sergeev'}}
-      %span арсений<br /> сергеев
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/temen/temen", :id => "temen", :data => {:id => 'temen'}}
-      %span протей<br /> темен
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/juzhanina/juzhanina", :id => "juzhanina", :data => {:id => 'juzhanina'}}
-      %span ира<br /> южанина
-    %a.people-item.filter-item.magpop{:href => settings.prefix + "/assets/data/person/logutova/logutova", :id => "logutova", :data => {:id => 'logutova'}}
-      %span наталья<br /> логутова
+
 
 #post.article
