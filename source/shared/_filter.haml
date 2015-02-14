@@ -1,4 +1,4 @@
-- head ||= 'undefined!' 
+- activeClass ||= '' 
 // по умолчанию значение 
 
-%a.filter-item{:href => name, :id => name}= head
+%a{:class => "filter-item #{activeClass}", :href => name, :id => name}= head

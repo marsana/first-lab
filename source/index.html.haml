@@ -17,9 +17,7 @@ page_class: 'index'
   .what.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.what-link'} }
     %h2 что
     .filter.filter_tags
-    
-      %a.filter_active.filter-item{:href => "all", :id => "all"} всё
-      
+      = partial :filter, locals: {name: "all", head: "всё", activeClass: "filter_active"}
       = partial :filter, locals: {name: "graph", head: "графический&nbsp;дизайн"}
       = partial :filter, locals: {name: "brending", head: "брендинг"}
       = partial :filter, locals: {name: "godotchet", head: "годовые&nbsp;отчеты&nbsp;и&nbsp;буклеты"}
@@ -63,8 +61,6 @@ page_class: 'index'
     .scheme
       %img{:src => settings.prefix + "/assets/images/data/scheme.png"}
     %p.scheme-desc ресурсы лаборатории позволяют собрать оптимальный состав команды под каждый новый проект
-
-
 
   .who.chapter.col-xs-10.col-xs-offset-2{ :data => {:link => '.who-link'} }
     %h2 кто
