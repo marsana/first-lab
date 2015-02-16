@@ -202,10 +202,10 @@ $(document).ready(function(){
         //$item.css('transition','all .5s');
       // hash
         if(history.pushState) {
-          var redirect = prefix + '/#';
+          var redirect = prefix + '/';
           history.pushState('', '', redirect);
         }else{
-          changeHashWithoutScrolling(prefix + '/#');
+          changeHashWithoutScrolling(prefix + '/');
         }
       },
       change: function(){
@@ -264,52 +264,76 @@ $(document).ready(function(){
 
     }
   });
-  //--------------------------------------***--------------------------------------
-
   $(document).on("click", "a.anchor", function(e){
     e.preventDefault();
     var idtop = $($(this).attr("href")).offset().top-200;
     if ($post.hasClass(CLASS_ACTIVE)) closeProgect();
     $('html,body').animate({scrollTop: idtop}, A_DURATION);
   });
+  
+//--------------------------------------***--------------------------------------
   var status_filter = false;
-  $(document).on("click", ".filter a", function(e){
-    e.preventDefault();
-    if ($post.hasClass(CLASS_ACTIVE)) closeProgect();
-    if(history.pushState) {
-      var redirect = '/';
-      history.pushState('', '', redirect);
-    }
-    else{
-      changeHashWithoutScrolling('')
-    }
-    var idtop = $('.what').offset().top-200;
-    $('html,body').animate({scrollTop: idtop}, A_DURATION);
-    var flag_status;
-    if ($(this).hasClass('filter_active')) flag_status = true;
+  var href;
+  var setFilterActive = function(){
     $('.filter_active').removeClass('filter_active');
     $item.removeClass('filtred');
     $('.item').removeClass('display-none');
-    if (!flag_status){
-
-      var filter_search = $(this).attr('href');
-      // console.log(filter_search);
-      $('#'+filter_search).addClass('filter_active')
-      $item.children().each(function(){
-        if(!$(this).hasClass('f_'+filter_search)){
-          if(history.pushState) {
-            var redirect = prefix + '/#'+ filter_search;
-            window.history.pushState('', '', redirect);
-          }else{
-          changeHashWithoutScrolling('')
-          }
-          $item.addClass('filtred');
-          $(this).addClass('display-none');
-        }
-      });
+    $('#' + href + '').addClass('filter_active');
+    
+    if(history.pushState) {
+      var redirect = prefix + '/#'+ href;
+      window.history.pushState('', '', redirect);
+    }else{
+      changeHashWithoutScrolling('')
     }
+    
+    $item.children().each(function(){
+      if(!$(this).hasClass('f_'+href)){
+        $(this).addClass('display-none');
+      }
+    });
+    $item.addClass('filtred');
+    // переключиться на другую фильтрацию: снять со всех, отдать правильному, перезаписать хэш - done
+}
+  $(document).on("click", ".filter a", function(e){
+    e.preventDefault();
+    
+    var $that = $( this ),
+        idtop = $( '.what' ).offset().top - 200,
+        flag_status;
+    href = $that.attr( 'href' );
+     
+    if ($that.hasClass('filter_active')) flag_status = true;  
+    
+    if ($post.hasClass( CLASS_ACTIVE )) {closeProgect();} // поменять хэш с проекта на фильтр 
+    else if (flag_status) {
+      
+      $('.filter_active').removeClass('filter_active');
+      $item.removeClass('filtred');
+      $('.item').removeClass('display-none');
+      $('#'+'all').addClass('filter_active');
+      if(history.pushState) {
+        var redirect = prefix + '/';
+        window.history.pushState('', '', redirect);
+      }else{
+        changeHashWithoutScrolling('')
+      }
+    } //Снять выделение, сделать активным ВСЁ, очистить хэш
+    
+
+    if ( !flag_status ) {
+      setFilterActive();
+    }
+    
+    
+    $('html,body').animate({scrollTop: idtop}, A_DURATION);
     if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
+
   });
+  
+  
+  
+  
   $("body").on("click", ".close", function(){
     closeProgect();
   });
