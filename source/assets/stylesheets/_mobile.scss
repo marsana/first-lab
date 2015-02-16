@@ -1,6 +1,7 @@
 $break-1: 477px;
 $break-2: 767px;
 $break-3: 1500px;
+$break-4: 990px;
 @mixin respond-to($media) {
   @if $media == mob {
     @media only screen and (max-width: $break-2) { @content; }
@@ -8,6 +9,9 @@ $break-3: 1500px;
   @if $media == small {
     @media only screen and (max-width: $break-3) { @content; }
   }
+  @if $media == big {
+    @media only screen and (min-width: $break-3) { @content; }
+  }  
 }
 
 @include respond-to(mob){
@@ -103,12 +107,20 @@ $break-3: 1500px;
 @include respond-to(small){
 
   .person-works.custome-style {
-  .person-row{
-    position: relative;
-    img {position: static;}
-    &.row-up {
-      margin-top: 0px;
+    .person-row{
+      position: relative;
+      img {position: static;}
+      &.row-up {
+        margin-top: 0px;
+      }
     }
-    }
+  }
+}
+
+
+@include respond-to(big){
+  .row.bigrow {
+      width:140%;
+      margin-left: -20%;
   }
 }
