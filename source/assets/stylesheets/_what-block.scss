@@ -62,7 +62,6 @@
         .item
         {
             transition: all .3s !important;
-            
             &:hover
             {
                 transition: all .3s !important;
@@ -101,7 +100,7 @@
 
     opacity: 0;
     color: #fff;
-    // border-radius: 50%;
+    border-radius: 50%;
     background: rgba(9, 0, 0, .3);
     &:hover
     {
@@ -114,7 +113,6 @@
     &.is__small
     {
         transition-delay: 0;
-        
     }
 }
 
