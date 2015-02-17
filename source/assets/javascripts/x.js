@@ -36,24 +36,27 @@ function changeHashWithoutScrolling(hash) {
   window.location.hash = hash
   elem.id = id
 }
+
+
+
 $(document).ready(function(){
-  document.addEventListener('backbutton', function(){
-  });
-  $(window).keyup(function(e){
-    if(e.keyCode == 8){
-      if(location){
-        console.log($(location  ));
-        setTimeout(function() {
-          var idtop = $('.what').offset().top-200;
-          $(window).scrollTop(idtop);
-          setTimeout(function() {
-            $(location).trigger( "click" );
-            $(window).trigger('scroll');
-          }, 1000);
-        }, 100);
-      }
-    }
-  })
+  // document.addEventListener('backbutton', function(){
+  // });
+  // $(window).keyup(function(e){
+  //   if(e.keyCode == 8){
+  //     if(location){
+  //       console.log($(location  ));
+  //       setTimeout(function() {
+  //         var idtop = $('.what').offset().top-200;
+  //         $(window).scrollTop(idtop);
+  //         setTimeout(function() {
+  //           $(location).trigger( "click" );
+  //           $(window).trigger('scroll');
+  //         }, 1000);
+  //       }, 100);
+  //     }
+  //   }
+  // })
   var location = window.location.hash, buffer_hash;
   var item,project,menu,post_id,to,
     CLASS_ACTIVE = 'active',
@@ -157,6 +160,10 @@ $(document).ready(function(){
         var flag_status;
         $('.filter_active').removeClass('filter_active');
         $item.removeClass('filtred');
+        $('#'+'all').addClass('filter_active');
+        $('.item').css({
+          display: 'block'
+        });
         $('.item').removeClass('display-none');
         if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
       //--------------------------------------***--------------------------------------
@@ -277,6 +284,9 @@ $(document).ready(function(){
   var setFilterActive = function(){
     $('.filter_active').removeClass('filter_active');
     $item.removeClass('filtred');
+    $('.item').css({
+        display: 'block'
+      });
     $('.item').removeClass('display-none');
     $('#' + href + '').addClass('filter_active');
     
@@ -292,6 +302,13 @@ $(document).ready(function(){
         $(this).addClass('display-none');
       }
     });
+    
+    setTimeout(function() {
+      $('.display-none').css({
+        display: 'none'
+      });
+    }, 500);   
+    
     $item.addClass('filtred');
     // переключиться на другую фильтрацию: снять со всех, отдать правильному, перезаписать хэш - done
 }
@@ -310,6 +327,11 @@ $(document).ready(function(){
       
       $('.filter_active').removeClass('filter_active');
       $item.removeClass('filtred');
+      
+      $('.item').css({
+        display: 'block'
+      });
+      
       $('.item').removeClass('display-none');
       $('#'+'all').addClass('filter_active');
       if(history.pushState) {

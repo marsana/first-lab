@@ -20,11 +20,11 @@ page_class: 'index'
       = partial :filter, locals: {name: "all", head: "всё", activeClass: "filter_active"}
       = partial :filter, locals: {name: "graph", head: "графический&nbsp;дизайн"}
       = partial :filter, locals: {name: "brending", head: "брендинг"}
-      = partial :filter, locals: {name: "godotchet", head: "годовые&nbsp;отчеты&nbsp;и&nbsp;буклеты"}
-      = partial :filter, locals: {name: "prezentacii", head: "презентации"}
-      = partial :filter, locals: {name: "infografika", head: "инфографика"}
+      = partial :filter, locals: {name: "ar", head: "годовые&nbsp;отчеты&nbsp;и&nbsp;буклеты"}
+      = partial :filter, locals: {name: "presentation", head: "презентации"}
+      = partial :filter, locals: {name: "infographic", head: "инфографика"}
       = partial :filter, locals: {name: "digital", head: "диджитал"}
-      = partial :filter, locals: {name: "reklama", head: "реклама"}
+      = partial :filter, locals: {name: "ad", head: "реклама"}
       = partial :filter, locals: {name: "g2013", head: "2013"}
       = partial :filter, locals: {name: "g2014", head: "2014"}    
       // = partial :filter, locals: {name: "g2015", head: "2015"} 
@@ -38,25 +38,25 @@ page_class: 'index'
     = partial :work, locals: {tags: "f_graph f_brending f_g2014", name: "plate", head: "Декоративные<br />тарелки", color: "#acdcef", size: "item_big"} 
     
     
-    = partial :work, locals: {tags: "f_graph f_brending f_digital f_reklama f_g2014", name: "rvkcalen", head: "РВК<br />календарь", color: "#24286a"} 
-    = partial :work, locals: {tags: "f_graph f_godotchet f_infografika f_reklama f_g2014", name: "chtpz", head: "ЧТПЗ<br />полиграфия", color: "#c2321a"} 
-    = partial :work, locals: {tags: "f_graph f_brending f_infografika f_godotchet f_g2014", name: "rvk", head: "РВК<br />полиграфия", color: "#730e92"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_digital f_ad f_g2014", name: "rvkcalen", head: "РВК<br />календарь", color: "#24286a"} 
+    = partial :work, locals: {tags: "f_graph f_ar f_infographic f_ad f_g2014", name: "chtpz", head: "ЧТПЗ<br />полиграфия", color: "#c2321a"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_infographic f_ar f_g2014", name: "rvk", head: "РВК<br />полиграфия", color: "#730e92"} 
     = partial :work, locals: {tags: "f_graph f_brending f_g2014", name: "hosp", head: "Первый московский хоспис им.&nbsp;Веры&nbsp;Миллионщиковой<br />стиль", color: "#ebdf35", size: "item_big"} 
-    = partial :work, locals: {tags: "f_graph f_brending f_digital f_reklama f_g2014", name: "school", head: "Школа дизайна<br /> стиль и носители", color: "#000000"} 
-    = partial :work, locals: {tags: "f_graph f_brending f_infografika f_g2013 f_g2014", name: "lyceumhse", head: "Лицей НИУ&nbsp;ВШЭ <br />стиль", color: "#1264fb"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_digital f_ad f_g2014", name: "school", head: "Школа дизайна<br /> стиль и носители", color: "#000000"} 
+    = partial :work, locals: {tags: "f_graph f_brending f_infographic f_g2013 f_g2014", name: "lyceumhse", head: "Лицей НИУ&nbsp;ВШЭ <br />стиль", color: "#1264fb"} 
     = partial :work, locals: {tags: "f_graph f_brending f_g2013", name: "goldhse", head: "премия «Золотая вышка» <br />стиль", color: "#ffb8b8", size: "item_big"} 
     = partial :work, locals: {tags: "f_graph f_brending f_g2013 f_g2014", name: "depintercom", head: "«Отделение интегрированных коммуникаций»<br />стиль", color: "#c23a1d", size: "item_big"} 
     = partial :work, locals: {tags: "f_graph f_brending f_g2013 f_g2014", name: "pyrusstyle", head: "«PYRUS»<br />стиль", color: "#e7b73c", size: "item_big"} 
-    = partial :work, locals: {tags: "f_digital f_reklama f_g2014", name: "pyrussite", head: "«PYRUS» <br />сайт", color: "#2bb6ac"} 
-    = partial :work, locals: {tags: "f_graph f_reklama f_g2013 f_g2014", name: "lecturezil", head: "Лекции в кц ЗИЛ", color: "#0b4dd9"} 
-    = partial :work, locals: {tags: "f_graph f_godotchet f_g2013 f_g2014", name: "rosatom", head: "«Росатом» <br />буклет", color: "#df7b00"} 
+    = partial :work, locals: {tags: "f_digital f_ad f_g2014", name: "pyrussite", head: "«PYRUS» <br />сайт", color: "#2bb6ac"} 
+    = partial :work, locals: {tags: "f_graph f_ad f_g2013 f_g2014", name: "lecturezil", head: "Лекции в кц ЗИЛ", color: "#0b4dd9"} 
+    = partial :work, locals: {tags: "f_graph f_ar f_g2013 f_g2014", name: "rosatom", head: "«Росатом» <br />буклет", color: "#df7b00"} 
     = partial :work, locals: {tags: "f_graph f_brending f_digital f_g2013 f_g2014", name: "iohse", head: "«Института образования НИУ&nbsp;ВШЭ» <br />Брендбук", color: "#8c3e3f", size: "item_big"} 
     = partial :work, locals: {tags: "f_digital f_g2013", name: "isiezsite", head: "ИСИЭЗ <br />сайт", color: "#3cc47c"}
-    = partial :work, locals: {tags: "f_godotchet f_g2014", name: "arkso", head: "Годовой отчет ВЭБ", color: "#77b4d1"} 
-    = partial :work, locals: {tags: "f_graph f_reklama f_g2013", name: "lecturesp", head: "лекции в Санкт-Петербурге", color: "#64bebf"}
-    = partial :work, locals: {tags: "f_graph f_prezentacii f_infografika f_g2013 f_g2014", name: "presentationdepculture", head: "Презентация для ДЕПАРТАМЕНТа&nbsp;КУЛЬТУРЫ", color: "#339e2a", size: "item_big"}
-    = partial :work, locals: {tags: "f_graph f_infografika f_godotchet f_g2013", name: "isiezbooklet", head: "ИСИЭЗ <br />буклет", color: "#6862a2"}
-    = partial :work, locals: {tags: "f_graph f_godotchet f_infografika f_g2013", name: "skolkovo", head: "Сколково <br />буклет", color: "#76d7ff"}
+    = partial :work, locals: {tags: "f_ar f_g2014", name: "arkso", head: "Годовой отчет ВЭБ", color: "#77b4d1"} 
+    = partial :work, locals: {tags: "f_graph f_ad f_g2013", name: "lecturesp", head: "лекции в Санкт-Петербурге", color: "#64bebf"}
+    = partial :work, locals: {tags: "f_graph f_presentation f_infographic f_g2013 f_g2014", name: "presentationdepculture", head: "Презентация для ДЕПАРТАМЕНТа&nbsp;КУЛЬТУРЫ", color: "#339e2a", size: "item_big"}
+    = partial :work, locals: {tags: "f_graph f_infographic f_ar f_g2013", name: "isiezbooklet", head: "ИСИЭЗ <br />буклет", color: "#6862a2"}
+    = partial :work, locals: {tags: "f_graph f_ar f_infographic f_g2013", name: "skolkovo", head: "Сколково <br />буклет", color: "#76d7ff"}
 
 
 .main-wrapper
