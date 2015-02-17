@@ -151,17 +151,17 @@ $(document).ready(function(){
             $item.css('z-index','2');
 
           }else {
-                  //--------------------------------------Отмена фильтрации при открытии--------------------------------------
-        var flag_status;
-        $('.filter_active').removeClass('filter_active');
-        $item.removeClass('filtred');
-        $('#'+'all').addClass('filter_active');
-        $('.item').css({
-          display: 'block'
-        });
-        $('.item').removeClass('display-none');
-        if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
-      //--------------------------------------***--------------------------------------
+          //--------------------------------------Отмена фильтрации при открытии--------------------------------------
+            var flag_status;
+            $('.filter_active').removeClass('filter_active');
+            $item.removeClass('filtred');
+            $('#'+'all').addClass('filter_active');
+            $('.item').css({
+              display: 'block'
+            });
+            $('.item').removeClass('display-none');
+            if (init($container, [], itemsArr )) init( $peopleItems, [], peopleArr );
+          //--------------------------------------***--------------------------------------
             currArr = itemsArr;
             $peopleItems.css('z-index','2');
           }
@@ -183,6 +183,14 @@ $(document).ready(function(){
         }
       },
       change: function(){
+        var magnificPopup = $.magnificPopup.instance,
+            cur = magnificPopup.st.el;
+
+        $currContainer = cur.parent();
+        var currArr;
+
+        $currContainer.addClass(CLASS_ACTIVE);
+        $post.addClass(CLASS_ACTIVE);
         var mp = $.magnificPopup.instance,
             t = $(mp.currItem.el[0]);
         t.removeClass('magpop');
