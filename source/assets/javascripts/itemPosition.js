@@ -14,16 +14,16 @@ var $items, to,
 var matrix = [];
 function calculate($obj, itemsArr){
 	$items = $obj.children();
-	width = $obj.parent().width()-150;
+	width = $obj.parent().width();
 	$obj.width(width);
-	colum = 3000;
+	colum = 30000;
 	for(var i = 0; i < $items.length; i++){
 		size = itemsArr[i].size[0] + margin;
 		if (colum > size){
 			colum = size;
 		}
-	}
-	if (colum) col = Math.floor(width / (colum));
+	} // ширина колонки по наименьшему элементу
+	if (colum) col = Math.floor(width / (colum)); // количество колонок
 	if (col <= 0) col = 1;
 	if ($obj.hasClass('active')) {
 		col = $obj.children().length;
@@ -34,7 +34,7 @@ function findPlaceInMatrix(matrix, sizeCol, i, j){
 	for (var h = i; h < i + sizeCol; h++){
 		if (!matrix[h]) matrix[h] = new Array();
 		for (var k = j; k < j + sizeCol; k++){
-			if (matrix[h][k] > col) return false;
+			if ( (sizeCol>1) && k == col) return false;
 			if (matrix[h][k]) return false;
 		}
 	}
@@ -125,6 +125,9 @@ function draw($obj,matrix, itemsArr){
 }
 function init($obj, martix, itemsArr) {
 	$obj = itemsArr[0].linkTo.parent()
+	// console.log($obj.attr('class'))
+	// console.log($obj.parent().width());
+
 	matrix = [];
 	if ($obj.hasClass('active')) {
 		for(var i = 0; i < $obj.children().length; i++){
@@ -165,5 +168,7 @@ function init($obj, martix, itemsArr) {
 	if (draw($obj,matrix, itemsArr)) {
 		$obj.addClass('is__ready');
 	}
+	
 	return true;
+	
 }
