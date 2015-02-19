@@ -35,6 +35,8 @@
     transition: all .5s;
 
     opacity: 0;
+
+
     &.is__ready
     {
         transition-delay: .5s;
@@ -61,6 +63,7 @@
         }
         .item
         {
+            
             transition: all .3s !important;
             &:hover
             {
@@ -97,7 +100,7 @@
     transition: all .5s;
     text-align: center;
     text-transform: lowercase;
-
+    margin-left:-25px;
     opacity: 0;
     color: #fff;
     border-radius: 50%;
