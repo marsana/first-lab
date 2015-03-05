@@ -99,7 +99,7 @@ function draw($obj,matrix, itemsArr){
 							leftOffset = ($(document).width() - $obj.children().length*smallItemSize)/2 - $obj.parent().offset().left;
 					$(this).css({
 						left: result[1]*colum+leftOffset,
-						top: - (wrapperItemOffset - posTop) +70
+						top: - (wrapperItemOffset - posTop) +117
 					});
 				}else if($obj.hasClass('notActive'))  {
 					$obj.css({
