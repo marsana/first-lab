@@ -4,16 +4,18 @@ page_class: 'index'
 ---
 .main-wrapper
   %header.header.columns.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.header-link'} }
+    %h1 Лаборатория дизайна
+    %h2.description Лаборатория дизайна&nbsp;&mdash; это подразделение Школы дизайна НИУ ВШЭ, по&nbsp;форме деятельности представляющее собой арт-студию или дизайн-бюро. Но&nbsp;ни&nbsp;в&nbsp;одной другой студии вы&nbsp;не&nbsp;найдете такого количества выдающихся дизайнеров, собранных под одной крышей. Интеллектуальные и&nbsp;технические ресурсы Лаборатории позволяют собрать оптимально выгодный состав команды под каждый новый проект и&nbsp;бюджет.
+
     .infoblock.col
+      .infoblock-contacts
+        %p +7 (495) 772-95-90 (доб. 14302)
+        %p
+          %a{:href => "mailto:deslab@hse.ru"} deslab@hse.ru
       .social
         %a.social-fb{href: "https://www.facebook.com/HSEDesign"} Facebook
         %a.social-vk{href: "http://vk.com/hsedesign"} Vk
         %a.social-tw{href: "http://twitter.com/hsedesign"} Twitter
-      .infoblock-contacts
-        %p
-          %a{:href => "mailto:deslab@hse.ru"} deslab@hse.ru
-        %p +7 (495) 772-95-90 (доб. 14302)
-    .description Лаборатория дизайна – это подразделение Школы дизайна НИУ ВШЭ, по форме деятельности представляющее собой арт-студию или дизайн-бюро. Но ни в одной другой студии вы не найдете такого количества выдающихся дизайнеров, собранных под одной крышей. Интеллектуальные и технические ресурсы Лаборатории позволяют собрать оптимально выгодный состав команды под каждый новый проект и бюджет.
   .what.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.what-link'} }
     %h2 что
     .filter.filter_tags
@@ -63,9 +65,9 @@ page_class: 'index'
 .main-wrapper
   .how.chapter.col-xs-10.col-xs-offset-1.col-sm-offset-2{ :data => {:link => '.how-link'} }
     %h2 как
+    %p.scheme-desc ресурсы лаборатории позволяют собрать оптимальный состав команды под&nbsp;каждый новый проект
     .scheme
       %img{:src => settings.prefix + "/assets/images/data/scheme.png"}
-    %p.scheme-desc ресурсы лаборатории позволяют собрать оптимальный состав команды под каждый новый проект
 
   .who.chapter.col-xs-10.col-xs-offset-2{ :data => {:link => '.who-link'} }
     %h2 кто

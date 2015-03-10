@@ -1,10 +1,31 @@
 
 /*Header*/
+.header {
+    h1 {
 
+        font-size: 66px;
+        line-height: 1;
+        text-transform: lowercase;
+
+    }
+    .description
+    {
+
+        font-weight: normal;
+        font-size: 33px;
+        text-transform: lowercase;
+        a
+        {
+            @include lightDecoration();
+        }
+    }
+}
 .infoblock.col
 {
     font-weight: 550;
 }
+
+
 .descriptions
 {
     // width: 570px;

@@ -17,6 +17,7 @@ textarea
 body
 {
     font: 18px 'Proxima Nova', Arial, sans-serif;
+    color: #1a2028;
 }
 a
 {
@@ -24,7 +25,7 @@ a
     transition: color .3s;
     text-decoration: none;
 
-    color: #000;
+    color: #1a2028;
     &:hover
     {
         text-decoration: none;
@@ -47,7 +48,7 @@ a
     // margin-left: 230px;
     h2
     {
-        font-size: 23px;
+        font-size: 33px;
         margin-bottom: 30px;
     }
 }
