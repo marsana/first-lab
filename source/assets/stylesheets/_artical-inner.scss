@@ -53,13 +53,6 @@
 {
     width: 100%;
     margin: 0 auto;
-    h1
-    {
-        font-size: 66px;
-        font-weight: normal;
-
-        text-transform: lowercase;
-    }
     img
     {
         display: block;
@@ -117,14 +110,7 @@
     iframe {
         margin: 30px auto;
     }
-}
-.article_inner
-{
-    h2
-    {
-        font-size: 33px;
-        text-transform: lowercase;
-    }
+
     .description
     {
         padding-left: 155px;
@@ -145,9 +131,6 @@
 
 
 .peopleAboutItem {
-    // position: absolute;
-    // opacity: 0;
-    // padding: 60px 60px 60px 0;
     box-sizing: border-box;
     transition: all .3s;
 }
@@ -162,9 +145,6 @@
 
 .person-works {
     width: 100%;
-    //margin-left: 4%;
-    //margin-right: 4%;
-
     margin: 80px auto;
     text-align: center;
     img{

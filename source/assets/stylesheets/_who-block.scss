@@ -3,7 +3,6 @@
 {
     position: static;
 
-    // margin: 0 auto;
 }
 .filter_people {
     position: absolute;
@@ -18,7 +17,6 @@
 
         width: 170px;
         height: 106px;
-        //margin: 15px 5px;
         margin-left:-25px;
         cursor: default;
         transition: all .3s;
@@ -154,7 +152,6 @@
 .filter_people .people-item.people-hover-active {
 
     cursor: default;
-    // transition: background-image .3s !important;
     span
     {
         cursor: default;
@@ -164,7 +161,6 @@
 }
 .filter_people .people-item.people-hover:hover {
     cursor: default;
-    // transition: background-image .3s !important;
     span
     {
         cursor: default;

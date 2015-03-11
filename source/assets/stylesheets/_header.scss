@@ -2,22 +2,20 @@
 /*Header*/
 .header {
     h1 {
-        margin-top: -10px;
-        font-size: 66px;
-        line-height: 1;
+
         text-transform: lowercase;
 
     }
     .description
     {
-
-        font-weight: normal;
-        font-size: 33px;
-        text-transform: lowercase;
-        a
-        {
-            @include lightDecoration();
-        }
+        margin-bottom: 30px;
+    //     font-weight: normal;
+    //     font-size: 33px;
+    //     text-transform: lowercase;
+    //     a
+    //     {
+    //         @include lightDecoration();
+    //     }
     }
 }
 .infoblock.col
@@ -28,7 +26,6 @@
 
 .descriptions
 {
-    // width: 570px;
     margin-bottom: 100px;
     a
     {
@@ -64,7 +61,7 @@
     p
     {
         margin-top: 0;
-        margin-bottom: px;
+        // margin-bottom: px;
     }
 }
 

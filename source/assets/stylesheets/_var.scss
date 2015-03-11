@@ -1,3 +1,19 @@
 $fontDefault: 'Proxima Nova', Helvetica, Arial, sans-serif;
 $colorMain: #c0122b;
 $spritemap: sprite-map('sprite/*.png', $spacing: 10px);
+
+
+$font-main: 'Proxima Nova', Arial, sans-serif;
+
+// $color-dark: rgba(26,33,41,1);
+$color-main: rgba(0,93,130,1);
+$color-main-op: rgba(0,93,130, .5);
+$color-hover: rgba(0,152,212,1);
+$color-active: rgba(0,0,0,1);
+$color-white: rgba(255,255,255,1);
+
+$colorMainNew: #1a2028;
+$color-dark: #1a2028;
+
+$d: .3s;
+$e: cubic-bezier(.8, 0, .2, 1);

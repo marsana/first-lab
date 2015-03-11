@@ -16,7 +16,7 @@ textarea
 }
 body
 {
-    font: 18px 'Proxima Nova', Arial, sans-serif;
+    // font: 18px 'Proxima Nova', Arial, sans-serif;
     color: #1a2028;
 }
 a
@@ -36,30 +36,18 @@ a
 
 .wrapper
 {
-    font-size: 21px;
+    // font-size: 21px;
     max-width: 1200px;
     margin: 140px auto;
     padding: 0 40px;
 }
 
-.main
-{
-    // max-width: 970px;
-    // margin-left: 230px;
-    h2
-    {
-        font-size: 33px;
-        margin-bottom: 30px;
-    }
-}
 .display-none
 {
     transition: opacity .2s;
 
     opacity: 0 !important;
     
-    // -webkit-animation-duration: 0.5s;
-    // -webkit-animation-name: fadeInFromNone;
 }
 
 @-webkit-keyframes fadeInFromNone {

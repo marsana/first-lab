@@ -38,3 +38,17 @@
         border-color: #005fff ;
     }
 }
+@mixin t-small() {
+  font-size: 14px;
+  line-height: 20px;
+}
+@mixin t-medium() {
+  font-size: 20px;
+  line-height: 30px;
+}
+@mixin t-large() {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 40px;
+  text-transform: lowercase;
+}
