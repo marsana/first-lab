@@ -14,5 +14,4 @@ use Rack::TryStatic,
     :root => "tmp",
     :urls => %w[/],
     :try => ['.html', 'index.html', '/index.html']
-}
-
+    
