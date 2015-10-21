@@ -46,7 +46,7 @@
 # end
 activate :directory_indexes
 
-set :build_dir, '../../public/lab'
+set :build_dir, 'build'
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
