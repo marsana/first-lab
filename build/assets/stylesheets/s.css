@@ -1,0 +1,2348 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+/* line 12, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+/* line 50, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Removes default margin.
+ */
+/* line 74, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* line 108, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+h1 {
+  font-size: 2em; }
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 116, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 124, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 133, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 141, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+mark {
+  background: #ff0;
+  color: #1a2028; }
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 151, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 163, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Sets consistent quote types.
+ */
+/* line 173, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 181, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 189, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 197, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+sup {
+  top: -0.5em; }
+
+/* line 201, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+/* line 213, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+img {
+  border: 0; }
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 221, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 233, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 245, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 256, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 267, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 281, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 294, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 306, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+/* line 316, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 328, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 340, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+/* line 349, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 360, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 373, /Users/asoldatova/works/first-lab/source/assets/stylesheets/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-reg.eot");
+  src: url("../fonts/proximanova-reg.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-sbold.eot");
+  src: url("../fonts/proximanova-sbold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-sbold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-bold.eot");
+  src: url("../fonts/proximanova-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+/* line 2, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media (min-width: 768px) {
+  /* line 9, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .container {
+    width: 750px; } }
+@media (min-width: 992px) {
+  /* line 14, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .container {
+    width: 970px; } }
+@media (min-width: 1200px) {
+  /* line 19, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .container {
+    width: 1170px; } }
+/* line 23, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* line 29, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+/* line 33, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box; }
+
+/* line 40, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left; }
+
+/* line 43, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-12 {
+  width: 100%; }
+
+/* line 46, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-11 {
+  width: 91.66666667%; }
+
+/* line 49, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-10 {
+  width: 83.33333333%; }
+
+/* line 52, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-9 {
+  width: 75%; }
+
+/* line 55, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-8 {
+  width: 66.66666667%; }
+
+/* line 58, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-7 {
+  width: 58.33333333%; }
+
+/* line 61, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-6 {
+  width: 50%; }
+
+/* line 64, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-5 {
+  width: 41.66666667%; }
+
+/* line 67, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-4 {
+  width: 33.33333333%; }
+
+/* line 70, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-3 {
+  width: 25%; }
+
+/* line 73, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-2 {
+  width: 16.66666667%; }
+
+/* line 76, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-1 {
+  width: 8.33333333%; }
+
+/* line 79, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-12 {
+  right: 100%; }
+
+/* line 82, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-11 {
+  right: 91.66666667%; }
+
+/* line 85, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-10 {
+  right: 83.33333333%; }
+
+/* line 88, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-9 {
+  right: 75%; }
+
+/* line 91, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-8 {
+  right: 66.66666667%; }
+
+/* line 94, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-7 {
+  right: 58.33333333%; }
+
+/* line 97, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-6 {
+  right: 50%; }
+
+/* line 100, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-5 {
+  right: 41.66666667%; }
+
+/* line 103, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-4 {
+  right: 33.33333333%; }
+
+/* line 106, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-3 {
+  right: 25%; }
+
+/* line 109, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-2 {
+  right: 16.66666667%; }
+
+/* line 112, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-1 {
+  right: 8.33333333%; }
+
+/* line 115, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-pull-0 {
+  right: auto; }
+
+/* line 118, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-12 {
+  left: 100%; }
+
+/* line 121, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-11 {
+  left: 91.66666667%; }
+
+/* line 124, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-10 {
+  left: 83.33333333%; }
+
+/* line 127, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-9 {
+  left: 75%; }
+
+/* line 130, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-8 {
+  left: 66.66666667%; }
+
+/* line 133, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-7 {
+  left: 58.33333333%; }
+
+/* line 136, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-6 {
+  left: 50%; }
+
+/* line 139, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-5 {
+  left: 41.66666667%; }
+
+/* line 142, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-4 {
+  left: 33.33333333%; }
+
+/* line 145, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-3 {
+  left: 25%; }
+
+/* line 148, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-2 {
+  left: 16.66666667%; }
+
+/* line 151, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-1 {
+  left: 8.33333333%; }
+
+/* line 154, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-push-0 {
+  left: auto; }
+
+/* line 157, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-12 {
+  margin-left: 100%; }
+
+/* line 160, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-11 {
+  margin-left: 91.66666667%; }
+
+/* line 163, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-10 {
+  margin-left: 83.33333333%; }
+
+/* line 166, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-9 {
+  margin-left: 75%; }
+
+/* line 169, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-8 {
+  margin-left: 66.66666667%; }
+
+/* line 172, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-7 {
+  margin-left: 58.33333333%; }
+
+/* line 175, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-6 {
+  margin-left: 50%; }
+
+/* line 178, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-5 {
+  margin-left: 41.66666667%; }
+
+/* line 181, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-4 {
+  margin-left: 33.33333333%; }
+
+/* line 184, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-3 {
+  margin-left: 25%; }
+
+/* line 187, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-2 {
+  margin-left: 16.66666667%; }
+
+/* line 190, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-1 {
+  margin-left: 8.33333333%; }
+
+/* line 193, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.col-xs-offset-0 {
+  margin-left: 0%; }
+
+@media (min-width: 768px) {
+  /* line 197, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left; }
+
+  /* line 200, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-12 {
+    width: 100%; }
+
+  /* line 203, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-11 {
+    width: 91.66666667%; }
+
+  /* line 206, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-10 {
+    width: 83.33333333%; }
+
+  /* line 209, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-9 {
+    width: 75%; }
+
+  /* line 212, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-8 {
+    width: 66.66666667%; }
+
+  /* line 215, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-7 {
+    width: 58.33333333%; }
+
+  /* line 218, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-6 {
+    width: 50%; }
+
+  /* line 221, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-5 {
+    width: 41.66666667%; }
+
+  /* line 224, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-4 {
+    width: 33.33333333%; }
+
+  /* line 227, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-3 {
+    width: 25%; }
+
+  /* line 230, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-2 {
+    width: 16.66666667%; }
+
+  /* line 233, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-1 {
+    width: 8.33333333%; }
+
+  /* line 236, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-12 {
+    right: 100%; }
+
+  /* line 239, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-11 {
+    right: 91.66666667%; }
+
+  /* line 242, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-10 {
+    right: 83.33333333%; }
+
+  /* line 245, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-9 {
+    right: 75%; }
+
+  /* line 248, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-8 {
+    right: 66.66666667%; }
+
+  /* line 251, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-7 {
+    right: 58.33333333%; }
+
+  /* line 254, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-6 {
+    right: 50%; }
+
+  /* line 257, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-5 {
+    right: 41.66666667%; }
+
+  /* line 260, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-4 {
+    right: 33.33333333%; }
+
+  /* line 263, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-3 {
+    right: 25%; }
+
+  /* line 266, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-2 {
+    right: 16.66666667%; }
+
+  /* line 269, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-1 {
+    right: 8.33333333%; }
+
+  /* line 272, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-pull-0 {
+    right: auto; }
+
+  /* line 275, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-12 {
+    left: 100%; }
+
+  /* line 278, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-11 {
+    left: 91.66666667%; }
+
+  /* line 281, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-10 {
+    left: 83.33333333%; }
+
+  /* line 284, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-9 {
+    left: 75%; }
+
+  /* line 287, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-8 {
+    left: 66.66666667%; }
+
+  /* line 290, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-7 {
+    left: 58.33333333%; }
+
+  /* line 293, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-6 {
+    left: 50%; }
+
+  /* line 296, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-5 {
+    left: 41.66666667%; }
+
+  /* line 299, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-4 {
+    left: 33.33333333%; }
+
+  /* line 302, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-3 {
+    left: 25%; }
+
+  /* line 305, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-2 {
+    left: 16.66666667%; }
+
+  /* line 308, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-1 {
+    left: 8.33333333%; }
+
+  /* line 311, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-push-0 {
+    left: auto; }
+
+  /* line 314, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-12 {
+    margin-left: 100%; }
+
+  /* line 317, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%; }
+
+  /* line 320, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%; }
+
+  /* line 323, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+
+  /* line 326, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%; }
+
+  /* line 329, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%; }
+
+  /* line 332, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+
+  /* line 335, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%; }
+
+  /* line 338, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%; }
+
+  /* line 341, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+
+  /* line 344, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%; }
+
+  /* line 347, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%; }
+
+  /* line 350, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-sm-offset-0 {
+    margin-left: 0%; } }
+@media (min-width: 992px) {
+  /* line 355, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left; }
+
+  /* line 358, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-12 {
+    width: 100%; }
+
+  /* line 361, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-11 {
+    width: 91.66666667%; }
+
+  /* line 364, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-10 {
+    width: 83.33333333%; }
+
+  /* line 367, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-9 {
+    width: 75%; }
+
+  /* line 370, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-8 {
+    width: 66.66666667%; }
+
+  /* line 373, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-7 {
+    width: 58.33333333%; }
+
+  /* line 376, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-6 {
+    width: 50%; }
+
+  /* line 379, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-5 {
+    width: 41.66666667%; }
+
+  /* line 382, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-4 {
+    width: 33.33333333%; }
+
+  /* line 385, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-3 {
+    width: 25%; }
+
+  /* line 388, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-2 {
+    width: 16.66666667%; }
+
+  /* line 391, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-1 {
+    width: 8.33333333%; }
+
+  /* line 394, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-12 {
+    right: 100%; }
+
+  /* line 397, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-11 {
+    right: 91.66666667%; }
+
+  /* line 400, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-10 {
+    right: 83.33333333%; }
+
+  /* line 403, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-9 {
+    right: 75%; }
+
+  /* line 406, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-8 {
+    right: 66.66666667%; }
+
+  /* line 409, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-7 {
+    right: 58.33333333%; }
+
+  /* line 412, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-6 {
+    right: 50%; }
+
+  /* line 415, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-5 {
+    right: 41.66666667%; }
+
+  /* line 418, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-4 {
+    right: 33.33333333%; }
+
+  /* line 421, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-3 {
+    right: 25%; }
+
+  /* line 424, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-2 {
+    right: 16.66666667%; }
+
+  /* line 427, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-1 {
+    right: 8.33333333%; }
+
+  /* line 430, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-pull-0 {
+    right: auto; }
+
+  /* line 433, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-12 {
+    left: 100%; }
+
+  /* line 436, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-11 {
+    left: 91.66666667%; }
+
+  /* line 439, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-10 {
+    left: 83.33333333%; }
+
+  /* line 442, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-9 {
+    left: 75%; }
+
+  /* line 445, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-8 {
+    left: 66.66666667%; }
+
+  /* line 448, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-7 {
+    left: 58.33333333%; }
+
+  /* line 451, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-6 {
+    left: 50%; }
+
+  /* line 454, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-5 {
+    left: 41.66666667%; }
+
+  /* line 457, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-4 {
+    left: 33.33333333%; }
+
+  /* line 460, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-3 {
+    left: 25%; }
+
+  /* line 463, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-2 {
+    left: 16.66666667%; }
+
+  /* line 466, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-1 {
+    left: 8.33333333%; }
+
+  /* line 469, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-push-0 {
+    left: auto; }
+
+  /* line 472, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-12 {
+    margin-left: 100%; }
+
+  /* line 475, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-11 {
+    margin-left: 91.66666667%; }
+
+  /* line 478, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-10 {
+    margin-left: 83.33333333%; }
+
+  /* line 481, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-9 {
+    margin-left: 75%; }
+
+  /* line 484, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-8 {
+    margin-left: 66.66666667%; }
+
+  /* line 487, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-7 {
+    margin-left: 58.33333333%; }
+
+  /* line 490, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-6 {
+    margin-left: 50%; }
+
+  /* line 493, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-5 {
+    margin-left: 41.66666667%; }
+
+  /* line 496, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-4 {
+    margin-left: 33.33333333%; }
+
+  /* line 499, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-3 {
+    margin-left: 25%; }
+
+  /* line 502, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-2 {
+    margin-left: 16.66666667%; }
+
+  /* line 505, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-1 {
+    margin-left: 8.33333333%; }
+
+  /* line 508, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-md-offset-0 {
+    margin-left: 0%; } }
+@media (min-width: 1200px) {
+  /* line 513, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left; }
+
+  /* line 516, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-12 {
+    width: 100%; }
+
+  /* line 519, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-11 {
+    width: 91.66666667%; }
+
+  /* line 522, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-10 {
+    width: 83.33333333%; }
+
+  /* line 525, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-9 {
+    width: 75%; }
+
+  /* line 528, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-8 {
+    width: 66.66666667%; }
+
+  /* line 531, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-7 {
+    width: 58.33333333%; }
+
+  /* line 534, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-6 {
+    width: 50%; }
+
+  /* line 537, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-5 {
+    width: 41.66666667%; }
+
+  /* line 540, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-4 {
+    width: 33.33333333%; }
+
+  /* line 543, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-3 {
+    width: 25%; }
+
+  /* line 546, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-2 {
+    width: 16.66666667%; }
+
+  /* line 549, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-1 {
+    width: 8.33333333%; }
+
+  /* line 552, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-12 {
+    right: 100%; }
+
+  /* line 555, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-11 {
+    right: 91.66666667%; }
+
+  /* line 558, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-10 {
+    right: 83.33333333%; }
+
+  /* line 561, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-9 {
+    right: 75%; }
+
+  /* line 564, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-8 {
+    right: 66.66666667%; }
+
+  /* line 567, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-7 {
+    right: 58.33333333%; }
+
+  /* line 570, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-6 {
+    right: 50%; }
+
+  /* line 573, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-5 {
+    right: 41.66666667%; }
+
+  /* line 576, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-4 {
+    right: 33.33333333%; }
+
+  /* line 579, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-3 {
+    right: 25%; }
+
+  /* line 582, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-2 {
+    right: 16.66666667%; }
+
+  /* line 585, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-1 {
+    right: 8.33333333%; }
+
+  /* line 588, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-pull-0 {
+    right: auto; }
+
+  /* line 591, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-12 {
+    left: 100%; }
+
+  /* line 594, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-11 {
+    left: 91.66666667%; }
+
+  /* line 597, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-10 {
+    left: 83.33333333%; }
+
+  /* line 600, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-9 {
+    left: 75%; }
+
+  /* line 603, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-8 {
+    left: 66.66666667%; }
+
+  /* line 606, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-7 {
+    left: 58.33333333%; }
+
+  /* line 609, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-6 {
+    left: 50%; }
+
+  /* line 612, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-5 {
+    left: 41.66666667%; }
+
+  /* line 615, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-4 {
+    left: 33.33333333%; }
+
+  /* line 618, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-3 {
+    left: 25%; }
+
+  /* line 621, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-2 {
+    left: 16.66666667%; }
+
+  /* line 624, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-1 {
+    left: 8.33333333%; }
+
+  /* line 627, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-push-0 {
+    left: auto; }
+
+  /* line 630, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-12 {
+    margin-left: 100%; }
+
+  /* line 633, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%; }
+
+  /* line 636, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%; }
+
+  /* line 639, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-9 {
+    margin-left: 75%; }
+
+  /* line 642, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%; }
+
+  /* line 645, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%; }
+
+  /* line 648, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-6 {
+    margin-left: 50%; }
+
+  /* line 651, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%; }
+
+  /* line 654, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%; }
+
+  /* line 657, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-3 {
+    margin-left: 25%; }
+
+  /* line 660, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%; }
+
+  /* line 663, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%; }
+
+  /* line 666, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+  .col-lg-offset-0 {
+    margin-left: 0%; } }
+/* line 670, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+/* line 681, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both; }
+
+/* line 687, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 692, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.pull-right {
+  float: right !important; }
+
+/* line 695, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.pull-left {
+  float: left !important; }
+
+/* line 698, /Users/asoldatova/works/first-lab/source/assets/stylesheets/grid.css */
+.affix {
+  position: fixed; }
+
+/* line 1, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+body {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #1a2028; }
+
+/* line 6, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+.small {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* line 9, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+h1 {
+  text-transform: none;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px; }
+
+/* line 15, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+h2 {
+  text-transform: none;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px; }
+
+/* line 21, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+h3 {
+  text-transform: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px; }
+
+/* line 27, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+h4 {
+  text-transform: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px; }
+
+/* line 33, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+p {
+  font-size: 20px;
+  line-height: 30px; }
+
+/* line 37, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+.lead {
+  font-size: 24px;
+  line-height: 40px; }
+
+/* line 41, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_typography.scss */
+.program h3 {
+  display: inline; }
+
+/* line 1, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+a:focus, :hover {
+  outline: none; }
+
+/* line 5, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+::-moz-focus-inner {
+  border: 0; }
+
+/* line 9, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+body,
+input,
+button,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 17, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+body {
+  color: #1a2028; }
+
+/* line 22, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+a {
+  -webkit-transition: border-color .3s;
+          transition: border-color .3s;
+  -webkit-transition: color .3s;
+          transition: color .3s;
+  text-decoration: none;
+  color: #1a2028; }
+  /* line 29, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+  a:hover {
+    text-decoration: none;
+    color: #005fff;
+    border-color: #005fff; }
+
+/* line 37, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+.wrapper {
+  max-width: 1200px;
+  margin: 140px auto;
+  padding: 0 40px; }
+
+/* line 45, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+.display-none {
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
+  opacity: 0 !important; }
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: block;
+    opacity: 1; }
+  99% {
+    display: none;
+    opacity: 0.01; }
+  100% {
+    display: none;
+    opacity: 0; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* line 116, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+.mfp-figure {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+/* line 126, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+iframe.video {
+  display: block;
+  margin: 80 auto; }
+
+/* line 131, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_common.scss */
+.mfp-content {
+  padding-top: 160px; }
+
+/* line 1, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+.menu {
+  position: fixed;
+  z-index: 2000;
+  top: 195px; }
+
+/* line 8, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+.logotype {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background: url("../images/sprite-sd72070bad5.png") 0 -403px no-repeat;
+  width: 70px;
+  height: 69px; }
+
+/* line 16, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+.links {
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+  width: 70px;
+  height: 250px;
+  padding: 0;
+  border: 5px solid #1a2028; }
+  /* line 28, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links a {
+    display: block;
+    overflow: hidden;
+    margin: 0 0 4px -5px;
+    text-indent: -1000em;
+    border: 0; }
+  /* line 39, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .header-link.active-menu {
+    background: url("../images/sprite-sd72070bad5.png") 0 -532px no-repeat;
+    width: 70px;
+    height: 40px; }
+  /* line 43, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .header-link {
+    background: url("../images/sprite-sd72070bad5.png") 0 -482px no-repeat;
+    width: 70px;
+    height: 40px; }
+  /* line 47, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .header-link span {
+    display: block;
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 0;
+    background: url("../images/sprite-sd72070bad5.png") 0 -532px no-repeat;
+    width: 70px;
+    height: 40px; }
+  /* line 57, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .header-link span:hover {
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 1; }
+  /* line 63, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .who-link.active-menu {
+    background: url("../images/sprite-sd72070bad5.png") 0 -987px no-repeat;
+    width: 70px;
+    height: 75px; }
+  /* line 67, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .who-link {
+    background: url("../images/sprite-sd72070bad5.png") 0 -902px no-repeat;
+    width: 70px;
+    height: 75px; }
+  /* line 71, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .who-link span {
+    display: block;
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 0;
+    background: url("../images/sprite-sd72070bad5.png") 0 -987px no-repeat;
+    width: 70px;
+    height: 75px; }
+  /* line 81, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .who-link span:hover {
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 1; }
+  /* line 87, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .how-link.active-menu {
+    background: url("../images/sprite-sd72070bad5.png") 0 -148px no-repeat;
+    width: 70px;
+    height: 67px; }
+  /* line 91, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .how-link {
+    background: url("../images/sprite-sd72070bad5.png") 0 -71px no-repeat;
+    width: 70px;
+    height: 67px; }
+  /* line 95, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .how-link span {
+    display: block;
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 0;
+    background: url("../images/sprite-sd72070bad5.png") 0 -148px no-repeat;
+    width: 70px;
+    height: 67px; }
+  /* line 105, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .how-link span:hover {
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 1; }
+  /* line 111, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .what-link.active-menu {
+    background: url("../images/sprite-sd72070bad5.png") 0 -802px no-repeat;
+    width: 70px;
+    height: 90px; }
+  /* line 115, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .what-link {
+    background: url("../images/sprite-sd72070bad5.png") 0 -702px no-repeat;
+    width: 70px;
+    height: 90px; }
+  /* line 119, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .what-link span {
+    display: block;
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 0;
+    background: url("../images/sprite-sd72070bad5.png") 0 -802px no-repeat;
+    width: 70px;
+    height: 90px; }
+  /* line 129, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_menu.scss */
+  .links .what-link span:hover {
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+    opacity: 1; }
+
+/*Header*/
+/* line 4, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.header {
+  margin-top: -35px; }
+  /* line 6, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+  .header h1 {
+    text-transform: lowercase; }
+    /* line 10, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+    .header h1.upper {
+      text-transform: none; }
+  /* line 15, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+  .header .description {
+    margin-bottom: 30px; }
+
+/* line 27, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.infoblock.col {
+  font-weight: 550; }
+
+/* line 33, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.descriptions {
+  margin-bottom: 100px; }
+  /* line 36, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+  .descriptions a {
+    -webkit-transition: border-color .3s;
+            transition: border-color .3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+    /* line 34, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mixin.scss */
+    .descriptions a:hover {
+      text-decoration: none;
+      border-color: #005fff; }
+
+/* line 42, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social a {
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  text-indent: -1000em;
+  border: 0; }
+
+/* line 55, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social-fb {
+  background: url("../images/sprite-sd72070bad5.png") 0 -11px no-repeat; }
+
+/* line 56, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social-vk {
+  background: url("../images/sprite-sd72070bad5.png") 0 -642px no-repeat; }
+
+/* line 57, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social-tw {
+  background: url("../images/sprite-sd72070bad5.png") 0 -582px no-repeat; }
+
+/* line 58, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social-fb:hover {
+  background: url("../images/sprite-sd72070bad5.png") 0 -41px no-repeat; }
+
+/* line 59, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social-vk:hover {
+  background: url("../images/sprite-sd72070bad5.png") 0 -672px no-repeat; }
+
+/* line 60, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.social-tw:hover {
+  background: url("../images/sprite-sd72070bad5.png") 0 -612px no-repeat; }
+
+/* line 63, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.infoblock-contacts a {
+  -webkit-transition: border-color .3s;
+          transition: border-color .3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  /* line 34, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mixin.scss */
+  .infoblock-contacts a:hover {
+    text-decoration: none;
+    border-color: #005fff; }
+/* line 67, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_header.scss */
+.infoblock-contacts p {
+  margin-top: 0; }
+
+/*What*/
+/* line 3, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.what {
+  margin-bottom: 30px;
+  margin-top: 80px; }
+
+/* line 8, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.filter_tags {
+  max-width: 920px; }
+
+/* line 12, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.portfolio-link {
+  margin-bottom: 150px;
+  color: #999;
+  -webkit-transition: border-color .3s;
+          transition: border-color .3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  /* line 34, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mixin.scss */
+  .portfolio-link:hover {
+    text-decoration: none;
+    border-color: #005fff; }
+
+/* line 20, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.filter_active {
+  color: #005fff; }
+
+/* line 25, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.items-wrapper {
+  position: static; }
+
+/* line 29, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.items {
+  position: absolute;
+  z-index: 2024;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+  opacity: 0; }
+  /* line 39, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .items.is__ready {
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+    opacity: 1; }
+  /* line 47, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .items.active:before {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 187px;
+    content: '';
+    background-color: #fff; }
+  /* line 63, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .items.active .item {
+    -webkit-transition: all .3s !important;
+            transition: all .3s !important; }
+    /* line 67, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+    .items.active .item:hover {
+      -webkit-transition: all .3s !important;
+              transition: all .3s !important;
+      background-color: #1a2028 !important; }
+  /* line 74, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .items.active .item-title {
+    -webkit-transition: opacity .3s;
+            transition: opacity .3s;
+    opacity: 0; }
+  /* line 80, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .items.active .item_deco {
+    display: none; }
+
+/* line 86, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.item {
+  font-size: 100%;
+  font-weight: 800;
+  line-height: 170px;
+  position: absolute;
+  display: block;
+  width: 170px;
+  height: 170px;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+  text-align: center;
+  text-transform: lowercase;
+  margin-left: -25px;
+  opacity: 0;
+  color: #fff;
+  border-radius: 50%;
+  background: rgba(9, 0, 0, 0.3); }
+  /* line 107, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .item:hover {
+    color: white; }
+  /* line 111, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .item.loading {
+    opacity: .7; }
+  /* line 115, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+  .item.is__small {
+    -webkit-transition-delay: 0;
+            transition-delay: 0; }
+
+/* line 121, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.item_big {
+  line-height: 365px;
+  width: 365px;
+  height: 365px; }
+
+/* line 128, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_what-block.scss */
+.item-title {
+  line-height: 1.4;
+  display: inline-block;
+  padding: 0 25px;
+  -webkit-transition: opacity .3s;
+          transition: opacity .3s;
+  vertical-align: middle;
+  opacity: 1; }
+
+/*How*/
+/* line 3, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_how-block.scss */
+.scheme {
+  display: block;
+  max-width: 481px;
+  margin: 0px auto;
+  margin-bottom: 55px;
+  margin-bottom: 140px; }
+  /* line 10, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_how-block.scss */
+  .scheme img {
+    width: 100%; }
+
+/* line 16, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_how-block.scss */
+.scheme-desc {
+  margin-bottom: 30px;
+  text-transform: lowercase; }
+
+/*Who*/
+/* line 3, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+.people-wrapper {
+  position: static; }
+
+/* line 8, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+.filter_people {
+  position: absolute;
+  z-index: 2024;
+  -webkit-transition: all .5s;
+          transition: all .5s; }
+  /* line 12, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people .people-item {
+    font-weight: 600;
+    position: absolute;
+    z-index: 20;
+    display: inline-block;
+    width: 170px;
+    height: 106px;
+    margin-left: -25px;
+    cursor: default;
+    -webkit-transition: all .3s;
+            transition: all .3s;
+    text-align: center;
+    z-index: 2024;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #a7abab; }
+    /* line 29, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people .people-item span {
+      position: absolute;
+      width: 170px;
+      height: 110px;
+      margin: 0;
+      margin-left: -85px;
+      padding-top: 60px;
+      cursor: default;
+      -webkit-transition: opacity .3s;
+              transition: opacity .3s;
+      opacity: 1;
+      border-radius: 50%; }
+  /* line 46, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.is__ready {
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+    opacity: 1; }
+  /* line 52, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #meshherjakov {
+    background: url("../images/data/H68A8862.jpg") no-repeat; }
+    /* line 55, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #meshherjakov span {
+      background: RGBa(175, 174, 146, 0.7); }
+  /* line 56, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #borisovsky {
+    background: url("../images/data/H68A8730.jpg") no-repeat; }
+    /* line 59, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #borisovsky span {
+      background: RGBa(137, 127, 123, 0.7); }
+  /* line 60, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #egorov {
+    background: url("../images/data/egor.JPG") no-repeat; }
+    /* line 63, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #egorov span {
+      background: RGBa(137, 127, 123, 0.7); }
+  /* line 64, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #kleschev {
+    background: url("../images/data/H68A7227.jpg") no-repeat; }
+    /* line 67, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #kleschev span {
+      background: RGBa(175, 174, 146, 0.7); }
+  /* line 68, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #novichkov {
+    background: url("../images/data/nov.JPG") no-repeat; }
+    /* line 71, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #novichkov span {
+      background: RGBa(167, 171, 171, 0.7); }
+  /* line 72, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #paschenko {
+    background: url("../images/data/H68A4905.jpg") no-repeat; }
+    /* line 75, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #paschenko span {
+      background: RGBa(97, 95, 97, 0.7); }
+  /* line 76, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #rumin {
+    background: url("../images/data/rum.jpg") no-repeat; }
+    /* line 79, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #rumin span {
+      background: RGBa(167, 171, 171, 0.7); }
+  /* line 80, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #sergeev {
+    background: url("../images/data/serg.JPG") no-repeat; }
+    /* line 83, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #sergeev span {
+      background: RGBa(167, 171, 171, 0.7); }
+  /* line 84, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #temen {
+    background: url("../images/data/H68A3451.jpg") no-repeat; }
+    /* line 87, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #temen span {
+      background: RGBa(167, 171, 171, 0.7); }
+  /* line 88, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #juzhanina {
+    background: url("../images/data/yug.JPG") no-repeat; }
+    /* line 91, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #juzhanina span {
+      background: RGBa(124, 128, 129, 0.7); }
+  /* line 92, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people #logutova {
+    background: url("../images/data/log.JPG") no-repeat; }
+    /* line 95, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people #logutova span {
+      background: RGBa(175, 174, 146, 0.7); }
+  /* line 98, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active:before {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 187px;
+    content: '';
+    background-color: #fff; }
+  /* line 114, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active .people-item {
+    -webkit-transition: all .3s !important;
+            transition: all .3s !important; }
+    /* line 117, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+    .filter_people.active .people-item:hover {
+      -webkit-transition: all .3s !important;
+              transition: all .3s !important;
+      background-color: #1a2028 !important; }
+  /* line 124, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active .item-title {
+    -webkit-transition: opacity .3s;
+            transition: opacity .3s;
+    opacity: 0; }
+  /* line 130, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active .item_deco {
+    display: none; }
+  /* line 134, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #meshherjakov {
+    background: RGBa(175, 174, 146, 1); }
+  /* line 135, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #borisovsky {
+    background: RGBa(137, 127, 123, 1); }
+  /* line 136, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #egorov {
+    background: RGBa(137, 127, 123, 1); }
+  /* line 137, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #kleschev {
+    background: RGBa(175, 174, 146, 1); }
+  /* line 138, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #novichkov {
+    background: RGBa(167, 171, 171, 1); }
+  /* line 139, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #paschenko {
+    background: RGBa(97, 95, 97, 1); }
+  /* line 140, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #rumin {
+    background: RGBa(167, 171, 171, 1); }
+  /* line 141, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #sergeev {
+    background: RGBa(167, 171, 171, 1); }
+  /* line 142, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #temen {
+    background: RGBa(167, 171, 171, 1); }
+  /* line 143, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #juzhanina {
+    background: RGBa(124, 128, 129, 1); }
+  /* line 144, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active #logutova {
+    background: RGBa(175, 174, 146, 1); }
+  /* line 145, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people.active .close1 {
+    background-image: url("../images/data/close_item.png") !important; }
+
+/* line 153, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+.filter_people .people-item.people-hover-active {
+  cursor: default; }
+  /* line 156, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people .people-item.people-hover-active span {
+    cursor: default;
+    opacity: 0; }
+
+/* line 163, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+.filter_people .people-item.people-hover:hover {
+  cursor: default; }
+  /* line 165, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+  .filter_people .people-item.people-hover:hover span {
+    cursor: default;
+    opacity: 0; }
+
+/* line 173, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_who-block.scss */
+.filter_people .people-item.whiteItem {
+  opacity: .3 !important; }
+
+/* line 1, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.content {
+  position: relative; }
+  /* line 4, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .content.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; }
+
+/* line 16, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.main-wrapper {
+  -webkit-transition: opacity .3s;
+          transition: opacity .3s;
+  opacity: 1; }
+
+/* line 22, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.close1 {
+  background: url("../images/data/close_item.png") no-repeat; }
+
+/* line 26, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.article_inner {
+  max-width: 1050px;
+  margin: 0 auto; }
+
+/* line 31, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.full_width {
+  width: 100%;
+  max-width: 100%;
+  display: block; }
+
+/* line 38, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.full_width.offset {
+  margin: 1em auto; }
+
+/* line 42, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.article_inner .filter, .article_inner a.filter-item {
+  color: #999; }
+
+/* line 46, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.article_inner a.filter-item:hover {
+  color: #005fff; }
+
+/* line 52, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.article_inner {
+  width: 100%;
+  margin: 0 auto; }
+  /* line 56, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner img {
+    display: block;
+    max-width: 1200px;
+    margin: 1em auto;
+    box-sizing: border-box; }
+    /* line 63, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+    .article_inner img.full_width {
+      width: 100%; }
+  /* line 68, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner .content_colum {
+    float: left;
+    width: 45%; }
+  /* line 74, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner .image_colum {
+    float: right;
+    width: 45%; }
+  /* line 80, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner .description,
+  .article_inner .colums {
+    max-width: 1000px;
+    margin: 1em auto;
+    padding: 20px 150px; }
+  /* line 87, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner .filter_tags {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 10px;
+    vertical-align: top; }
+  /* line 96, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner .filter_people {
+    display: inline-block;
+    position: static;
+    width: 50%;
+    margin-right: 4%;
+    margin-bottom: 10px;
+    vertical-align: top; }
+    /* line 105, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+    .article_inner .filter_people .filter-item {
+      display: inline-block; }
+  /* line 110, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner iframe {
+    margin: 30px auto; }
+  /* line 114, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .article_inner .description {
+    padding-left: 155px; }
+
+/* line 119, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.isotope-item {
+  z-index: 2; }
+
+/* line 123, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.isotope-hidden.isotope-item {
+  z-index: 1;
+  pointer-events: none; }
+
+/* line 133, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.peopleAboutItem {
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+          transition: all .3s; }
+
+/* line 138, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.activeItemPerson {
+  opacity: 1;
+  -webkit-transition: all .3s;
+          transition: all .3s; }
+
+/* line 146, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.person-works {
+  width: 100%;
+  margin: 80px auto;
+  text-align: center; }
+  /* line 150, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works img {
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block; }
+  /* line 155, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-10 {
+    width: 98.0%; }
+  /* line 156, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-9 {
+    width: 88.0%; }
+  /* line 157, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-8 {
+    width: 78.0%; }
+  /* line 158, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-7 {
+    width: 68.0%; }
+  /* line 159, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-6 {
+    width: 58.0%; }
+  /* line 160, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-5 {
+    width: 48.0%; }
+  /* line 161, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-4 {
+    width: 38.0%; }
+  /* line 162, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-3 {
+    width: 28.0%; }
+  /* line 163, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-2 {
+    width: 18.0%; }
+  /* line 164, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-1 {
+    width: 8.0%; }
+  /* line 166, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+  .person-works .col-1,
+  .person-works .col-2,
+  .person-works .col-3,
+  .person-works .col-4,
+  .person-works .col-5,
+  .person-works .col-6,
+  .person-works .col-7,
+  .person-works .col-8,
+  .person-works .col-9,
+  .person-works .col-10 {
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%; }
+
+/* line 187, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.in {
+  vertical-align: top;
+  float: left; }
+
+/* line 193, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.bottom {
+  margin-bottom: 150px; }
+
+/* line 196, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner.scss */
+.row.offset {
+  margin-bottom: 30px; }
+
+/* line 2, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+.person-works.custome-style .person-row {
+  position: relative; }
+  /* line 4, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row img {
+    position: relative;
+    top: 0;
+    left: 0; }
+  /* line 9, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p1 {
+    left: 150px;
+    z-index: 2; }
+  /* line 10, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p2 {
+    top: -80px;
+    z-index: 1; }
+  /* line 11, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p3 {
+    top: -210px;
+    left: 200px;
+    z-index: 1; }
+  /* line 12, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p4 {
+    top: -440px;
+    left: 460px;
+    z-index: 3; }
+  /* line 13, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p5 {
+    top: -180px;
+    left: 100px;
+    z-index: 2; }
+  /* line 14, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p6 {
+    top: -310px;
+    left: -90px;
+    z-index: 3; }
+  /* line 15, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p7 {
+    top: -270px;
+    left: 550px;
+    z-index: 3; }
+  /* line 17, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p9 {
+    top: -80px;
+    left: -20px;
+    z-index: 3; }
+  /* line 19, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p11 {
+    top: -110px; }
+  /* line 20, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p12 {
+    top: -350px;
+    left: 140px; }
+  /* line 21, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p13 {
+    top: -200px;
+    left: 250px; }
+  /* line 22, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p14 {
+    top: -100px;
+    left: -100px; }
+  /* line 23, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p15 {
+    top: -100px; }
+  /* line 24, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p19 {
+    top: -100px; }
+  /* line 25, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p17 {
+    top: -100px; }
+  /* line 26, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row .p18 {
+    top: -100px; }
+  /* line 28, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+  .person-works.custome-style .person-row.row-up {
+    margin-top: -300px; }
+
+/* line 33, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+.list-teachers {
+  font-weight: 600; }
+
+/* line 36, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_artical-inner-custom.scss */
+.cust_top_offset {
+  margin-top: -450px; }
+
+@media only screen and (max-width: 767px) {
+  /* line 18, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .wrapper {
+    margin: 70px auto;
+    padding: 0 10px; }
+
+  /* line 22, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .main {
+    margin-left: 80px; }
+
+  /* line 25, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .logo {
+    display: none; }
+
+  /* line 28, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .descriptions {
+    margin-bottom: 40px; }
+
+  /* line 31, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .infoblock.col {
+    width: 100%; }
+
+  /* line 34, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .header {
+    margin-bottom: 50px; }
+
+  /* line 37, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .item-title {
+    font-size: 14px; }
+
+  /* line 40, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .item {
+    width: 200px;
+    height: 200px;
+    line-height: 200px; }
+
+  /* line 45, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .chapter {
+    margin-bottom: 60px; }
+
+  /* line 51, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .article_inner img {
+    width: 100%; }
+
+  /* line 54, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .article_inner .description {
+    padding: 0 10px 0 90px;
+    margin: 0; }
+
+  /* line 58, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .logotype {
+    display: none; }
+
+  /* line 61, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .items.is__ready.active {
+    display: none; }
+
+  /* line 64, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .mfp-content {
+    padding-top: 80px; }
+
+  /* line 69, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .person-works {
+    width: 100%; }
+    /* line 71, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-10 {
+      width: 98.0%; }
+    /* line 72, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-9 {
+      width: 98.0%; }
+    /* line 73, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-8 {
+      width: 98.0%; }
+    /* line 74, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-7 {
+      width: 98.0%; }
+    /* line 75, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-6 {
+      width: 98.0%; }
+    /* line 76, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-5 {
+      width: 98.0%; }
+    /* line 77, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-4 {
+      width: 98.0%; }
+    /* line 78, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-3 {
+      width: 98.0%; }
+    /* line 79, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-2 {
+      width: 98.0%; }
+    /* line 80, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-1 {
+      width: 98.0%; }
+    /* line 82, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works .col-1,
+    .person-works .col-2,
+    .person-works .col-3,
+    .person-works .col-4,
+    .person-works .col-5,
+    .person-works .col-6,
+    .person-works .col-7,
+    .person-works .col-8,
+    .person-works .col-9,
+    .person-works .col-10 {
+      position: relative;
+      margin-left: 1%;
+      margin-right: 1%; } }
+@media only screen and (max-width: 1500px) {
+  /* line 110, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .person-works.custome-style .person-row {
+    position: relative; }
+    /* line 112, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works.custome-style .person-row img {
+      position: static; }
+    /* line 113, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+    .person-works.custome-style .person-row.row-up {
+      margin-top: 0px; }
+
+  /* line 118, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .cust_top_offset {
+    margin-top: 0px; } }
+@media only screen and (min-width: 1500px) {
+  /* line 125, /Users/asoldatova/works/first-lab/source/assets/stylesheets/_mobile.scss */
+  .row.bigrow {
+    width: 140%;
+    margin-left: -20%; } }
